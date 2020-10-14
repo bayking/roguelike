@@ -5,4 +5,6 @@ package inte.grupp5.combat;
 public class Combat {
     private String test;
     private int testing;
+
+
 }
