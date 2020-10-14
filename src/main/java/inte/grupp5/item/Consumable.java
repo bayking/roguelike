@@ -2,14 +2,7 @@ package inte.grupp5.item;
 
 public class Consumable extends Item{
 
-    private final int healthBonus;
-
-    public Consumable(String name, int healthBonus) {
+    public Consumable(String name) {
         super(name);
-        this.healthBonus = healthBonus;
-    }
-
-    public int getHealthBonus() {
-        return healthBonus;
     }
 }

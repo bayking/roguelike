@@ -9,7 +9,7 @@ class FoodTest {
     private final Food steak50Health = new Food("Steak", 50);
 
     @Test
-    void NameMatches() {
+    void nameMatches() {
         assertEquals("Steak", steak50Health.getName());
     }
 
