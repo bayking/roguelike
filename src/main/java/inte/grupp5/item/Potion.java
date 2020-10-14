@@ -5,7 +5,6 @@ public class Potion extends Consumable {
     private final Type type;
 
     // Placeholder implementation. Each different potion type has only one value.
-    // TODO: Different values for same potion type?
 
     public enum Type {
 
