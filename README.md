@@ -1,6 +1,6 @@
 # Inlämningsuppgift INTE HT20
 
-Testdriven utveckling av ett roguelike spel.
+Testdriven utveckling av ett roguelikespel.
 
 ## Introduction
 
