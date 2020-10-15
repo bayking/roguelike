@@ -2,17 +2,18 @@ package inte.grupp5.item;
 
 public class Potion extends Consumable {
 
-    private final Type type;
+    private final PotionType potionType;
 
-    public enum Type {
+    public enum PotionType {
 
-        HEALTH(100, 20), MANA(100, 20), LEVEL(1, 40);
+        // TODO: Have level potion give experience instead of whole level?
+
+        HEALTH_POTION(100, 20), MANA_POTION(100, 20), LEVEL_POTION(1, 40);
 
         private final int restoreValue;
         private final int value;
 
-
-        Type(int restoreValue, int value) {
+        PotionType(int restoreValue, int value) {
             this.restoreValue = restoreValue;
             this.value = value;
         }
@@ -26,21 +27,21 @@ public class Potion extends Consumable {
         }
     }
 
-    public Potion(String name, int weight, Type type) {
+    public Potion(String name, int weight, PotionType potionType) {
         super(name, weight);
-        this.type = type;
+        this.potionType = potionType;
     }
 
     @Override
     public int getValue() {
-        if (getType().equals(Type.HEALTH)) {
-            return Type.HEALTH.getValue();
-        } else if (getType().equals(Type.MANA)) {
-            return Type.MANA.getValue();
-        } else return Type.LEVEL.getValue();
+        if (getPotionType().equals(PotionType.HEALTH_POTION)) {
+            return PotionType.HEALTH_POTION.getValue();
+        } else if (getPotionType().equals(PotionType.MANA_POTION)) {
+            return PotionType.MANA_POTION.getValue();
+        } else return PotionType.LEVEL_POTION.getValue();
     }
 
-    public Type getType() {
-        return type;
+    public PotionType getPotionType() {
+        return potionType;
     }
 }
