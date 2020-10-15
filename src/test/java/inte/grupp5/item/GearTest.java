@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GearTest {
 
-    private final Gear glowes = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR);
+    private final Gear gloves = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR);
 
     @Test
     void valueMatches() {
-        assertEquals(0.5, glowes.getValue());
+        assertEquals(0.5, gloves.getValue());
     }
 
 }
