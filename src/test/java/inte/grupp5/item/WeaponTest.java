@@ -33,4 +33,9 @@ class WeaponTest {
     void weaponTypeMatches() {
         assertEquals(Weapon.WeaponType.SWORD, sword5WGT10DMG.getWeaponType());
     }
+
+    @Test
+    void rangeMatches() {
+        assertEquals(1, sword5WGT10DMG.getWeaponType().getRange());
+    }
 }
