@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FoodTest {
 
-    private final Food steak50Health = new Food("Steak", 50);
+    private final Food steak50Health = new Food("Steak", 1, 50);
 
     @Test
     void nameMatches() {

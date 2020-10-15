@@ -4,9 +4,14 @@ public class Food extends Consumable {
 
     private final int healthBonus;
 
-    public Food(String name, int healthBonus) {
-        super(name);
+    public Food(String name, int weight, int healthBonus) {
+        super(name, weight);
         this.healthBonus = healthBonus;
+    }
+
+    @Override
+    public int getValue() {
+        return getHealthBonus() / getWeight();
     }
 
     public int getHealthBonus() {
