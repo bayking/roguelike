@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GearTest {
 
-    private final Gear glowes = new Armor("Glowes", 4, 2, Armor.ArmorType.LIGHT_ARMOR);
+    private final Gear glowes = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR);
 
     @Test
     void valueMatches() {
