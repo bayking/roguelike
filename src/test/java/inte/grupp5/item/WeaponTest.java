@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WeaponTest {
 
-    Weapon sword5WGT10DMG = new Weapon("Sword of might", 5, 10, Weapon.WeaponType.SWORD) {
-    };
+    Weapon sword5WGT10DMG =
+            new Weapon("Sword of might", 5, 10, Weapon.WeaponType.SWORD);
 
     @Test
     void nameMatches() {

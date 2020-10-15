@@ -3,9 +3,9 @@ package inte.grupp5.item;
 public abstract class Item {
 
     private final String name;
-    private final int weight;
+    private final double weight;
 
-    public Item(String name, int weight) {
+    public Item(String name, double weight) {
         if (name == null || name.isBlank()) throw
                 new IllegalArgumentException("Name can not be empty!");
         this.name = name;
@@ -14,13 +14,15 @@ public abstract class Item {
         this.weight = weight;
     }
 
-    public abstract int getValue();
+    public abstract double getValue();
+
+    public abstract String toString();
 
     public String getName() {
         return name;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 }

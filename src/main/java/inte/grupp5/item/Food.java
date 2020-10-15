@@ -1,7 +1,7 @@
 package inte.grupp5.item;
 
 
-// TODO: Is this class necessary? Same as Potion basically.
+// TODO: Placeholder class if we decide to use it. Same as Potion basically.
 
 public class Food extends Consumable {
 
@@ -13,8 +13,13 @@ public class Food extends Consumable {
     }
 
     @Override
-    public int getValue() {
+    public double getValue() {
         return getHealthBonus() / getWeight();
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 
     public int getHealthBonus() {

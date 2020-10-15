@@ -7,7 +7,12 @@ public class QuestItem extends Item {
     }
 
     @Override
-    public int getValue() {
+    public double getValue() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 }

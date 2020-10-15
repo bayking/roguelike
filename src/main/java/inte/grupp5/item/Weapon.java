@@ -34,7 +34,12 @@ public class Weapon extends Item {
     }
 
     @Override
-    public int getValue() {
+    public double getValue() {
         return getWeight() + getDamage();
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 }

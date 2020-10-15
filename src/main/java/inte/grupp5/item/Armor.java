@@ -16,4 +16,9 @@ public class Armor extends Gear {
     public ArmorType getArmorType() {
         return armorType;
     }
+
+    @Override
+    public String toString() {
+        return "[" + String.format("Name: %s, Weight: %.2f, Armor rating: %d", getName(), getWeight(), getArmorRating()) + ", Armor type: " + getArmorType() + "]";
+    }
 }

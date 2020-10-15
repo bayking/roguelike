@@ -33,7 +33,7 @@ public class Potion extends Consumable {
     }
 
     @Override
-    public int getValue() {
+    public double getValue() {
         if (getPotionType().equals(PotionType.HEALTH_POTION)) {
             return PotionType.HEALTH_POTION.getValue();
         } else if (getPotionType().equals(PotionType.MANA_POTION)) {
@@ -43,5 +43,10 @@ public class Potion extends Consumable {
 
     public PotionType getPotionType() {
         return potionType;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + String.format("Name: %s, Weight: %.2f", getName(), getWeight()) + ", Potion type: " + getPotionType() + "]";
     }
 }

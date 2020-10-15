@@ -15,5 +15,9 @@ class ArmorTest {
         assertEquals(Armor.ArmorType.LIGHT_ARMOR, chestPlate.getArmorType());
     }
 
+    @Test
+    void toStringMatches() {
+        assertEquals("[Name: Helmet, Weight: 10.00, Armor rating: 7, Armor type: HEAVY_ARMOR]", helmet.toString());
+    }
 
 }

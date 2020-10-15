@@ -11,7 +11,7 @@ public abstract class Gear extends Item {
     }
 
     @Override
-    public int getValue() {
+    public double getValue() {
         return getArmorRating() / getWeight();
     }
 
