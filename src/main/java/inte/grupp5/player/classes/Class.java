@@ -30,4 +30,5 @@ public abstract class  Class {
             return manaPerLvl[level];
         return manaPerLvl[level-1];
     }
+
 }
