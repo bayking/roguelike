@@ -5,36 +5,48 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class EnemyTest {
 
     @Test
     void constructorThrowsIfNegativeValue () {
-        assertThrows(IllegalArgumentException.class, () -> new Enemy(-1));
-    }
-
-
-    @Test
-    void healthThrowsIfNegativeValue () {
-        Enemy e = new Enemy(1);
-        assertThrows(IllegalArgumentException.class, () -> e.getAttackDamage(-1));
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Enemy(-1);
+        });
     }
 
     @Test
-    void damageThrowsIfNegativeValue () {
-        Enemy e = new Enemy(1);
-        assertThrows(IllegalArgumentException.class, () -> new Enemy(-1));
+    void constructorThrowsIfLevelAboveCertainValue () {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Enemy(1000);
+        });
     }
 
     @Test
-    void healthIsCorrect() {
+    void healthIsCalculatedCorrect() {
         Enemy e = new Enemy(20);
-        assertEquals(60,e.getHealth(20));
+        assertEquals(130,e.getHealth(20));
     }
 
     @Test
-    void attackDamageIsCorrect() {
+    void damageIsCalculatedCorrect() {
         Enemy e = new Enemy(21);
-        assertEquals(10,e.getAttackDamage(20));
+        assertEquals(10,e.getDamage(21));
+    }
+
+    @Test
+    void enemyHasCorrectValues () {
+        Enemy e = new Enemy(50);
+        assertEquals(50,e.getLevel());
+        assertEquals(175,e.getHealth(e.getLevel()));
+        assertEquals(25,e.getDamage(e.getLevel()));
+    }
+
+    @Test
+    void enemyTypeHasRightName () {
+        Enemy e = new Enemy(10);
+        assertEquals("Enemy",e.getEnemyType());
     }
 
     @Test
@@ -44,9 +56,16 @@ public class EnemyTest {
     }
 
     @Test
+    void arrayListContainsAnEnemyWhenEnemyCreated() {
+        Enemy e = new Enemy(20);
+        assertEquals(1,e.getEnemies().size());
+
+    }
+
+    @Test
     void toStringIsCorrect() {
         Enemy e = new Enemy(58);
-        assertEquals(" Level = 58 Health = 117 Attack damage = 29",e.toString());
+        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29",e.toString());
     }
 
 

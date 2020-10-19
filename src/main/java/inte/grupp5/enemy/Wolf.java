@@ -5,27 +5,29 @@ import java.util.Collections;
 
 
 public class Wolf extends Enemy {
-    private String enemyType;
+
+    public String wolfId;
 
     private ArrayList<Wolf> groupOfWolfes = new ArrayList <Wolf>();
     private ArrayList<Integer> random = new ArrayList<>(5);
 
-    public Wolf(int level, String enemyType) {
+    public Wolf(int level) {
         super(level);
-        if (enemyType == null || !enemyType.equals("Wolf")) {
-            throw new IllegalArgumentException("Not valid");
-        }
-        addWolvesIfBelowLevel(super.getLevel());
-        this.enemyType = enemyType;
+        addWolvesIfBelowLevel(level);
         groupOfWolfes.add(this);
+        wolfId = getWolfId();
     }
 
-    public Wolf (int level) {
+    public Wolf (int level, String wolfId) {
         super(level);
-        this.enemyType = "Wolf";
+        this.wolfId = wolfId;
     }
 
-    public ArrayList<Wolf> getGroupOfWolfes() {
+    public String getWolfId() {
+        return wolfId =  "Wolf " + groupOfWolfes.size();
+    }
+
+    public ArrayList<Wolf> getGroupOfWolves() {
         return groupOfWolfes;
     }
 
@@ -33,26 +35,18 @@ public class Wolf extends Enemy {
         return random;
     }
 
-    public String getEnemyType() {
-        return enemyType;
-    }
-
+    // Om vargen är under level 30 i första konstruktorn skapas mellan 1-5 vargar i den andra konstruktorn.
     public void addWolvesIfBelowLevel(int level) {
         if (level < 30)  {
             int random = randomWolvesGenerator();
             for(int i=0;i<random;i++) {
-                Wolf w = new Wolf(level + randomWolvesGenerator());
+                Wolf w = new Wolf(level + randomWolvesGenerator(), getWolfId());
                 groupOfWolfes.add(w);
             }
         }
     }
 
-    public void printGroupOfWolfes() {
-        Collections.shuffle(groupOfWolfes);
-        System.out.println(groupOfWolfes);
-    }
-
-
+    //Slumpar en siffra mellan 1-5.
     public int randomWolvesGenerator() {
         for(int i=1;i<5;i++)
             random.add(i);
@@ -62,6 +56,6 @@ public class Wolf extends Enemy {
 
     @Override
     public String toString() {
-        return  "Enemy type = " + getEnemyType() + " Level = " + super.getLevel() + " Health = " + super.getHealth(getLevel()) + " Attack damage = " + super.getAttackDamage(getLevel());
+        return  "Enemy type = " + getEnemyType() + ", Level = " + super.getLevel() + ", Health = " + super.getHealth(getLevel()) + ", Damage = " + super.getDamage(getLevel()) + ", Wolf ID = " + getWolfId() + "\n";
     }
 }
