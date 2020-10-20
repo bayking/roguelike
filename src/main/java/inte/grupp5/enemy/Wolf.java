@@ -8,13 +8,13 @@ public class Wolf extends Enemy {
 
     public String wolfId;
 
-    private ArrayList<Wolf> groupOfWolfes = new ArrayList <Wolf>();
+    private ArrayList<Wolf> groupOfWolves = new ArrayList <Wolf>();
     private ArrayList<Integer> random = new ArrayList<>(5);
 
     public Wolf(int level) {
         super(level);
         addWolvesIfBelowLevel(level);
-        groupOfWolfes.add(this);
+        groupOfWolves.add(this);
         wolfId = getWolfId();
     }
 
@@ -24,17 +24,16 @@ public class Wolf extends Enemy {
     }
 
     public String getWolfId() {
-        return wolfId =  "Wolf " + groupOfWolfes.size();
+        return wolfId =  "Wolf " + groupOfWolves.size();
     }
 
     public ArrayList<Wolf> getGroupOfWolves() {
-        return groupOfWolfes;
+        return groupOfWolves;
     }
 
     public ArrayList<Integer> getRandom() {
         return random;
     }
-
 
 
     // Om vargen är under level 30 i första konstruktorn skapas mellan 1-5 vargar i den andra konstruktorn.
@@ -43,7 +42,7 @@ public class Wolf extends Enemy {
             int random = randomWolvesGenerator();
             for(int i=0;i<random;i++) {
                 Wolf w = new Wolf(level + randomWolvesGenerator(), getWolfId());
-                groupOfWolfes.add(w);
+                groupOfWolves.add(w);
             }
         }
     }

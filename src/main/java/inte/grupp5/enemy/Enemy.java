@@ -35,12 +35,12 @@ public class Enemy {
         return this.getClass().getSimpleName();
     }
 
-
+    // Kan justera beroende spelarens damage eller items.
     public int getHealth(int level) {
-        return hp = (int) (ATTRIBUTES_CALC * level + 100);
+        return hp = (int) ((ATTRIBUTES_CALC * level) + 100);
     }
 
-
+   // Kan justera beroende på spelarens damage eller items.
     public int getDamage(int level) {
         return damage = (int) ((level * ATTRIBUTES_CALC) - level);
     }
@@ -49,6 +49,13 @@ public class Enemy {
         return hp;
     }
 
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
 
     public int getDamage() {
         return damage;

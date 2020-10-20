@@ -35,6 +35,8 @@ public class EnemyTest {
         assertEquals(10,e.getDamage(21));
     }
 
+
+
     @Test
     void enemyHasCorrectValues () {
         Enemy e = new Enemy(50);
