@@ -56,7 +56,7 @@ public class ChestTest {
     }
 
     @Test
-    void generatedChestHas4ItemsForMages() {
+    void generatedChestHas4Items() {
         LEVEL_25_MAGE_CHEST.generateItems(LEVEL_25_MAGE);
         assertEquals(4, LEVEL_25_MAGE_CHEST.getItems().size());
     }
