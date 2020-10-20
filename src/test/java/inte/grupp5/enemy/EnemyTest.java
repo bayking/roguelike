@@ -63,6 +63,13 @@ public class EnemyTest {
     }
 
     @Test
+    void healthIsCorrectAftertakeDamageCalled() {
+        Enemy e = new Enemy(30);
+        e.takeDamage(30);
+        assertEquals(115,e.getHealth());
+    }
+
+    @Test
     void toStringIsCorrect() {
         Enemy e = new Enemy(58);
         assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29",e.toString());

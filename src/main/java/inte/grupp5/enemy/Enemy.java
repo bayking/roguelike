@@ -23,6 +23,10 @@ public class Enemy {
         enemies.add(this);
     }
 
+    public void takeDamage(int damage) {
+        hp = hp - damage;
+    }
+
     public ArrayList<Enemy> getEnemies() {
         return enemies;
     }
@@ -33,13 +37,23 @@ public class Enemy {
 
 
     public int getHealth(int level) {
-        return (int) (ATTRIBUTES_CALC * level + 100);
+        return hp = (int) (ATTRIBUTES_CALC * level + 100);
     }
 
 
     public int getDamage(int level) {
-        return (int) ((level * ATTRIBUTES_CALC) - level);
+        return damage = (int) ((level * ATTRIBUTES_CALC) - level);
     }
+
+    public int getHealth() {
+        return hp;
+    }
+
+
+    public int getDamage() {
+        return damage;
+    }
+
 
     public int getLevel() {
         return level;

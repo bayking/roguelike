@@ -35,6 +35,8 @@ public class Wolf extends Enemy {
         return random;
     }
 
+
+
     // Om vargen är under level 30 i första konstruktorn skapas mellan 1-5 vargar i den andra konstruktorn.
     public void addWolvesIfBelowLevel(int level) {
         if (level < 30)  {
