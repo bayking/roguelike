@@ -40,6 +40,6 @@ public class Weapon extends Item {
 
     @Override
     public String toString() {
-        return null;
+        return "[" + String.format("Name: %s, Weight: %.2f, Damage: %d", getName(), getWeight(), getDamage()) + ", Weapon type: " + getWeaponType() + "]";
     }
 }

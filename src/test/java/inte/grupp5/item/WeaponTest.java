@@ -38,4 +38,9 @@ class WeaponTest {
     void rangeMatches() {
         assertEquals(1, sword5WGT10DMG.getWeaponType().getRange());
     }
+
+    @Test
+    void toStringMatches() {
+        assertEquals("[Name: Sword of might, Weight: 5.00, Damage: 10, Weapon type: SWORD]", sword5WGT10DMG.toString());
+    }
 }
