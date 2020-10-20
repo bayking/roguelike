@@ -31,28 +31,32 @@ public class ChestTest {
     @Test
     void chestGeneratesWeaponWithDamageBasedOnLevelForMages() {
         LEVEL_5_MAGE_CHEST.generateItems(LEVEL_5_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 5, Weapon type: STAFF]", LEVEL_5_MAGE_CHEST.getItems().get(3).toString());
-        // TODO: Workaround to check damage, since value is calculated by adding damage and weight.
-        assertEquals(8, LEVEL_5_MAGE_CHEST.getItems().get(3).getValue());
-
+        Weapon LEVEL_5_MAGE_WEAPON = (Weapon) LEVEL_5_MAGE_CHEST.getItems().get(3);
+        assertEquals(5, LEVEL_5_MAGE_WEAPON.getDamage());
 
         LEVEL_15_MAGE_CHEST.generateItems(LEVEL_15_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 10, Weapon type: STAFF]", LEVEL_15_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_15_MAGE_WEAPON = (Weapon) LEVEL_15_MAGE_CHEST.getItems().get(3);
+        assertEquals(10, LEVEL_15_MAGE_WEAPON.getDamage());
 
         LEVEL_25_MAGE_CHEST.generateItems(LEVEL_25_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 20, Weapon type: STAFF]", LEVEL_25_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_25_MAGE_WEAPON = (Weapon) LEVEL_25_MAGE_CHEST.getItems().get(3);
+        assertEquals(20, LEVEL_25_MAGE_WEAPON.getDamage());
 
         LEVEL_35_MAGE_CHEST.generateItems(LEVEL_35_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 30, Weapon type: STAFF]", LEVEL_35_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_35_MAGE_WEAPON = (Weapon) LEVEL_35_MAGE_CHEST.getItems().get(3);
+        assertEquals(30, LEVEL_35_MAGE_WEAPON.getDamage());
 
         LEVEL_45_MAGE_CHEST.generateItems(LEVEL_45_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 40, Weapon type: STAFF]", LEVEL_45_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_45_MAGE_WEAPON = (Weapon) LEVEL_45_MAGE_CHEST.getItems().get(3);
+        assertEquals(40, LEVEL_45_MAGE_WEAPON.getDamage());
 
         LEVEL_55_MAGE_CHEST.generateItems(LEVEL_55_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 50, Weapon type: STAFF]", LEVEL_55_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_55_MAGE_WEAPON = (Weapon) LEVEL_55_MAGE_CHEST.getItems().get(3);
+        assertEquals(50, LEVEL_55_MAGE_WEAPON.getDamage());
 
         LEVEL_60_MAGE_CHEST.generateItems(LEVEL_60_MAGE);
-        assertEquals("[Name: Staff, Weight: 3.00, Damage: 60, Weapon type: STAFF]", LEVEL_60_MAGE_CHEST.getItems().get(3).toString());
+        Weapon LEVEL_60_MAGE_WEAPON = (Weapon) LEVEL_60_MAGE_CHEST.getItems().get(3);
+        assertEquals(60, LEVEL_60_MAGE_WEAPON.getDamage());
     }
 
     @Test

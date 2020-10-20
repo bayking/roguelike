@@ -97,7 +97,6 @@ public class Chest {
     }
 
     // Todo: This method is public until openChest() gets implemented in Player.
-    //  Change to private when that happens.
     public ArrayList<Item> getItems() {
         return items;
     }
