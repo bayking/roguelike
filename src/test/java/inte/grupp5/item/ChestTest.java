@@ -60,8 +60,39 @@ public class ChestTest {
     }
 
     @Test
-    void generatedChestHas4Items() {
+    void chestGeneratesLightArmorWithArmorRatingBasedOnLevelForMages() {
+        LEVEL_5_MAGE_CHEST.generateItems(LEVEL_5_MAGE);
+        Armor LEVEL_5_MAGE_ARMOR = (Armor) LEVEL_5_MAGE_CHEST.getItems().get(4);
+        assertEquals(5, LEVEL_5_MAGE_ARMOR.getArmorRating());
+
+        LEVEL_15_MAGE_CHEST.generateItems(LEVEL_15_MAGE);
+        Armor LEVEL_15_MAGE_ARMOR = (Armor) LEVEL_15_MAGE_CHEST.getItems().get(4);
+        assertEquals(10, LEVEL_15_MAGE_ARMOR.getArmorRating());
+
         LEVEL_25_MAGE_CHEST.generateItems(LEVEL_25_MAGE);
-        assertEquals(4, LEVEL_25_MAGE_CHEST.getItems().size());
+        Armor LEVEL_25_MAGE_ARMOR = (Armor) LEVEL_25_MAGE_CHEST.getItems().get(4);
+        assertEquals(20, LEVEL_25_MAGE_ARMOR.getArmorRating());
+
+        LEVEL_35_MAGE_CHEST.generateItems(LEVEL_35_MAGE);
+        Armor LEVEL_35_MAGE_ARMOR = (Armor) LEVEL_35_MAGE_CHEST.getItems().get(4);
+        assertEquals(30, LEVEL_35_MAGE_ARMOR.getArmorRating());
+
+        LEVEL_45_MAGE_CHEST.generateItems(LEVEL_45_MAGE);
+        Armor LEVEL_45_MAGE_ARMOR = (Armor) LEVEL_45_MAGE_CHEST.getItems().get(4);
+        assertEquals(40, LEVEL_45_MAGE_ARMOR.getArmorRating());
+
+        LEVEL_55_MAGE_CHEST.generateItems(LEVEL_55_MAGE);
+        Armor LEVEL_55_MAGE_ARMOR = (Armor) LEVEL_55_MAGE_CHEST.getItems().get(4);
+        assertEquals(50, LEVEL_55_MAGE_ARMOR.getArmorRating());
+
+        LEVEL_60_MAGE_CHEST.generateItems(LEVEL_60_MAGE);
+        Armor LEVEL_60_MAGE_ARMOR = (Armor) LEVEL_60_MAGE_CHEST.getItems().get(4);
+        assertEquals(60, LEVEL_60_MAGE_ARMOR.getArmorRating());
+    }
+
+    @Test
+    void generatedChestHas5Items() {
+        LEVEL_25_MAGE_CHEST.generateItems(LEVEL_25_MAGE);
+        assertEquals(5, LEVEL_25_MAGE_CHEST.getItems().size());
     }
 }
