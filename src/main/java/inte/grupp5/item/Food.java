@@ -19,7 +19,7 @@ public class Food extends Consumable {
 
     @Override
     public String toString() {
-        return null;
+        return "[" + String.format("Name: %s, Weight: %.2f, Healthbonus: %d", getName(), getWeight(), getHealthBonus()) + "]";
     }
 
     public int getHealthBonus() {

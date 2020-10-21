@@ -35,6 +35,7 @@ class PotionTest {
     void valueMatches() {
         assertEquals(20, potionOfHealth.getValue());
         assertEquals(40, potionOfLevel.getValue());
+        assertEquals(20, potionOfMana.getValue());
     }
 
     @Test

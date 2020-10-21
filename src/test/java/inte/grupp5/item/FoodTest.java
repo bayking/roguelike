@@ -17,4 +17,14 @@ class FoodTest {
     void healthBonusMatches() {
         assertEquals(50, steak50Health.getHealthBonus());
     }
+
+    @Test
+    void toStringMatches() {
+        assertEquals("[Name: Steak, Weight: 1.00, Healthbonus: 50]", steak50Health.toString());
+    }
+
+    @Test
+    void valueMatches() {
+        assertEquals(50, steak50Health.getValue());
+    }
 }

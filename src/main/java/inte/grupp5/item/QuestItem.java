@@ -8,11 +8,12 @@ public class QuestItem extends Item {
 
     @Override
     public double getValue() {
-        return 0;
+        int QUEST_ITEM_VALUE = 100;
+        return QUEST_ITEM_VALUE;
     }
 
     @Override
     public String toString() {
-        return null;
+        return "[" + String.format("Name: %s, Weight: %.2f, Value: %.2f", getName(), getWeight(), getValue()) + "]";
     }
 }
