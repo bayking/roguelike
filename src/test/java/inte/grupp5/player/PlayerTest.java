@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
 
-    Player player = new Player("Tester", new Mage(), 1);
+    Player player = new Player("Tester", new Mage("mage"), 1);
 
     @Test
     void setCurrentHealthPointsZero() {
@@ -84,7 +84,7 @@ class PlayerTest {
 
     @Test
     void getKlass() {
-        Mage mage = new Mage();
+        Mage mage = new Mage("mage");
         assertEquals(mage, player.getKlass());
     }
 

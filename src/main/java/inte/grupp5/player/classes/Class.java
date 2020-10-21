@@ -3,12 +3,24 @@ package inte.grupp5.player.classes;
 import java.util.Objects;
 
 public abstract class  Class {
-    private String name;
+    private final String name;
     private int[] healthPerLvl = new int[60];
     private int[] manaPerLvl = new int[60];
+    protected int startingHealth;
+    protected int startingMana;
     // TODO: private ArrayList<Spell> spells
 
-    void initArrays(int health, int mana) {
+    public Class(String name) {
+        this.name = name;
+    }
+
+    public Class() {
+        this.name = "test";
+        this.startingHealth = 50;
+        this.startingMana = 50;
+    }
+
+    protected void initArrays(int health, int mana) {
         if (health <= 0 || mana <= 0) {
             throw new IllegalArgumentException();
         }
@@ -18,6 +30,22 @@ public abstract class  Class {
             health = health+100;
             mana = mana+100;
         }
+    }
+
+    public int getStartingHealth() {
+        return startingHealth;
+    }
+
+    public void setStartingHealth(int startingHealth) {
+        this.startingHealth = startingHealth;
+    }
+
+    public int getStartingMana() {
+        return startingMana;
+    }
+
+    public void setStartingMana(int startingMana) {
+        this.startingMana = startingMana;
     }
 
     public int getHealth(int level) {
