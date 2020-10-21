@@ -3,7 +3,7 @@ package inte.grupp5.player.classes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ClassTest {
     Class c1 = new Class() {
@@ -66,5 +66,41 @@ class ClassTest {
         };
         c2.initArrays(100, 100);
         assertEquals(6000, c2.getHealth(60));
+    }
+
+    @Test
+    void testEquals() {
+        Mage mage = new Mage("mage");
+        Mage mage1 = new Mage("mage");
+        assertEquals(mage1, mage);
+    }
+
+    @Test
+    void testHashCode() {
+        Mage mage = new Mage("mage");
+        Mage mage1 = new Mage("mage");
+        assertEquals(mage1.hashCode(), mage.hashCode());
+    }
+
+    @Test
+    void getStartingHealth() {
+        assertEquals(50, c1.getStartingHealth());
+    }
+
+    @Test
+    void setStartingHealth() {
+        c1.setStartingHealth(200);
+        assertEquals(200, c1.getStartingHealth());
+    }
+
+    @Test
+    void getStartingMana() {
+        assertEquals(50, c1.getStartingMana());
+    }
+
+    @Test
+    void setStartingMana() {
+        c1.setStartingMana(200);
+        assertEquals(200, c1.getStartingMana());
     }
 }
