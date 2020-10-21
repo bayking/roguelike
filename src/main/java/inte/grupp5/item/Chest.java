@@ -2,6 +2,7 @@ package inte.grupp5.item;
 
 import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
+import inte.grupp5.player.classes.Paladin;
 
 import java.util.ArrayList;
 
@@ -102,7 +103,7 @@ public class Chest {
                 items.add(new Armor
                         (LIGHT_ARMOR_STR, LIGHT_ARMOR_WEIGHT, LGT_ARM_RTG_LVL_60, Armor.ArmorType.LIGHT_ARMOR));
             }
-        } else {
+        } else if (player.getKlass() instanceof Paladin) {
             // Adds extra health potion if you are not a mage.
             items.add(new Potion(HEALTH_POTION_STR, 2, Potion.PotionType.HEALTH_POTION));
 
@@ -128,7 +129,7 @@ public class Chest {
                 items.add(new Weapon
                         (SWORD_STR, SWORD_WEIGHT, WEAPON_DMG_LVL_40, Weapon.WeaponType.SWORD));
                 items.add(new Armor(HEAVY_ARMOR_STR, HEAVY_ARMOR_WEIGHT, HVY_ARM_RTG_LVL_40, Armor.ArmorType.HEAVY_ARMOR));
-            } else if (player.getLevel() > 50 && player.getLevel() <= 60) {
+            } else if (player.getLevel() > 50 && player.getLevel() < 60) {
                 items.add(new Weapon
                         (SWORD_STR, SWORD_WEIGHT, WEAPON_DMG_LVL_50, Weapon.WeaponType.SWORD));
                 items.add(new Armor(HEAVY_ARMOR_STR, HEAVY_ARMOR_WEIGHT, HVY_ARM_RTG_LVL_50, Armor.ArmorType.HEAVY_ARMOR));
