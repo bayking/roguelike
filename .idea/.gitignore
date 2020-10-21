@@ -28,6 +28,11 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+# Conflicted merge, trying to ignore.
+.gradle/6.3/executionHistory/executionHistory.lock
+.gradle/6.3/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
