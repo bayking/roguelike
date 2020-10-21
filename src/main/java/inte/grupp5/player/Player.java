@@ -5,9 +5,10 @@ import inte.grupp5.player.classes.Class;
 import java.util.ArrayList;
 
 // TODO: Spells, Interaction with consumables.
+// Tests not done for some mana methods as they are equivalent to the hp methods
 public class Player {
-    public static final int MAXLEVEL = 60;
-    public static final int MINLEVEL = 1;
+    public static final int MAX_LEVEL = 60;
+    public static final int MIN_LEVEL = 1;
     private String name;
     //private final Race race;
     private final Class klass;
@@ -29,7 +30,9 @@ public class Player {
         System.out.println("Insufficient Mana");
     }
 
-    private boolean hasMana(int manaCost) {
+    public boolean hasManaForSpell(int manaCost) {
+        if (manaCost < 0)
+            throw new IllegalArgumentException("Mana cost can't be less than 0.");
         if (currentManaPoints < manaCost) {
             insufficientMana();
             return false;
@@ -42,7 +45,7 @@ public class Player {
             System.out.println("Health is full");
             return;
         }
-        if (hasMana(10)) {
+        if (hasManaForSpell(10)) {
             if (currentHealthPoints <= maxHealthPoints-5)
                 currentHealthPoints-=5;
             else {
@@ -84,10 +87,14 @@ public class Player {
     }
 
     public void setMaxHealthPoints(int maxHealthPoints) {
+        if (maxHealthPoints < 1)
+            throw new IllegalArgumentException("Value can't be less than 1");
         this.maxHealthPoints = maxHealthPoints;
     }
 
     public void setMaxManaPoints(int maxManaPoints) {
+        if (maxManaPoints < 1)
+            throw new IllegalArgumentException("Value can't be less than 1");
         this.maxManaPoints = maxManaPoints;
     }
 
@@ -112,7 +119,7 @@ public class Player {
     }
 
     public void setLevel(int level) {
-        if (level > MAXLEVEL || level < MINLEVEL)
+        if (level > MAX_LEVEL || level < MIN_LEVEL)
             throw new IllegalArgumentException("Level must be in range 1-60");
         this.level = level;
     }
