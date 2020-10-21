@@ -33,7 +33,7 @@ public abstract class  Class {
             return manaPerLvl[level];
         return manaPerLvl[level-1];
     }
-
+  
     @Override
     public boolean equals(Object o) {
         if (o == this)
