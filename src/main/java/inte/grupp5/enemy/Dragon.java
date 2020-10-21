@@ -12,6 +12,14 @@ public class Dragon extends Enemy {
         return mana;
     }
 
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public void itemUsedOnDragon(int damage) {
+        super.takeDamage(damage);
+    }
+
     public void healItself() {
         setHp(getHealth() + 25);
     }
@@ -19,12 +27,16 @@ public class Dragon extends Enemy {
     public void breathFireAttack () {
         if (mana > 25 ) {
             setDamage(getDamage() + 25);
-            mana = mana -25;
+            mana = getMana() -25;
         }
         else {
             throw new IllegalArgumentException("Should not be called");
         }
     }
+
+
+
+
 
 
 
