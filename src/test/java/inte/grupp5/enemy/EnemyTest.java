@@ -57,12 +57,7 @@ public class EnemyTest {
         assertEquals(20,e.getLevel());
     }
 
-    @Test
-    void arrayListContainsAnEnemyWhenEnemyCreated() {
-        Enemy e = new Enemy(20);
-        assertEquals(1,e.getEnemies().size());
 
-    }
 
     @Test
     void healthIsCorrectAftertakeDamageCalled() {
@@ -74,7 +69,7 @@ public class EnemyTest {
     @Test
     void toStringIsCorrect() {
         Enemy e = new Enemy(58);
-        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29",e.toString());
+        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29," + " Enemy ID = " + e.getEnemyID(), e.toString());
     }
 
 

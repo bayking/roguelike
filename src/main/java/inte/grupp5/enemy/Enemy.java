@@ -1,16 +1,16 @@
 package inte.grupp5.enemy;
 
-import java.util.ArrayList;
-
 public class Enemy {
+    private static int ID_COUNTER = 1;
+
+    private Enemy enemy;
     private int hp;
     private int level;
     private int damage;
+    private int enemyID;
     private String enemyType;
 
-    private ArrayList<Enemy> enemies = new ArrayList <Enemy>();
     public static final double ATTRIBUTES_CALC = 1.5;
-
 
     public Enemy(int level) {
         if (level < 0 || level > 999)  {
@@ -20,15 +20,20 @@ public class Enemy {
         this.hp = getHealth(level);
         this.damage = getDamage(level);
         this.enemyType = getEnemyType();
-        enemies.add(this);
+        this.enemyID = ID_COUNTER;
+        this.enemy = this;
+        ID_COUNTER ++;
     }
 
+    public Enemy getEnemy() {
+        return enemy;
+    }
+
+    public int getEnemyID() {
+        return enemyID;
+    }
     public void takeDamage(int damage) {
         hp = hp - damage;
-    }
-
-    public ArrayList<Enemy> getEnemies() {
-        return enemies;
     }
 
     public String getEnemyType() {
@@ -40,7 +45,7 @@ public class Enemy {
         return hp = (int) ((ATTRIBUTES_CALC * level) + 100);
     }
 
-   // Kan justera beroende på spelarens damage eller items.
+    // Kan justera beroende på spelarens damage eller items.
     public int getDamage(int level) {
         return damage = (int) ((level * ATTRIBUTES_CALC) - level);
     }
@@ -61,13 +66,12 @@ public class Enemy {
         return damage;
     }
 
-
     public int getLevel() {
         return level;
     }
 
     @Override
     public String toString() {
-        return " Enemy type = " + enemyType + ", Level = " + level + ", Health = " + hp + ", Damage = " + damage;
+        return " Enemy type = " + enemyType + ", Level = " + level + ", Health = " + hp + ", Damage = " + damage + ", Enemy ID = " + enemyID ;
     }
 }
