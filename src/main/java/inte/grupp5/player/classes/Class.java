@@ -1,5 +1,8 @@
 package inte.grupp5.player.classes;
 
+import inte.grupp5.player.spell.Spell;
+
+import java.util.ArrayList;
 import java.util.Objects;
 
 public abstract class  Class {
@@ -8,7 +11,7 @@ public abstract class  Class {
     private int[] manaPerLvl = new int[60];
     protected int startingHealth;
     protected int startingMana;
-    // TODO: private ArrayList<Spell> spells
+    protected ArrayList<Spell> spells = new ArrayList<>();
 
     public Class(String name) {
         this.name = name;
@@ -30,6 +33,10 @@ public abstract class  Class {
             health = health+100;
             mana = mana+100;
         }
+    }
+
+    public ArrayList<Spell> getSpells() {
+        return spells;
     }
 
     public int getStartingHealth() {
@@ -55,10 +62,8 @@ public abstract class  Class {
     }
 
     public int getMana(int level) {
-        if (level < 0 || level > 60)
+        if (level <= 0 || level > 60)
             throw new IllegalArgumentException("Level must be in range 1-60");
-        if (level == 0)
-            return manaPerLvl[level];
         return manaPerLvl[level-1];
     }
   
