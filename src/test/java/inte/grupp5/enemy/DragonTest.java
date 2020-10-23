@@ -17,6 +17,8 @@ public class DragonTest {
         assertEquals(200,d.getHealth());
     }
 
+
+
     @Test
     void breathFireAttackHasCorrectValue () {
         Dragon d = new Dragon(51);
@@ -39,6 +41,14 @@ public class DragonTest {
     void constructorThrowsIfLevelAboveCertainValue () {
         assertThrows(IllegalArgumentException.class, () -> {
             new Dragon(1000);
+        });
+    }
+
+
+    @Test
+    void constructorThrowsIfLevelBelowCertainValue () {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Dragon(-1);
         });
     }
 
