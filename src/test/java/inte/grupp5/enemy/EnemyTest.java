@@ -9,12 +9,54 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EnemyTest {
 
+
     @Test
-    void constructorThrowsIfNegativeValue () {
+    void getEnemyReturnsRightEnemy () {
+        Enemy e = new Enemy(23);
+        assertEquals(23,e.getEnemy().getLevel());
+    }
+
+    @Test
+    void getLevelIsCorrect () {
+        Enemy e = new Enemy(26);
+        assertEquals(26,e.getLevel());
+    }
+
+    @Test
+    void setHpIsCorrectValueIfNegative () {
+        Enemy e = new Enemy(50);
+        e.setHp(-1);
+        assertEquals(0,e.getHealth());
+    }
+
+    @Test
+    void setHpIsCorrectValue () {
+        Enemy e = new Enemy(50);
+        e.setHp(10);
+        assertEquals(10,e.getHealth());
+    }
+
+    @Test
+    void setDamageThrowsIfNegativeValue () {
         assertThrows(IllegalArgumentException.class, () -> {
-            new Enemy(-1);
+            Enemy e = new Enemy(10);
+            e.setDamage(-1);
         });
     }
+
+    @Test
+    void setDamageSetsCorrectValue () {
+        Enemy e = new Enemy(50);
+        e.setDamage(11);
+        assertEquals(11,e.getDamage());
+    }
+
+    @Test
+    void getDamageReturnsCorrectValue() {
+        Enemy e = new Enemy(10);
+        assertEquals(5,e.getDamage());
+    }
+
 
     @Test
     void constructorThrowsIfLevelAboveCertainValue () {

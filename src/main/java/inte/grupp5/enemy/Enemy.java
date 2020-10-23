@@ -55,17 +55,23 @@ public class Enemy {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp < 0) {
+            this.hp = 0;
+        }
+        else
+            this.hp = hp;
     }
 
     public void setDamage(int damage) {
+        if (damage < 0) {
+            throw new IllegalArgumentException("Damage can't be negative");
+        }
         this.damage = damage;
     }
 
     public int getDamage() {
         return damage;
     }
-
     public int getLevel() {
         return level;
     }

@@ -9,7 +9,8 @@ public class EnemyList {
         enemies = new ArrayList <>();
     }
 
-    public void addEnemy(Enemy enemy){
+    public void addEnemy(Enemy enemy) {
+
         this.enemies.add(enemy);
     }
 

@@ -16,6 +16,7 @@ public class Dragon extends Enemy {
         this.mana = mana;
     }
 
+    //Testa med combat klasserna
     public void itemUsedOnDragon(int damage) {
         super.takeDamage(damage);
     }
@@ -33,10 +34,6 @@ public class Dragon extends Enemy {
             throw new IllegalArgumentException("Should not be called");
         }
     }
-
-
-
-
 
 
 
