@@ -1,19 +1,18 @@
 package inte.grupp5.player;
-import inte.grupp5.item.Consumable;
+
 import inte.grupp5.player.classes.Class;
+import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
 
-// TODO: Spells, Interaction with consumables.
-// Tests not done for some mana methods as they are equivalent to the hp methods
+// TODO: Interaction with consumables.
 public class Player {
     public static final int MAX_LEVEL = 60;
     public static final int MIN_LEVEL = 1;
     private String name;
-    //private final Race race;
     private final Class klass;
     private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level;
-    private ArrayList<Consumable> consumables;
+    private ArrayList<Spell> spells;
 
     public Player(String name, Class klass, int level) {
         setLevel(level);
@@ -24,7 +23,7 @@ public class Player {
         maxManaPoints = klass.getMana(level);
         currentHealthPoints = maxHealthPoints;
         currentManaPoints = maxManaPoints;
-        consumables = new ArrayList<>();
+        spells = klass.getSpells();
     }
     private void insufficientMana() {
         System.out.println("Insufficient Mana");
@@ -40,13 +39,13 @@ public class Player {
         return true;
     }
 
-    public boolean heal() {
+    public boolean heal(int amount) {
         if (currentHealthPoints == maxHealthPoints) {
             System.out.println("Health is full");
         }
         else if (hasManaForSpell(10)) {
-            if (currentHealthPoints <= maxHealthPoints-20)
-                currentHealthPoints +=20;
+            if (currentHealthPoints <= maxHealthPoints-amount)
+                currentHealthPoints +=amount;
             else {
                 currentHealthPoints = maxHealthPoints;
             }
@@ -58,10 +57,6 @@ public class Player {
     public String getName() {
         return name;
     }
-
-    /*public Race getRace() {
-        return race;
-    }*/
 
     public Class getKlass() {
         return klass;
@@ -123,5 +118,9 @@ public class Player {
         if (level > MAX_LEVEL || level < MIN_LEVEL)
             throw new IllegalArgumentException("Level must be in range 1-60");
         this.level = level;
+    }
+
+    public boolean castSpell(Spell spell) {
+        return spell.cast(this);
     }
 }

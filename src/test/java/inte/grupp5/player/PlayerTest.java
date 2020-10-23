@@ -1,6 +1,7 @@
 package inte.grupp5.player;
 
 import inte.grupp5.player.classes.Mage;
+import inte.grupp5.player.spell.InvokeMana;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -54,22 +55,22 @@ class PlayerTest {
 
     @Test
     void healHealthIsFull() {
-        player.heal();
+        player.heal(20);
         assertEquals(100, player.getCurrentHealthPoints());
-        assertFalse(player.heal());
+        assertFalse(player.heal(20));
     }
 
     @Test
     void healHasManaAndLowHP() {
         player.setCurrentHealthPoints(10);
-        assertTrue(player.heal());
+        assertTrue(player.heal(20));
         assertEquals(30, player.getCurrentHealthPoints());
     }
 
     @Test
     void healHasManaButCloseToMaxHP() {
         player.setCurrentHealthPoints(player.getMaxHealthPoints()-8);
-        assertTrue(player.heal());
+        assertTrue(player.heal(20));
         assertEquals(player.getMaxHealthPoints(), player.getCurrentHealthPoints());
     }
 
@@ -187,5 +188,14 @@ class PlayerTest {
     void setMaxManaPointsPositive() {
         player.setMaxManaPoints(30000);
         assertEquals(30000, player.getMaxManaPoints());
+    }
+
+    @Test
+    void castSpell() {
+        Player caster = new Player("caster", new Mage("mage"), 10);
+        InvokeMana invokeMana = new InvokeMana();
+        caster.setCurrentManaPoints(5);
+        assertTrue(caster.castSpell(invokeMana));
+        assertEquals(caster.getCurrentManaPoints(), caster.getMaxManaPoints());
     }
 }

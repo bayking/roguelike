@@ -3,8 +3,7 @@ package inte.grupp5.player.classes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ClassTest {
     Class c1 = new Class() {
@@ -114,10 +113,17 @@ class ClassTest {
     }
 
     @Test
-    void testEqualsNotSameClass() {
-        String str = "mage";
+    void testEqualsNotSameClassSameParent() {
+        Paladin paladin = new Paladin("paladin");
         Mage mage = new Mage("mage");
-        assertNotEquals(str, mage);
+        assertNotEquals(paladin, mage);
+    }
+
+    @Test
+    void testEqualsNotSameClass() {
+        String str = "str";
+        Mage mage = new Mage("mage");
+        assertFalse(mage.equals(str));
     }
 
     @Test
