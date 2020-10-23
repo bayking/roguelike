@@ -1,9 +1,12 @@
 package inte.grupp5.item;
 
 import inte.grupp5.player.Player;
+import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -143,5 +146,22 @@ public class ChestTest {
     void generatedChestHas5Items() {
         LEVEL_25_MAGE_CHEST.generateItems(LEVEL_25_MAGE);
         assertEquals(5, LEVEL_25_MAGE_CHEST.getItems().size());
+    }
+
+    @Test
+    void methodOpenChestGeneratesItemsAndReturnsThemAsArrayList() {
+        ArrayList<Item> testItems = new ArrayList<>();
+        testItems.add(new Potion
+                ("Health potion", 2, Potion.PotionType.HEALTH_POTION));
+        testItems.add(new Potion
+                ("Level potion", 1, Potion.PotionType.LEVEL_POTION));
+        testItems.add(new Potion
+                ("Mana potion", 2, Potion.PotionType.MANA_POTION));
+        testItems.add(new Weapon
+                ("Staff", 3, 5, Weapon.WeaponType.STAFF));
+        testItems.add(new Armor
+                ("Light armor", 7, 5, Armor.ArmorType.LIGHT_ARMOR));
+
+        assertEquals(testItems.toString(), LEVEL_5_MAGE_CHEST.openChest(LEVEL_5_MAGE).toString());
     }
 }

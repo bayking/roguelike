@@ -10,7 +10,6 @@ public class Chest {
 
     private ArrayList<Item> items = new ArrayList<>();
 
-    // TODO: Implement for all the Player Classes.
     public void generateItems(Player player) {
 
         // Variable declaration
@@ -60,13 +59,14 @@ public class Chest {
         items.add(new Potion(HEALTH_POTION_STR, 2, Potion.PotionType.HEALTH_POTION));
         items.add(new Potion(LEVEL_POTION_STR, 1, Potion.PotionType.LEVEL_POTION));
 
+        // If player is of class Mage
         if (player.getKlass() instanceof Mage) {
 
             // Every chest has a mana potion when you are a mage.
             items.add(new Potion(MANA_POTION_STR, 2, Potion.PotionType.MANA_POTION));
 
-            // Based on player level, adds Staff with different damage,
-            // and Light armor with different armor rating.
+            // Based on player level, adds Staff with increasing damage,
+            // and Light armor with increasing armor rating.
             if (player.getLevel() <= 10) {
                 items.add(new Weapon
                         (STAFF_STR, STAFF_WEIGHT, WEAPON_DMG_LVL_1, Weapon.WeaponType.STAFF));
@@ -104,11 +104,12 @@ public class Chest {
                         (LIGHT_ARMOR_STR, LIGHT_ARMOR_WEIGHT, LGT_ARM_RTG_LVL_60, Armor.ArmorType.LIGHT_ARMOR));
             }
         } else if (player.getKlass() instanceof Paladin) {
+
             // Adds extra health potion if you are not a mage.
             items.add(new Potion(HEALTH_POTION_STR, 2, Potion.PotionType.HEALTH_POTION));
 
-            // Based on player level, adds Sword with different damage,
-            // and Heavy armor with different armor rating.
+            // Based on player level, adds Sword with increasing damage,
+            // and Heavy armor with increasing armor rating.
             if (player.getLevel() <= 10) {
                 items.add(new Weapon
                         (SWORD_STR, SWORD_WEIGHT, WEAPON_DMG_LVL_1, Weapon.WeaponType.SWORD));
