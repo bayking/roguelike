@@ -13,12 +13,6 @@ public class EnemyListTest {
 
     EnemyList e = new EnemyList();
 
-
-    //   @BeforeEach
-    //void setUp() {
-
-    //}
-
     @Test
     void oneEnemy() {
         Enemy enemy = new Enemy(50);
@@ -77,6 +71,15 @@ public class EnemyListTest {
     @Test void addEnemyCantBeNull() {
 
     }
+
+
+
+
+
+
+
+
+
 
 
 

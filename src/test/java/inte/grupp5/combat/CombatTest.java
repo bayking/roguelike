@@ -44,7 +44,7 @@ public class CombatTest {
         enemyList.addList(wolf.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(),null);
         assertNotNull(combat.getOpponents());
-        assertNotNull(combat.getEnemyForCombat());
+        assertNotNull(combat.getEnemy());
     }
 
     @Disabled

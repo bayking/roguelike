@@ -1,9 +1,7 @@
 package inte.grupp5.combat;
-
-// Test note
-
 import inte.grupp5.enemy.Enemy;
 import inte.grupp5.enemy.Wolf;
+import inte.grupp5.item.Consumable;
 import inte.grupp5.player.Player;
 
 import java.util.ArrayList;
@@ -20,6 +18,8 @@ public class Combat {
     private ArrayList<Enemy> opponents = new ArrayList<Enemy>();
     private Player player;
     private Enemy enemy;
+    private int defeated;
+    Consumable itemsUsed;
 
 
     // Om ingen spelare så möter enemy varandra.
@@ -43,28 +43,34 @@ public class Combat {
         this.player = player;
     }
 
+    public Enemy getEnemy() {
+        return enemy;
+    }
+
     public ArrayList<Enemy> getOpponents() {
         return opponents;
     }
 
-    public Enemy getEnemyForCombat() {
-        return enemy;
+    public Player getPlayer() {
+        return player;
     }
-
 
     public void addEnemyListToOpponents(ArrayList<Enemy> enemy) {
         opponents.addAll(enemy);
     }
 
     public Enemy strongestEnemy(ArrayList<Enemy> opponents) {
-        return  enemy = opponents.stream()
+        return   enemy = opponents.stream()
                 .max(Comparator.comparingInt(Enemy::getLevel))
                 .get();
     }
 
-    public void startCombat(Enemy e, Player player, ArrayList<Enemy> opponents) {
-        StartCombat startCombat = new StartCombat();
+    public void startCombat (Enemy enemy, Player player,ArrayList<Enemy> opponents ) {
+        if (enemy == null) {
+            for (Enemy e: opponents) {
+                StartCombat startCombat = new StartCombat(e.getEnemy(),player);
+                startCombat.initiziateCombat();
+            }
+        }
     }
-
-
 }
