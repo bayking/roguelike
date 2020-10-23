@@ -8,8 +8,7 @@ public class QuestItem extends Item {
 
     @Override
     public double getValue() {
-        int QUEST_ITEM_VALUE = 100;
-        return QUEST_ITEM_VALUE;
+        return 100;
     }
 
     @Override

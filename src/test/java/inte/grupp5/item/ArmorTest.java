@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArmorTest {
 
-    Armor helmet = new Armor("Helmet", 10, 7, Armor.ArmorType.HEAVY_ARMOR);
-    Armor chestPlate = new Armor("Chest plate", 20, 22, Armor.ArmorType.LIGHT_ARMOR);
+    final Armor helmet = new Armor("Helmet", 10, 7, Armor.ArmorType.HEAVY_ARMOR);
+    final Armor chestPlate = new Armor("Chest plate", 20, 22, Armor.ArmorType.LIGHT_ARMOR);
 
     @Test
     void armorTypeMatches() {

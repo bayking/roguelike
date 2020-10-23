@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Chest {
 
-    private ArrayList<Item> items = new ArrayList<>();
+    private final ArrayList<Item> items = new ArrayList<>();
 
     public void generateItems(Player player) {
 
