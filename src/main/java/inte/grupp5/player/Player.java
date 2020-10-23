@@ -40,18 +40,19 @@ public class Player {
         return true;
     }
 
-    public void heal() {
+    public boolean heal() {
         if (currentHealthPoints == maxHealthPoints) {
             System.out.println("Health is full");
-            return;
         }
-        if (hasManaForSpell(10)) {
-            if (currentHealthPoints <= maxHealthPoints-5)
-                currentHealthPoints-=5;
+        else if (hasManaForSpell(10)) {
+            if (currentHealthPoints <= maxHealthPoints-20)
+                currentHealthPoints +=20;
             else {
                 currentHealthPoints = maxHealthPoints;
             }
+            return true;
         }
+        return false;
     }
 
     public String getName() {
