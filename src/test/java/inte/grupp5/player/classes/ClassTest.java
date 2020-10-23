@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class ClassTest {
     Class c1 = new Class() {
@@ -38,6 +39,37 @@ class ClassTest {
     }
 
     @Test
+    void getManaWithZero() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> c1.getMana(0));
+    }
+
+    @Test
+    void getManaWithNegative() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> c1.getMana(-1));
+    }
+
+    @Test
+    void getManaWithAboveSixty() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> c1.getMana(61));
+    }
+
+    @Test
+    void getManaWithOne() {
+        Class c2 = new Class() {
+        };
+        c2.initArrays(100, 100);
+        assertEquals(100, c2.getMana(1));
+    }
+
+    @Test
+    void getManaWithSixty() {
+        Class c2 = new Class() {
+        };
+        c2.initArrays(100, 100);
+        assertEquals(6000, c2.getMana(60));
+    }
+
+    @Test
     void getHealthWithZero() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> c1.getHealth(0));
     }
@@ -69,10 +101,23 @@ class ClassTest {
     }
 
     @Test
-    void testEquals() {
+    void testEqualsDifferentInstances() {
         Mage mage = new Mage("mage");
         Mage mage1 = new Mage("mage");
         assertEquals(mage1, mage);
+    }
+
+    @Test
+    void testEqualsSameInstance() {
+        Mage mage = new Mage("mage");
+        assertEquals(mage, mage);
+    }
+
+    @Test
+    void testEqualsNotSameClass() {
+        String str = "mage";
+        Mage mage = new Mage("mage");
+        assertNotEquals(str, mage);
     }
 
     @Test

@@ -55,10 +55,8 @@ public abstract class  Class {
     }
 
     public int getMana(int level) {
-        if (level < 0 || level > 60)
+        if (level <= 0 || level > 60)
             throw new IllegalArgumentException("Level must be in range 1-60");
-        if (level == 0)
-            return manaPerLvl[level];
         return manaPerLvl[level-1];
     }
   
