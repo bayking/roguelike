@@ -1,0 +1,159 @@
+Index: src/main/java/inte/grupp5/item/Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.item;\r\n\r\npublic class Food extends Consumable{\r\n\r\n    public Food(String name, int healthBonus) {\r\n        super(name, healthBonus);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/inte/grupp5/item/Food.java	(revision 02bbfc716f65cf96211d34a8c652d4061bb425b5)
++++ src/main/java/inte/grupp5/item/Food.java	(date 1603434871315)
+@@ -1,8 +1,16 @@
+ package inte.grupp5.item;
+ 
+-public class Food extends Consumable{
++public class Food extends Consumable {
+ 
++    private final int healthBonus;
++
+     public Food(String name, int healthBonus) {
+-        super(name, healthBonus);
++        super(name);
++        this.healthBonus = healthBonus;
+     }
++
++    public int getHealthBonus() {
++        return healthBonus;
++    }
++
+ }
+Index: src/main/java/inte/grupp5/item/Consumable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.item;\r\n\r\npublic class Consumable extends Item{\r\n\r\n    private final int healthBonus;\r\n\r\n    public Consumable(String name, int healthBonus) {\r\n        super(name);\r\n        this.healthBonus = healthBonus;\r\n    }\r\n\r\n    public int getHealthBonus() {\r\n        return healthBonus;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/inte/grupp5/item/Consumable.java	(revision 02bbfc716f65cf96211d34a8c652d4061bb425b5)
++++ src/main/java/inte/grupp5/item/Consumable.java	(date 1603434871315)
+@@ -2,14 +2,7 @@
+ 
+ public class Consumable extends Item{
+ 
+-    private final int healthBonus;
+-
+-    public Consumable(String name, int healthBonus) {
++    public Consumable(String name) {
+         super(name);
+-        this.healthBonus = healthBonus;
+-    }
+-
+-    public int getHealthBonus() {
+-        return healthBonus;
+     }
+ }
+Index: src/main/java/inte/grupp5/item/Potion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.item;\r\n\r\npublic class Potion extends Consumable{\r\n\r\n    public Potion(String name, int healthBonus) {\r\n        super(name, healthBonus);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/inte/grupp5/item/Potion.java	(revision 02bbfc716f65cf96211d34a8c652d4061bb425b5)
++++ src/main/java/inte/grupp5/item/Potion.java	(date 1603434871316)
+@@ -1,8 +1,33 @@
+ package inte.grupp5.item;
+ 
+-public class Potion extends Consumable{
++public class Potion extends Consumable {
+ 
+-    public Potion(String name, int healthBonus) {
+-        super(name, healthBonus);
++    private final Type type;
++
++    // Placeholder implementation. Each different potion type has only one value.
++    // TODO: Different values for same potion type?
++
++    public enum Type {
++
++        HEALTH(100), MANA(100), LEVEL(1);
++
++        private final int value;
++
++        Type(int value) {
++            this.value = value;
++        }
++
++        public int getValue() {
++            return value;
++        }
++    }
++
++    public Potion(String name, Type type) {
++        super(name);
++        this.type = type;
++    }
++
++    public Type getType() {
++        return type;
+     }
+ }
+Index: src/test/java/inte/grupp5/item/FoodTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.item;\r\n\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\nclass FoodTest {\r\n\r\n    private final Food steak50Health = new Food(\"Steak\", 50);\r\n\r\n    @Test\r\n    void NameMatches() {\r\n        assertEquals(\"Steak\", steak50Health.getName());\r\n    }\r\n\r\n    @Test\r\n    void healthBonusMatches() {\r\n        assertEquals(50, steak50Health.getHealthBonus());\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/inte/grupp5/item/FoodTest.java	(revision 02bbfc716f65cf96211d34a8c652d4061bb425b5)
++++ src/test/java/inte/grupp5/item/FoodTest.java	(date 1603434871317)
+@@ -9,7 +9,7 @@
+     private final Food steak50Health = new Food("Steak", 50);
+ 
+     @Test
+-    void NameMatches() {
++    void nameMatches() {
+         assertEquals("Steak", steak50Health.getName());
+     }
+ 
+Index: src/test/java/inte/grupp5/item/PotionTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.item;\r\n\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\nclass PotionTest {\r\n\r\n    private final Potion potionOfHealth60Hp = new Potion(\"Potion of health\", 60);\r\n\r\n    @Test\r\n    void NameMatches() {\r\n        assertEquals(\"Potion of health\", potionOfHealth60Hp.getName());\r\n    }\r\n\r\n    @Test\r\n    void healthBonusMatches() {\r\n        assertEquals(60, potionOfHealth60Hp.getHealthBonus());\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/inte/grupp5/item/PotionTest.java	(revision 02bbfc716f65cf96211d34a8c652d4061bb425b5)
++++ src/test/java/inte/grupp5/item/PotionTest.java	(date 1603434871317)
+@@ -6,15 +6,27 @@
+ 
+ class PotionTest {
+ 
+-    private final Potion potionOfHealth60Hp = new Potion("Potion of health", 60);
++    private final Potion potionOfHealth = new Potion("Potion of health", Potion.Type.HEALTH);
++    private final Potion potionOfMana = new Potion("Potion of mana", Potion.Type.MANA);
++    private final Potion potionOfLevel = new Potion("Potion of level", Potion.Type.LEVEL);
+ 
+     @Test
+-    void NameMatches() {
+-        assertEquals("Potion of health", potionOfHealth60Hp.getName());
++    void nameMatches() {
++        assertEquals("Potion of health", potionOfHealth.getName());
+     }
+ 
+     @Test
+     void healthBonusMatches() {
+-        assertEquals(60, potionOfHealth60Hp.getHealthBonus());
++        assertEquals(100, potionOfHealth.getType().getValue());
++    }
++
++    @Test
++    void manaBonusMatches() {
++        assertEquals(100, potionOfMana.getType().getValue());
++    }
++
++    @Test
++    void levelBonusMatches() {
++        assertEquals(1, potionOfLevel.getType().getValue());
+     }
+ }
+\ No newline at end of file

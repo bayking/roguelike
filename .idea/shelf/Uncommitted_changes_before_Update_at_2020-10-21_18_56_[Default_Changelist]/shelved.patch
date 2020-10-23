@@ -1,0 +1,108 @@
+Index: src/main/java/inte/grupp5/enemy/Dragon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.enemy;\r\n\r\npublic class Dragon extends Enemy {\r\n\r\n    public int mana = 100;\r\n\r\n    public Dragon(int level) {\r\n        super(level);\r\n    }\r\n\r\n    public int getMana() {\r\n        return mana;\r\n    }\r\n\r\n    public void healItself() {\r\n        setHp(getHealth() + 25);\r\n    }\r\n\r\n    public void breathFireAttack () {\r\n        if (mana > 25 ) {\r\n            setDamage(getDamage() + 25);\r\n            mana = mana -25;\r\n        }\r\n        else {\r\n            throw new IllegalArgumentException(\"Should not be called\");\r\n        }\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/inte/grupp5/enemy/Dragon.java	(revision d5e11d22b9b3df9260da39bb1f3015ab49f66227)
++++ src/main/java/inte/grupp5/enemy/Dragon.java	(date 1603257315270)
+@@ -12,6 +12,14 @@
+         return mana;
+     }
+ 
++    public void setMana(int mana) {
++        this.mana = mana;
++    }
++
++    public void itemUsedOnDragon(int damage) {
++        super.takeDamage(damage);
++    }
++
+     public void healItself() {
+         setHp(getHealth() + 25);
+     }
+@@ -19,7 +27,7 @@
+     public void breathFireAttack () {
+         if (mana > 25 ) {
+             setDamage(getDamage() + 25);
+-            mana = mana -25;
++            mana = getMana() -25;
+         }
+         else {
+             throw new IllegalArgumentException("Should not be called");
+@@ -31,4 +39,8 @@
+ 
+ 
+ 
++
++
++
++
+ }
+Index: src/test/java/inte/grupp5/enemy/DragonTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package inte.grupp5.enemy;\r\n\r\nimport org.junit.jupiter.api.Disabled;\r\nimport org.junit.jupiter.api.Test;\r\nimport static org.junit.jupiter.api.Assertions.*;\r\npublic class DragonTest {\r\n\r\n    @Test\r\n    void checkIfHealsIself () {\r\n        Dragon d = new Dragon(50);\r\n        d.healItself();\r\n        assertEquals(200,d.getHealth());\r\n    }\r\n\r\n    @Test\r\n    void breathFireAttackHasCorrectValue () {\r\n        Dragon d = new Dragon(51);\r\n        d.breathFireAttack();\r\n        assertEquals( 50,d.getDamage());\r\n        assertEquals(75,d.getMana());\r\n    }\r\n\r\n    @Test\r\n    void fireAttackThrowsIfManaToLow () {\r\n        Dragon d = new Dragon(50);\r\n        d.healItself();\r\n        assertEquals(200,d.getHealth());\r\n    }\r\n\r\n    @Test\r\n    void constructorThrowsIfNegativeValue () {\r\n        assertThrows(IllegalArgumentException.class, () -> {\r\n          Dragon d = new Dragon(50);\r\n          d.breathFireAttack();\r\n\r\n        });\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/inte/grupp5/enemy/DragonTest.java	(revision d5e11d22b9b3df9260da39bb1f3015ab49f66227)
++++ src/test/java/inte/grupp5/enemy/DragonTest.java	(date 1603299335918)
+@@ -1,7 +1,12 @@
+ package inte.grupp5.enemy;
+ 
+ import org.junit.jupiter.api.Disabled;
++import org.junit.jupiter.api.RepeatedTest;
+ import org.junit.jupiter.api.Test;
++import org.junit.jupiter.params.ParameterizedTest;
++import org.junit.jupiter.params.provider.CsvSource;
++import org.junit.jupiter.params.provider.ValueSource;
++
+ import static org.junit.jupiter.api.Assertions.*;
+ public class DragonTest {
+ 
+@@ -20,19 +25,37 @@
+         assertEquals(75,d.getMana());
+     }
+ 
++
++    @ParameterizedTest
++    @ValueSource(ints = {75, 50, 25, 0})
++    void fireAttackManaIsCorrectValue (int mana){
++        Dragon d = new Dragon(50);
++        d.breathFireAttack();
++        d.setMana(mana);
++        assertEquals(mana, d.mana);
++    }
++
++    @Test
++    void constructorThrowsIfLevelAboveCertainValue () {
++        assertThrows(IllegalArgumentException.class, () -> {
++            new Dragon(1000);
++        });
++    }
++
+     @Test
+     void fireAttackThrowsIfManaToLow () {
+-        Dragon d = new Dragon(50);
+-        d.healItself();
+-        assertEquals(200,d.getHealth());
++        assertThrows(IllegalArgumentException.class, () -> {
++            Dragon d = new Dragon(50);
++            d.setMana(10);
++            d.breathFireAttack();
++        });
+     }
+ 
+     @Test
+     void constructorThrowsIfNegativeValue () {
+         assertThrows(IllegalArgumentException.class, () -> {
+-          Dragon d = new Dragon(50);
+-          d.breathFireAttack();
+-
++            Dragon d = new Dragon(-50);
++            d.breathFireAttack();
+         });
+     }
+ 

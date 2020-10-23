@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afc3034b-63e4-4c69-a6e9-40457d13dbe7" name="Default Changelist" comment="Tests, startCombat" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="combatDevelopment" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1isGnPmlQwUVcBwRqBR76IFAUbj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Ny mapp" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Gradle.EnemyListTest">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DragonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.DragonTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DragonTest.constructorThrowsIfLevelBelowCertainValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.DragonTest.constructorThrowsIfLevelBelowCertainValue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EnemyListTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.EnemyListTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EnemyListTest.Wolf" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.EnemyListTest.Wolf&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WolfTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.WolfTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.WolfTest" />
+        <item itemvalue="Gradle.EnemyListTest.Wolf" />
+        <item itemvalue="Gradle.EnemyListTest" />
+        <item itemvalue="Gradle.DragonTest.constructorThrowsIfLevelBelowCertainValue" />
+        <item itemvalue="Gradle.DragonTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afc3034b-63e4-4c69-a6e9-40457d13dbe7" name="Default Changelist" comment="" />
+      <created>1602689051194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602689051194</updated>
+      <workItem from="1602689052239" duration="16905000" />
+      <workItem from="1602776807906" duration="6171000" />
+      <workItem from="1602864212046" duration="673000" />
+      <workItem from="1602870001901" duration="3018000" />
+      <workItem from="1602910131113" duration="2578000" />
+      <workItem from="1602939523604" duration="1926000" />
+      <workItem from="1602960494331" duration="320000" />
+      <workItem from="1602961005028" duration="10000" />
+      <workItem from="1603091936414" duration="4062000" />
+      <workItem from="1603175387771" duration="9326000" />
+      <workItem from="1603215653030" duration="16020000" />
+      <workItem from="1603257056653" duration="324000" />
+      <workItem from="1603298932512" duration="3319000" />
+      <workItem from="1603360579511" duration="18547000" />
+      <workItem from="1603433778423" duration="21618000" />
+      <workItem from="1603458402854" duration="1002000" />
+    </task>
+    <task id="LOCAL−00001" summary="First commit">
+      <created>1602689368708</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1602689368708</updated>
+    </task>
+    <task id="LOCAL−00002" summary="First commit">
+      <created>1602689552707</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1602689552707</updated>
+    </task>
+    <task id="LOCAL−00003" summary="commit test">
+      <created>1602689626303</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1602689626303</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Added EnemyTest">
+      <created>1602697822064</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1602697822064</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Updated EnemyTest, Added a couple enemies.">
+      <created>1602745443155</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1602745443155</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Updated enemies and tests.">
+      <created>1602914029498</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1602914029498</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Enemy klasser och tester">
+      <created>1603094302360</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1603094302360</updated>
+    </task>
+    <task id="LOCAL−00008" summary="CombatTest">
+      <created>1603096174520</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1603096174520</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Enemy getters,takeDamage">
+      <created>1603188995804</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1603188995804</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Enemies, tests fix">
+      <created>1603238302479</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1603238302479</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Dragon test fix">
+      <created>1603300210093</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1603300210093</updated>
+    </task>
+    <task id="LOCAL−00012" summary="fixes">
+      <created>1603361803976</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1603361803976</updated>
+    </task>
+    <task id="LOCAL−00013" summary="EnemyListTest, StartCombatTest">
+      <created>1603420827737</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1603420827737</updated>
+    </task>
+    <task id="LOCAL−00014" summary="EnemyListTest, StartCombatTest">
+      <created>1603433979435</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1603433979435</updated>
+    </task>
+    <task id="LOCAL−00015" summary="EnemyListTest, StartCombatTest">
+      <created>1603434328704</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1603434328704</updated>
+    </task>
+    <task id="LOCAL−00016" summary="EnemyListTest, StartCombatTest">
+      <created>1603435518273</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1603435518273</updated>
+    </task>
+    <task id="LOCAL−00017" summary="EnemyListTest, StartCombatTest">
+      <created>1603436043323</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1603436043323</updated>
+    </task>
+    <task id="LOCAL−00018" summary="EnemyListTest, StartCombatTest">
+      <created>1603456501839</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1603456501839</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Tests, startCombat">
+      <created>1603459108822</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1603459108822</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="commit test" />
+    <MESSAGE value="Added EnemyTest" />
+    <MESSAGE value="Updated EnemyTest, Added a couple enemies." />
+    <MESSAGE value="Updated enemies and tests." />
+    <MESSAGE value="Enemy klasser och tester" />
+    <MESSAGE value="CombatTest" />
+    <MESSAGE value="Enemy getters,takeDamage" />
+    <MESSAGE value="Enemies, tests fix" />
+    <MESSAGE value="Dragon test fix" />
+    <MESSAGE value="fixes" />
+    <MESSAGE value="EnemyListTest, StartCombatTest" />
+    <MESSAGE value="Tests, startCombat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests, startCombat" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="583" y="237" key="#Notifications" timestamp="1603458304053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="583" y="237" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1603458304053" />
+    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1603448968271">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603448968271" />
+    <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.2293.920@0.0.2293.920" timestamp="1603433941485" />
+    <state x="933" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602697769356">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="933" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1602697769356" />
+    <state x="1447" y="378" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2293.920@0.0.2293.920" timestamp="1602689153684" />
+    <state x="106" y="41" key="DiffContextDialog" timestamp="1603435967542">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="106" y="41" key="DiffContextDialog/0.0.2293.920@0.0.2293.920" timestamp="1603435967542" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603457995228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603457995228" />
+    <state x="820" y="186" key="FileChooserDialogImpl/0.0.2293.920@0.0.2293.920" timestamp="1603302788204" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1603458396747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603458396747" />
+    <state width="2250" height="221" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603434458078" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1603458396747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603458396747" />
+    <state width="2250" height="221" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1603434458078" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1603458396747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603458396747" />
+    <state width="2250" height="221" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1603434458078" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1603458396747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603458396747" />
+    <state width="2250" height="221" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1603434458078" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1603458396748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603458396748" />
+    <state width="1387" height="259" key="GridCell.Tab.1.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603433744877" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1603458396748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603458396748" />
+    <state width="1387" height="259" key="GridCell.Tab.1.center/0.0.2293.920@0.0.2293.920" timestamp="1603433744877" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1603458396748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603458396748" />
+    <state width="1387" height="259" key="GridCell.Tab.1.left/0.0.2293.920@0.0.2293.920" timestamp="1603433744877" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1603458396748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603458396748" />
+    <state width="1387" height="259" key="GridCell.Tab.1.right/0.0.2293.920@0.0.2293.920" timestamp="1603433744877" />
+    <state x="219" y="73" key="MergeDialog" timestamp="1603436021678">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1603299953882" />
+    <state x="219" y="73" key="MergeDialog/0.0.2293.920@0.0.2293.920" timestamp="1603436021678" />
+    <state x="560" y="191" key="MultipleFileMergeDialog" timestamp="1603459175360">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="191" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1603459175360" />
+    <state x="787" y="222" key="MultipleFileMergeDialog/0.0.2293.920@0.0.2293.920" timestamp="1603436027234" />
+    <state x="628" y="35" key="SettingsEditor" timestamp="1603432794771">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="628" y="35" key="SettingsEditor/0.0.2293.920@0.0.2293.920" timestamp="1603432794771" />
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603459226771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603459226771" />
+    <state x="1344" y="186" key="Vcs.Push.Dialog.v2/0.0.2293.920@0.0.2293.920" timestamp="1603436050781" />
+    <state x="1094" y="106" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603459307056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1094" y="106" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603459307056" />
+    <state x="1633" y="118" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2293.920@0.0.2293.920" timestamp="1603434989143" />
+    <state x="614" y="156" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603458487483">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="614" y="156" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1603458487483" />
+    <state x="917" y="174" key="git4idea.branch.GitSmartOperationDialog/0.0.2293.920@0.0.2293.920" timestamp="1603435048201" />
+    <state x="360" y="33" key="new project wizard" timestamp="1602959429573">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602959429573" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603176539838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603176539838" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/roguelike$CombatTest.ic" NAME="CombatTest Coverage Results" MODIFIED="1603456466528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603456309429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$StartCombatTest.ic" NAME="StartCombatTest Coverage Results" MODIFIED="1603456444886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$WolfTest.ic" NAME="WolfTest Coverage Results" MODIFIED="1603455001387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603456345514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1603454970538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
