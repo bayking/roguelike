@@ -142,15 +142,12 @@ public class Chest {
         }
     }
 
-    // TODO: This method should be in the Player class.
     public ArrayList<Item> openChest(Player player) {
         generateItems(player);
         return getItems();
     }
 
-    // Todo: This method is public until openChest() gets implemented in Player.
     public ArrayList<Item> getItems() {
         return items;
     }
-
 }

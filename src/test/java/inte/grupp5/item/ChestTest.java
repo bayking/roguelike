@@ -1,7 +1,6 @@
 package inte.grupp5.item;
 
 import inte.grupp5.player.Player;
-import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.Test;
@@ -10,8 +9,6 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// TODO: Since Player only has one Class (klass),
-//  only chests for Mages can be tested.
 public class ChestTest {
 
     Mage MAGE = new Mage("Gandalf");
