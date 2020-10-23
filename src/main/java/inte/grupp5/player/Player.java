@@ -26,6 +26,11 @@ public class Player {
         currentManaPoints = maxManaPoints;
         consumables = new ArrayList<>();
     }
+
+    public ArrayList<Consumable> getConsumables() {
+        return consumables;
+    }
+
     private void insufficientMana() {
         System.out.println("Insufficient Mana");
     }

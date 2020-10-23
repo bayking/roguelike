@@ -22,6 +22,13 @@ public class WolfTest {
         assertEquals( "Enemy type = Wolf, Level = 31, Health = 146, Damage = 15, Wolf ID = 1"+"\n", wolf.toString());
     }
 
+    @Test
+    void getRandomReturnsNumberBetween1And5 () {
+        Wolf wolf = new Wolf(10,0);
+        assertTrue(wolf.getRandom().get(0) >= 1 && wolf.getRandom().get(0) <= 5);
+
+    }
+
 
     @Test
     void randomNumberGeneratorBetween1and5 () {
@@ -55,7 +62,7 @@ public class WolfTest {
         System.out.println(w.getGroupOfWolves().size());
     }
 
-    @Test void addWolvesIfBelowLevelValueIsAboveOne () {
+    @Test void addWolvesIfBelowLevel () {
         Wolf w = new Wolf (21,0);
         assertTrue(w.getGroupOfWolves().size() >= 1);
     }

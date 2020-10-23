@@ -63,14 +63,14 @@ public class EnemyListTest {
         e.addList(wolf.getGroupOfWolves());
         assertEquals(5,e.getEnemies().size());
     }
-    @Disabled
-    @Test void listCantBeNull () {
+
+    @Test void toStringIsCorrect () {
+        Enemy enemy = new Enemy(50);
+        e.addEnemy(enemy);
+        assertEquals(" Enemies = [ Enemy type = Enemy, Level = 50, Health = 175, Damage = 25, Enemy ID = " + enemy.getEnemyID() + "]",e.toString());
     }
 
-    @Disabled
-    @Test void addEnemyCantBeNull() {
 
-    }
 
 
 

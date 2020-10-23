@@ -28,17 +28,13 @@ public class Combat {
         if (enemy.size() >= 2 && player == null) {
             addEnemyListToOpponents(enemy);
             strongestEnemy(opponents);
-
         }
-
         else if (enemy.size() == 0 ) {
             throw new IllegalArgumentException("There has to be enemies for a combat");
         }
-
         else if (player == null) {
             throw new NullPointerException ("There has to be a Player for a combat");
         }
-
         else addEnemyListToOpponents(enemy);
         this.player = player;
     }
@@ -65,12 +61,4 @@ public class Combat {
                 .get();
     }
 
-    public void startCombat (Enemy enemy, Player player,ArrayList<Enemy> opponents ) {
-        if (enemy == null) {
-            for (Enemy e: opponents) {
-                StartCombat startCombat = new StartCombat(e.getEnemy(),player);
-                startCombat.initiziateCombat();
-            }
-        }
-    }
 }
