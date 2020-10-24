@@ -13,7 +13,7 @@ public class WolfTest {
     @Test
     public static void wolfIdIsCorrect () {
         Wolf wolf = new Wolf(35,0);
-        assertEquals(2, wolf.getEnemyID());
+        assertEquals(2, wolf.getENEMY_ID());
     }
 
     @BeforeAll
@@ -49,7 +49,7 @@ public class WolfTest {
     void constructorIsCorrectForManyWolves() {
         Wolf w = new Wolf (21,5);
 
-        assertTrue(w.getGroupOfWolves().size() >= 1);
+        assertTrue(w.getGroupOfWolves().size() >= 2);
         assertTrue(w.getGroupOfWolves().get(1).getLevel() >= w.getLevel());
         assertEquals(w.getGroupOfWolves().get(1).getEnemyType(), "Wolf");
         assertTrue(w.getGroupOfWolves().get(1).getDamage(w.getLevel()) <= (ATTRIBUTES_CALC * 21) - 21);

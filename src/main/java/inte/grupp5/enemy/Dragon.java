@@ -2,7 +2,7 @@ package inte.grupp5.enemy;
 
 public class Dragon extends Enemy {
 
-    public int mana = 100;
+    private int mana = 100;
 
     public Dragon(int level) {
         super(level);

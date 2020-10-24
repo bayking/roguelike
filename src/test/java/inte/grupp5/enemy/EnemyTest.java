@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class EnemyTest {
 
 
@@ -111,7 +109,7 @@ public class EnemyTest {
     @Test
     void toStringIsCorrect() {
         Enemy e = new Enemy(58);
-        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29," + " Enemy ID = " + e.getEnemyID(), e.toString());
+        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29," + " Enemy ID = " + e.getENEMY_ID(), e.toString());
     }
 
 

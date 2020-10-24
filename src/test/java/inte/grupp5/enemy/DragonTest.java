@@ -34,7 +34,7 @@ public class DragonTest {
         Dragon d = new Dragon(50);
         d.breathFireAttack();
         d.setMana(mana);
-        assertEquals(mana, d.mana);
+        assertEquals(mana, d.getMana());
     }
 
     @Test

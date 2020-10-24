@@ -6,8 +6,8 @@ import java.util.Collections;
 
 public class Wolf extends Enemy {
 
-    private ArrayList<Enemy> groupOfWolves = new ArrayList<Enemy>();
-    private ArrayList<Integer> randomWolves = new ArrayList<>(5);
+    private ArrayList<Enemy> groupOfWolves = new ArrayList<Enemy>(); // Statisk,
+    private ArrayList<Integer> randomWolves = new ArrayList<>(5); // ändra till array?
 
     public Wolf(int level, int amount) {
         super(level);
@@ -58,7 +58,7 @@ public class Wolf extends Enemy {
 
     @Override
     public String toString() {
-        return "Enemy type = " + getEnemyType() + ", Level = " + super.getLevel() + ", Health = " + super.getHealth(getLevel()) + ", Damage = " + super.getDamage(getLevel()) + ", Wolf ID = " + getEnemyID() + "\n";
+        return "Enemy type = " + getEnemyType() + ", Level = " + super.getLevel() + ", Health = " + super.getHealth(getLevel()) + ", Damage = " + super.getDamage(getLevel()) + ", Wolf ID = " + getENEMY_ID() + "\n";
     }
 }
 

@@ -5,13 +5,14 @@ import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
 
+// TODO: Tests för int Damage, getDamage, setDamage, takeDamage.
 // TODO: Interaction with consumables.
 public class Player {
     public static final int MAX_LEVEL = 60;
     public static final int MIN_LEVEL = 1;
     private String name;
     private final Class klass;
-    private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level;
+    private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level, damage; //la till damage
     private ArrayList<Spell> spells;
 
     public Player(String name, Class klass, int level) {
@@ -82,10 +83,28 @@ public class Player {
         return level;
     }
 
+
     public void setMaxHealthPoints(int maxHealthPoints) {
         if (maxHealthPoints < 1)
             throw new IllegalArgumentException("Value can't be less than 1");
         this.maxHealthPoints = maxHealthPoints;
+    }
+
+    public void takeDamage (int damage) {
+            currentHealthPoints = currentHealthPoints - damage;
+        if (currentHealthPoints < 0) {
+            currentHealthPoints = 0;
+        }
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        if (damage < 0 )
+            throw new IllegalArgumentException("Value can't be less than 1");
+        this.damage = damage;
     }
 
     public void setMaxManaPoints(int maxManaPoints) {

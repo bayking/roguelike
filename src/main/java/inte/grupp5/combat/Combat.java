@@ -19,7 +19,6 @@ public class Combat {
     private Player player;
     private Enemy enemy;
     private int defeated;
-    Consumable itemsUsed;
 
 
     // Om ingen spelare så möter enemy varandra.
@@ -39,6 +38,10 @@ public class Combat {
         this.player = player;
     }
 
+    public int getDefeated() {
+        return defeated;
+    }
+
     public Enemy getEnemy() {
         return enemy;
     }
@@ -49,6 +52,10 @@ public class Combat {
 
     public Player getPlayer() {
         return player;
+    }
+
+    public void setDefeated(int defeated) {
+        this.defeated = defeated;
     }
 
     public void addEnemyListToOpponents(ArrayList<Enemy> enemy) {
