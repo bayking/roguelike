@@ -50,7 +50,7 @@ public class StartCombatTest {
         combat.checkClass(combat.getOpponents().get(0));
         assertEquals(150 ,combat.getOpponents().get(0).getHealth());
     }
-
+    //TODO: spells
     @Disabled
     @Test
     void playerSpellsImpactsEnemyHealth() {
@@ -116,13 +116,23 @@ public class StartCombatTest {
     @Test
     void playerDefeatsManyOpponents() {
         Wolf wolf = new Wolf(10,5);
-        enemyList.addEnemy(wolf);
+        enemyList.addEnemy(this.wolf);
         enemyList.addList(wolf.getGroupOfWolves());
         StartCombat combat = new StartCombat(enemyList.getEnemies(), mage);
         combat.startCombat(combat.enemy, combat.player, combat.getOpponents());
         assertNull(combat.enemy);
         assertEquals(0,combat.getOpponents().get(6).getHealth());
         assertEquals(7,combat.getDefeated());
+    }
+
+    @Test
+    void playerDiesDuringCombat() {
+        Wolf wolf = new Wolf(50,40);
+        enemyList.addEnemy(this.wolf);
+        enemyList.addList(wolf.getGroupOfWolves());
+        StartCombat combat = new StartCombat(enemyList.getEnemies(), mage);
+        combat.startCombat(combat.enemy, combat.player, combat.getOpponents());
+        assertTrue(combat.isPlayerDefeated());
     }
 
     }

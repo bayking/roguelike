@@ -42,7 +42,9 @@ public class StartCombat extends Combat {
             for (Enemy e : opponents) {
                     checkClass(e);
                     combatLoop(e);
-                    setEnemyDefeatedFalse();
+                    if (playerDefeated) {
+                        break;
+                    }
             }
         }
     }
@@ -50,11 +52,18 @@ public class StartCombat extends Combat {
 
     public void combatLoop(Enemy e) {
           //  checkSpells(e);
-        while (!enemyDefeated || playerDefeated) {
+        while (!enemyDefeated) {
             playerTurn(e);
             checkIfEnemyHealthIsZero(e);
+            if (enemyDefeated) {
+                setEnemyDefeatedFalse();
+                break;
+            }
             enemyTurn(e);
             checkIfPlayerHealthIsZero(e);
+            if (playerDefeated) {
+                break;
+            }
         }
     }
 
@@ -66,13 +75,7 @@ public class StartCombat extends Combat {
         this.enemyDefeated = true;
     }
 
-    public void setPlayerDefeatedFalse() {
-        this.playerDefeated = false;
-    }
-
-    public void setPlayerDefeatedTrue() {
-        this.playerDefeated = true;
-    }
+    public void setPlayerDefeatedTrue() { this.playerDefeated = true; }
 
     public void playerTurn(Enemy e) {
         e.takeDamage(player.getDamage());
@@ -97,6 +100,10 @@ public class StartCombat extends Combat {
     public void enemyTurn(Enemy e) {
         player.takeDamage(e.getDamage());
 
+    }
+
+    public boolean isPlayerDefeated() {
+        return playerDefeated;
     }
 
     public void checkClass(Enemy enemy) {
