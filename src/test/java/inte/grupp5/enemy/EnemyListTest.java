@@ -36,14 +36,14 @@ public class EnemyListTest {
         Wolf wolf = new Wolf(51,0);
         Wolf wolf1 = new Wolf(10,2);
         e.addEnemy(wolf);
-        e.addList(wolf1.getGroupOfWolves());
+        e.addWolves(wolf1.getGroupOfWolves());
         assertEquals(4,e.getEnemies().size());
     }
 
     @Test
     void randomWolves() {
         Wolf wolf = new Wolf(1,0);
-        e.addList(wolf.getGroupOfWolves());
+        e.addWolves(wolf.getGroupOfWolves());
         assertTrue(e.getEnemies().size() >= 2);
     }
 
@@ -54,8 +54,21 @@ public class EnemyListTest {
         Wolf wolf = new Wolf(40,2);
         e.addEnemy(d);
         e.addEnemy(enemy);
-        e.addList(wolf.getGroupOfWolves());
+        e.addWolves(wolf.getGroupOfWolves());
         assertEquals(5,e.getEnemies().size());
+    }
+
+    @Test
+    void sortsEnemyListBasedOnLevel() {
+        Dragon d = new Dragon(23);
+        Enemy enemy = new Enemy(44);
+        Wolf wolf = new Wolf(40,2);
+        e.addEnemy(d);
+        e.addEnemy(enemy);
+        e.addWolves(wolf.getGroupOfWolves());
+        assertEquals(5,e.getEnemies().size());
+        assertEquals(23,e.getEnemies().get(0).getLevel());
+
     }
 
     @Test void toStringIsCorrect () {

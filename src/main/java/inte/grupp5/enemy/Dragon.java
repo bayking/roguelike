@@ -22,7 +22,7 @@ public class Dragon extends Enemy {
     }
 
     public void healItself() {
-        setHp(getHealth() + 25);
+        setHp(getCurrentHealth() + 25);
     }
 
     public void breathFireAttack () {

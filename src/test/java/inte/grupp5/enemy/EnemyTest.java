@@ -21,17 +21,33 @@ public class EnemyTest {
     }
 
     @Test
-    void setHpIsCorrectValueIfNegative () {
+    void takeDamageSetsToZeroWhenHpBelowZero () {
         Enemy e = new Enemy(50);
-        e.setHp(-1);
-        assertEquals(0,e.getHealth());
+        e.takeDamage(1000);
+        assertEquals(0,e.getCurrentHealth());
+    }
+
+    @Test
+    void takeDamageThrowsIfValueNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Enemy enemy = new Enemy(10);
+            enemy.takeDamage(-10);
+        });
+    }
+
+    @Test
+    void setDamageThrowsIfValueNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Enemy enemy = new Enemy(10);
+            enemy.setDamage(-1);
+        });
     }
 
     @Test
     void setHpIsCorrectValue () {
         Enemy e = new Enemy(50);
         e.setHp(10);
-        assertEquals(10,e.getHealth());
+        assertEquals(10,e.getCurrentHealth());
     }
 
     @Test
@@ -43,10 +59,18 @@ public class EnemyTest {
     }
 
     @Test
+    void setHpThrowsIfHpBelow0 () {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Enemy e = new Enemy(10);
+            e.setHp(-1);
+        });
+    }
+
+    @Test
     void setDamageSetsCorrectValue () {
         Enemy e = new Enemy(50);
         e.setDamage(11);
-        assertEquals(11,e.getDamage());
+        assertEquals(11,e.getCurrentDamage());
     }
 
     @Test
@@ -58,31 +82,41 @@ public class EnemyTest {
 
     @Test
     void constructorThrowsIfLevelAboveCertainValue () {
-        assertThrows(IllegalArgumentException.class, () -> {
-            new Enemy(1000);
-        });
+        assertThrows(IllegalArgumentException.class, () -> new Enemy(1000));
     }
 
     @Test
     void healthIsCalculatedCorrect() {
         Enemy e = new Enemy(20);
-        assertEquals(130,e.getHealth(20));
+        assertEquals(130,e.getHealth());
+    }
+
+    @Test
+    void getCurrentHealthReturnsCorrectHealth () {
+        Enemy e = new Enemy(20);
+        assertEquals(130,e.getCurrentHealth());
+
     }
 
     @Test
     void damageIsCalculatedCorrect() {
         Enemy e = new Enemy(21);
-        assertEquals(10,e.getDamage(21));
+        assertEquals(10,e.getDamage());
     }
 
+    @Test
+    void getCurrentDamageIsCorrect() {
+        Enemy e = new Enemy(21);
+        assertEquals(10,e.getCurrentDamage());
+    }
 
 
     @Test
     void enemyHasCorrectValues () {
         Enemy e = new Enemy(50);
         assertEquals(50,e.getLevel());
-        assertEquals(175,e.getHealth(e.getLevel()));
-        assertEquals(25,e.getDamage(e.getLevel()));
+        assertEquals(175,e.getCurrentHealth());
+        assertEquals(25,e.getDamage());
     }
 
     @Test
@@ -97,13 +131,11 @@ public class EnemyTest {
         assertEquals(20,e.getLevel());
     }
 
-
-
     @Test
     void healthIsCorrectAftertakeDamageCalled() {
         Enemy e = new Enemy(30);
         e.takeDamage(30);
-        assertEquals(115,e.getHealth());
+        assertEquals(115,e.getCurrentHealth());
     }
 
     @Test

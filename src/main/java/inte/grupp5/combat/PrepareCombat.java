@@ -13,28 +13,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Combat {
+public class PrepareCombat {
 
-    private ArrayList<Enemy> opponents = new ArrayList<Enemy>();
     private Player player;
     private Enemy enemy;
     private int defeated;
-
+    private ArrayList<Enemy> opponents = new ArrayList<Enemy>();
 
     // Om ingen spelare så möter enemy varandra.
-    public Combat(ArrayList<Enemy> enemy, Player player) {
+    public PrepareCombat(ArrayList<Enemy> enemies, Player player) {
 
-        if (enemy.size() >= 2 && player == null) {
-            addEnemyListToOpponents(enemy);
-            strongestEnemy(opponents);
+        if (enemies.size() >= 2 && player == null) {
+            addEnemyListToOpponents(enemies);
+            enemy = getStrongestEnemy();
         }
-        else if (enemy.size() == 0 ) {
+        else if (enemies.size() == 0 ) {
             throw new IllegalArgumentException("There has to be enemies for a combat");
         }
         else if (player == null) {
             throw new NullPointerException ("There has to be a Player for a combat");
         }
-        else addEnemyListToOpponents(enemy);
+        else addEnemyListToOpponents(enemies);
         this.player = player;
     }
 
@@ -44,10 +43,6 @@ public class Combat {
 
     public Enemy getEnemy() {
         return enemy;
-    }
-
-    public ArrayList<Enemy> getOpponents() {
-        return opponents;
     }
 
     public Player getPlayer() {
@@ -62,10 +57,17 @@ public class Combat {
         opponents.addAll(enemy);
     }
 
-    public Enemy strongestEnemy(ArrayList<Enemy> opponents) {
-        return   enemy = opponents.stream()
+    public ArrayList<Enemy> getOpponents() {
+        return opponents;
+    }
+
+    public Enemy getStrongestEnemy () {
+        return opponents.stream()
                 .max(Comparator.comparingInt(Enemy::getLevel))
                 .get();
     }
+
+
+
 
 }

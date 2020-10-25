@@ -9,9 +9,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class CombatTest {
+public class PrepareCombatTest {
 
     //Stridssystemet är turordning.
     //TTD och tillståndsmaskin?
@@ -21,30 +20,30 @@ public class CombatTest {
         Enemy e = new Enemy(40);
         EnemyList enemyList = new EnemyList();
         enemyList.addEnemy(e);
-        new Combat(enemyList.getEnemies(),null);
+        new PrepareCombat(enemyList.getEnemies(),null);
     }); }
 
     @Test
     void checkIfContainsEnemiesfails () {  assertThrows(NullPointerException.class, () -> {
         Player player = new Player( "Player", new Mage("mage"), 40);
-        new Combat(null,player);
+        new PrepareCombat(null,player);
     }); }
 
     @Test
     void checkIfEnemyContains () {  assertThrows(IllegalArgumentException.class, () -> {
         Player player = new Player("Player",new Mage("mage"),32);
         EnemyList enemyList = new EnemyList();
-        new Combat(enemyList.getEnemies(),player);
+        new PrepareCombat(enemyList.getEnemies(),player);
     }); }
 
     @Test
     void ifEnemySizeMoreThan1AndPlayerNullRuns() {
         Wolf wolf = new Wolf(20,0);
         EnemyList enemyList = new EnemyList();
-        enemyList.addList(wolf.getGroupOfWolves());
-        Combat combat = new Combat(enemyList.getEnemies(),null);
-        assertNotNull(combat.getOpponents());
-        assertNotNull(combat.getEnemy());
+        enemyList.addWolves(wolf.getGroupOfWolves());
+        PrepareCombat prepareCombat = new PrepareCombat(enemyList.getEnemies(),null);
+        assertNotNull(prepareCombat.getOpponents());
+        assertNotNull(prepareCombat.getEnemy());
     }
 
     @Disabled

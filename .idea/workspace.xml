@@ -28,7 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a1e189d-f8a9-4063-9bef-e3ad1903713a" name="Default Changelist" comment="startCombat och tests.">
+    <list default="true" id="0a1e189d-f8a9-4063-9bef-e3ad1903713a" name="Default Changelist" comment="startCombat structure, tests.">
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,15 +40,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/StartCombat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/StartCombat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/StartCombatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/StartCombatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/StartCombat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/EnemyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/EnemyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Wolf.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Wolf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/CombatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/CombatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/StartCombatTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyListTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/WolfTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/WolfTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/inte.grupp5.combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/inte.grupp5.combat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/StartCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/StartCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/StartCombatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/StartCombatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/PrepareCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/StartCombat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/EnemyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/EnemyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/CombatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/PrepareCombatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/StartCombatTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/DragonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/DragonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/EnemyListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/EnemyListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/EnemyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/EnemyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/WolfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/WolfTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +118,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Gradle.StartCombatTest">
+  <component name="RunManager" selected="Gradle.CombatTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -114,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StartCombatTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CombatTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.StartCombatTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -133,12 +151,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StartCombatTest.playerDefeatsManyOpponents" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DragonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.StartCombatTest.playerDefeatsManyOpponents&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.DragonTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -152,12 +170,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StartCombatTest.playerDefeatsOneEnemy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EnemyListTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.StartCombatTest.playerDefeatsOneEnemy&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.EnemyListTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -171,12 +189,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StartCombatTest.playerDiesDuringCombat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WolfTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.StartCombatTest.playerDiesDuringCombat&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.WolfTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -190,12 +208,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StartCombatTest.playerDoesDamage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WolfTest.groupOfWolvesContainsMoreThanOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.StartCombatTest.playerDoesDamage&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.WolfTest.groupOfWolvesContainsMoreThanOne&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -211,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StartCombatTest" />
-        <item itemvalue="Gradle.StartCombatTest.playerDiesDuringCombat" />
-        <item itemvalue="Gradle.StartCombatTest.playerDefeatsManyOpponents" />
-        <item itemvalue="Gradle.StartCombatTest.playerDefeatsOneEnemy" />
-        <item itemvalue="Gradle.StartCombatTest.playerDoesDamage" />
+        <item itemvalue="Gradle.CombatTest" />
+        <item itemvalue="Gradle.DragonTest" />
+        <item itemvalue="Gradle.EnemyListTest" />
+        <item itemvalue="Gradle.WolfTest" />
+        <item itemvalue="Gradle.WolfTest.groupOfWolvesContainsMoreThanOne" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +264,7 @@
       <workItem from="1603461264841" duration="3486000" />
       <workItem from="1603503200767" duration="24709000" />
       <workItem from="1603528199058" duration="675000" />
-      <workItem from="1603529087427" duration="4786000" />
+      <workItem from="1603529087427" duration="27605000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1602689368708</created>
@@ -374,7 +392,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1603529672297</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="startCombat structure, tests.">
+      <created>1603536780940</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1603536780940</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,27 +443,33 @@
     <MESSAGE value="EnemyListTest, StartCombatTest" />
     <MESSAGE value="Tests, startCombat" />
     <MESSAGE value="startCombat och tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="startCombat och tests." />
+    <MESSAGE value="startCombat structure, tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="startCombat structure, tests." />
   </component>
   <component name="WindowStateProjectService">
     <state x="583" y="237" key="#Notifications" timestamp="1603458304053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="583" y="237" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1603458304053" />
-    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1603536699704">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="93" y="93" width="2108" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603605013038">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="93" y="93" width="2108" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2293.920@0.0.2293.920" timestamp="1603605013038" />
+    <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1603593979716">
+      <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603536699704" />
-    <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.2293.920@0.0.2293.920" timestamp="1603520925004" />
+    <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.2293.920@0.0.2293.920" timestamp="1603593979716" />
     <state x="933" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602697769356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1602697769356" />
     <state x="1447" y="378" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2293.920@0.0.2293.920" timestamp="1602689153684" />
-    <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603463090631">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="767" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603596437420">
+      <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1603463090631" />
+    <state x="767" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2293.920@0.0.2293.920" timestamp="1603596437420" />
     <state x="106" y="41" key="DiffContextDialog" timestamp="1603435967542">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
@@ -449,26 +479,26 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603457995228" />
     <state x="820" y="186" key="FileChooserDialogImpl/0.0.2293.920@0.0.2293.920" timestamp="1603302788204" />
-    <state width="670" height="336" key="GridCell.Tab.0.bottom" timestamp="1603536730877">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1603608764175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="670" height="336" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603536730877" />
-    <state width="1011" height="207" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603529699993" />
-    <state width="670" height="336" key="GridCell.Tab.0.center" timestamp="1603536730877">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603608764175" />
+    <state width="2250" height="229" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603608138083" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1603608764175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="670" height="336" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603536730877" />
-    <state width="1011" height="207" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1603529699993" />
-    <state width="670" height="336" key="GridCell.Tab.0.left" timestamp="1603536730877">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603608764175" />
+    <state width="2250" height="229" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1603608138083" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1603608764175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="670" height="336" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603536730877" />
-    <state width="1011" height="207" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1603529699993" />
-    <state width="670" height="336" key="GridCell.Tab.0.right" timestamp="1603536730877">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603608764175" />
+    <state width="2250" height="229" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1603608138083" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1603608764175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="670" height="336" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603536730877" />
-    <state width="1011" height="207" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1603529699993" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603608764175" />
+    <state width="2250" height="229" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1603608138083" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1603458396748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -503,10 +533,10 @@
       <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="628" y="35" key="SettingsEditor/0.0.2293.920@0.0.2293.920" timestamp="1603432794771" />
-    <state x="1344" y="186" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603529687237">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603536795095">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603460165592" />
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603536795095" />
     <state x="1344" y="186" key="Vcs.Push.Dialog.v2/0.0.2293.920@0.0.2293.920" timestamp="1603529687237" />
     <state x="1094" y="106" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603460128216">
       <screen x="0" y="0" width="1536" height="824" />
@@ -522,20 +552,24 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602959429573" />
+    <state x="848" y="218" key="refactoring.ChangeSignatureDialog" timestamp="1603587127229">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="848" y="218" key="refactoring.ChangeSignatureDialog/0.0.2293.920@0.0.2293.920" timestamp="1603587127229" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1603176539838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603176539838" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/roguelike$CombatTest.ic" NAME="CombatTest Coverage Results" MODIFIED="1603456466528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603456309429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$CombatTest.ic" NAME="CombatTest Coverage Results" MODIFIED="1603608764135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__roguelike_test_.ic" NAME="Tests in 'roguelike.test' Coverage Results" MODIFIED="1603462245305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$StartCombatTest.ic" NAME="StartCombatTest Coverage Results" MODIFIED="1603529699959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$WolfTest.ic" NAME="WolfTest Coverage Results" MODIFIED="1603462230241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603456345514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603608120550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$StartCombatTest.ic" NAME="StartCombatTest Coverage Results" MODIFIED="1603536820094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$WolfTest.ic" NAME="WolfTest Coverage Results" MODIFIED="1603606254372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest_playerDefeatsOneEnemy.ic" NAME="StartCombatTest.playerDefeatsOneEnemy Coverage Results" MODIFIED="1603520992199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1603454970538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603608138071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1603597574480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest_playerDiesDuringCombat.ic" NAME="StartCombatTest.playerDiesDuringCombat Coverage Results" MODIFIED="1603536276859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

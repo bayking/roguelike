@@ -1,6 +1,7 @@
 
 package inte.grupp5.enemy;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -9,25 +10,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class WolfTest {
 
-    @BeforeAll
+
     @Test
-    public static void wolfIdIsCorrect () {
-        Wolf wolf = new Wolf(35,0);
-        assertEquals(2, wolf.getENEMY_ID());
+    public void constructorThrowsIfAmountNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Wolf(10,-1);
+        });}
+
+    @Test
+    public void constructorThrowsIfAmountToHigh() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Wolf(10,101);
+        });}
+
+    @Test
+    public void wolfIdIsSet () {
+        Enemy w = new Wolf(35,0);
+        assertTrue(1 <= w.getENEMY_ID());
     }
 
-    @BeforeAll
-    @Test
-    public static void toStringHasRightFormatForOneWolf() {
-        Wolf wolf = new Wolf(31,0);
-        assertEquals( "Enemy type = Wolf, Level = 31, Health = 146, Damage = 15, Wolf ID = 1"+"\n", wolf.toString());
-    }
 
     @Test
-    void getRandomReturnsNumberBetween1And5 () {
-        Wolf wolf = new Wolf(10,0);
-        assertTrue(wolf.getRandom().get(0) >= 1 && wolf.getRandom().get(0) <= 5);
-
+    public void toStringHasRightFormatForOneWolf() {
+        Wolf d = new Wolf(31,0);
+        assertEquals( "Enemy type = Wolf, Level = 31, Health = 146, Damage = 15, Wolf ID = " + d.getENEMY_ID() + "\n" , d.toString());
     }
 
 
@@ -41,19 +47,29 @@ public class WolfTest {
         Wolf w = new Wolf (40,0);
         assertEquals(40,w.getLevel());
         assertEquals("Wolf",w.getEnemyType());
-        assertEquals(20,w.getDamage(40));
-        assertEquals(160,w.getHealth(40));
+        assertEquals(20,w.getCurrentDamage());
+        assertEquals(160,w.getCurrentHealth());
     }
 
     @Test
     void constructorIsCorrectForManyWolves() {
         Wolf w = new Wolf (21,5);
-
-        assertTrue(w.getGroupOfWolves().size() >= 2);
+        assertEquals("Wolf", w.getGroupOfWolves().get(1).getEnemyType());
+        assertEquals(6, w.getGroupOfWolves().size());
         assertTrue(w.getGroupOfWolves().get(1).getLevel() >= w.getLevel());
-        assertEquals(w.getGroupOfWolves().get(1).getEnemyType(), "Wolf");
-        assertTrue(w.getGroupOfWolves().get(1).getDamage(w.getLevel()) <= (ATTRIBUTES_CALC * 21) - 21);
-        assertTrue(w.getGroupOfWolves().get(1).getHealth(w.getLevel()) <= ATTRIBUTES_CALC * 21 + 131);
+        assertTrue(w.getGroupOfWolves().get(1).getCurrentDamage() >=  (ATTRIBUTES_CALC * 21) - 21);
+        assertTrue(w.getGroupOfWolves().get(1).getCurrentHealth() >= ATTRIBUTES_CALC * 21 + 100);
+    }
+
+    @Test
+    void constructorIsCorrectForManyWolvesIfLevelToLow() {
+        Wolf w = new Wolf (20,0);
+        assertEquals("Wolf", w.getGroupOfWolves().get(1).getEnemyType());
+        assertTrue(w.getGroupOfWolves().size() >= 2 && w.getGroupOfWolves().size() <= 6);
+        assertTrue(w.getGroupOfWolves().get(1).getLevel() >= w.getLevel());
+        assertTrue(w.getGroupOfWolves().get(1).getCurrentDamage() >=  (ATTRIBUTES_CALC * 20) - 20);
+        assertTrue(w.getGroupOfWolves().get(1).getCurrentHealth() >= ATTRIBUTES_CALC * 20 + 100);
+
     }
 
     @Test
@@ -68,15 +84,21 @@ public class WolfTest {
         assertTrue(w.getGroupOfWolves().size() >= 1);
     }
 
-    @Disabled
     @Test
-    void wolfIdIsCorrectForManyWolves () {
-
+    void groupOfWolvesContainsOnlyOneWolf() {
+        Wolf w = new Wolf(50,0);
+        assertEquals(1,w.getGroupOfWolves().size());
     }
 
-    @Disabled
     @Test
-    void toStringHasRightFormatForManyWolves() { }
+    void groupOfWolvesContainsMoreThanOne() {
+        Wolf w = new Wolf(50,0);
+        Wolf d = new Wolf(50,0);
+        w.getGroupOfWolves().add(d);
+        assertEquals(2,w.getGroupOfWolves().size());
+    }
+
+
 
 
 }

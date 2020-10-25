@@ -6,11 +6,14 @@ import java.util.Collections;
 
 public class Wolf extends Enemy {
 
-    private ArrayList<Enemy> groupOfWolves = new ArrayList<Enemy>(); // Statisk,
-    private ArrayList<Integer> randomWolves = new ArrayList<>(5); // ändra till array?
+    private final ArrayList<Enemy> groupOfWolves = new ArrayList<>(); //Final?
+
 
     public Wolf(int level, int amount) {
         super(level);
+        if (amount < 0 || amount > 100) {
+            throw new IllegalArgumentException("Amount can not be less than 0 or more than 100");
+        }
         addWolvesIfBelowLevel(level, amount);
         groupOfWolves.add(this);
     }
@@ -19,46 +22,46 @@ public class Wolf extends Enemy {
         super(level);
     }
 
-    public ArrayList<Integer> getRandom() {
-        return randomWolves;
+    public void addWolvesIfBelowLevel(int level, int amount) {
+
+          if (!checkForOneWolf(level,amount)){
+            generateWolves(amount, level);
+        }
+    }
+
+    public boolean checkForOneWolf (int level, int amount) {
+        if (amount == 0 && level < 30) {
+            int random = randomWolvesGenerator();
+            generateWolves(random, level);
+            return true;
+        }
+        return false;
+    }
+
+    public void generateWolves(int random, int level) {
+        if (random > 0) {
+            for (int i = 0; i < random; i++) {
+                groupOfWolves.add(new Wolf(level + randomWolvesGenerator()));
+            }
+        }
+    }
+
+    public int randomWolvesGenerator() {
+        ArrayList<Integer> randomWolves = new ArrayList<>(5);
+        for (int i = 1; i < 5; i++) {
+            randomWolves.add(i);
+        }
+        Collections.shuffle(randomWolves);
+        return randomWolves.get(0);
     }
 
     public ArrayList<Enemy> getGroupOfWolves() {
         return groupOfWolves;
     }
 
-    // Om vargen är under level 30 i första konstruktorn skapas mellan 1-5 vargar i den andra konstruktorn.
-    public void addWolvesIfBelowLevel(int level, int amount) {
-        if (amount <= 0) {
-            if (level < 30) {
-                int random = randomWolvesGenerator();
-                generateWolves(random, level);
-            }
-        } else {
-            generateWolves(amount, level);
-        }
-    }
-
-    public void generateWolves(int random, int level) {
-        if (random > 0) {
-            for (int i = 0; i < random; i++) {
-                Wolf w = new Wolf(level + randomWolvesGenerator());
-                groupOfWolves.add(w);
-            }
-        }
-    }
-
-    //Slumpar en siffra mellan 1-5.
-    public int randomWolvesGenerator() {
-        for (int i = 1; i < 5; i++)
-            randomWolves.add(i);
-        Collections.shuffle(randomWolves);
-        return randomWolves.get(0);
-    }
-
     @Override
     public String toString() {
-        return "Enemy type = " + getEnemyType() + ", Level = " + super.getLevel() + ", Health = " + super.getHealth(getLevel()) + ", Damage = " + super.getDamage(getLevel()) + ", Wolf ID = " + getENEMY_ID() + "\n";
+        return "Enemy type = " + getEnemyType() + ", Level = " + super.getLevel() + ", Health = " + super.getCurrentHealth() + ", Damage = " + super.getCurrentDamage() + ", Wolf ID = " + getENEMY_ID() + "\n";
     }
 }
 
