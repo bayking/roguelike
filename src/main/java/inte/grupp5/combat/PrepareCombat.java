@@ -5,12 +5,12 @@ import inte.grupp5.player.Player;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class PrepareCombat {
+public abstract class PrepareCombat {
 
-    private Player player;
+    private final Player player;
     private Enemy enemy;
     private int defeated;
-    private ArrayList<Enemy> opponents = new ArrayList<Enemy>();
+    private final ArrayList<Enemy> opponents = new ArrayList<>();
 
 
     public PrepareCombat(ArrayList<Enemy> enemies, Player player) {

@@ -31,12 +31,6 @@
 Enemy attacked Opponent
 Opponent attacked enemy
 Enemy attacked Opponent
-Opponent attacked enemy
-Enemy attacked Opponent
-Opponent attacked enemy
-Enemy attacked Opponent
-Opponent attacked enemy
-Enemy attacked Opponent
 1 opponents defeated
 %Player class impacted enemy health.
 Player attacked opponent
@@ -137,8 +131,6 @@
 4 opponents defeated
 Enemy attacked Opponent
 5 opponents defeated
-Enemy attacked Opponent
-6 opponents defeated
 Health is full
 Player has casted a spell.
 Player attacked opponent
@@ -514,8 +506,6 @@
 %Player class impacted enemy health.
 Player attacked opponent
 Opponent attacked player
-Player attacked opponent
-Opponent attacked player
 Player defeated
 	%Player class impacted enemy health.
 	Health is full
@@ -531,6 +521,18 @@
 	Player has casted a spell.
 	Player attacked opponent
 	1 opponents defeated
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
 
 Enemy attacked Opponent
 
@@ -720,70 +722,70 @@
 Player has casted a spell.
 Opponent attacked player
 Player has casted a spell.
-%Player class impacted enemy health.
 %Player class impacted enemy health.
-Health is full
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-1 opponents defeated
-%Player class impacted enemy health.
+%Player class impacted enemy health.
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+1 opponents defeated
 %Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-1 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-2 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-3 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-4 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-5 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-6 opponents defeated
-%Player class impacted enemy health.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-7 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+1 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+2 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+3 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+4 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+5 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+6 opponents defeated
+%Player class impacted enemy health.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+7 opponents defeated

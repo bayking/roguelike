@@ -20,20 +20,20 @@ public class PrepareCombatTest {
         Enemy e = new Enemy(40);
         EnemyList enemyList = new EnemyList();
         enemyList.addEnemy(e);
-        new PrepareCombat(enemyList.getEnemies(),null);
+        new Combat(enemyList.getEnemies(),null);
     }); }
 
     @Test
     void checkIfContainsEnemiesfails () {  assertThrows(NullPointerException.class, () -> {
         Player player = new Player( "Player", new Mage("mage"), 40);
-        new PrepareCombat(null,player);
+        new Combat(null,player);
     }); }
 
     @Test
     void checkIfEnemyContains () {  assertThrows(IllegalArgumentException.class, () -> {
         Player player = new Player("Player",new Mage("mage"),32);
         EnemyList enemyList = new EnemyList();
-        new PrepareCombat(enemyList.getEnemies(),player);
+        new Combat(enemyList.getEnemies(),player);
     }); }
 
     @Test
@@ -41,7 +41,7 @@ public class PrepareCombatTest {
         Wolf wolf = new Wolf(20,0);
         EnemyList enemyList = new EnemyList();
         enemyList.addWolves(wolf.getGroupOfWolves());
-        PrepareCombat prepareCombat = new PrepareCombat(enemyList.getEnemies(),null);
+        PrepareCombat prepareCombat = new Combat(enemyList.getEnemies(),null);
         assertNotNull(prepareCombat.getOpponents());
         assertNotNull(prepareCombat.getEnemy());
     }

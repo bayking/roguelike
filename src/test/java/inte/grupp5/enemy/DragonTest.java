@@ -22,8 +22,8 @@ public class DragonTest {
     void breathFireAttackHasCorrectValue () {
         Dragon d = new Dragon(51);
         d.breathFireAttack();
-        assertEquals( 50,d.getDamage());
-        assertEquals(75,d.getMana());
+        assertEquals( 50,d.getCurrentDamage());
+        assertEquals(75,d.getCurrentMana());
     }
 
 

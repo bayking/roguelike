@@ -212,7 +212,10 @@ public class CombatTest {
         assertNotEquals(startingHealth, combat.getEnemy().getCurrentHealth());
     }
 
+    @Test
+    void runTimeTest () {
 
+    }
 
     }
 
