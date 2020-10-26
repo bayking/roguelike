@@ -1,0 +1,208 @@
+package inte.grupp5.combat;
+
+import inte.grupp5.enemy.Enemy;
+import inte.grupp5.item.Armor;
+import inte.grupp5.item.Weapon;
+import inte.grupp5.player.Player;
+import inte.grupp5.player.classes.Mage;
+import inte.grupp5.player.classes.Paladin;
+import inte.grupp5.player.spell.FlashOfLight;
+
+import java.util.ArrayList;
+
+public class Combat extends PrepareCombat {
+
+    //TODO: Spells, mera tester, enemy vs enemy, kommentarer
+    private boolean enemyDefeated = false;
+    private boolean playerDefeated = false;
+    private boolean opponentDefeated = false;
+    private boolean playerTakenDamage = false;
+    private int SPELL_COUNTER = 0;
+
+
+    public Combat(ArrayList<Enemy> enemy, Player player) {
+        super(enemy, player);
+    }
+
+    public void startCombat(Enemy enemy, Player player, ArrayList<Enemy> opponents) {
+        if (enemy == null) {
+            playerVersusEnemies(opponents);
+        }
+        if (player == null && enemy != null && opponents.size() >= 1) {
+            enemyVersusEnemy(opponents);
+        }
+    }
+
+    private void enemyVersusEnemy(ArrayList<Enemy> opponents) {
+        for (Enemy e : opponents) {
+            enemyVsEnemyLoop(e);
+            if (enemyDefeated) {
+                break;
+            }
+        }
+    }
+
+    private void playerVersusEnemies(ArrayList<Enemy> opponents) {
+        setWeaponAndArmorForPlayer();
+        for (Enemy e : opponents) {
+            checkClass(e);
+            combatLoop(e);
+            if (playerDefeated) {
+                break;
+            }
+        }
+    }
+
+    public void combatLoop(Enemy e) {
+        while (!opponentDefeated) {
+            playerTurn(e);
+            checkIfOpponentHealthIsZero(e);
+            if (opponentDefeated) {
+                setOpponentDefeatedFalse();
+                break;
+            }
+            opponentTurn(e);
+            checkIfPlayerHealthIsZero();
+            if (playerDefeated) {
+                setPlayerTakenDamageFalse();
+                SPELL_COUNTER = 0;
+                break;
+            }
+        }
+    }
+
+    public void enemyVsEnemyLoop(Enemy e) {
+        while (!opponentDefeated) {
+            enemyTurn(e);
+            checkIfOpponentHealthIsZero(e);
+            if (opponentDefeated) {
+                setOpponentDefeatedFalse();
+                break;
+            }
+            opponentTurn(e);
+            checkIfEnemyHealthIsZero();
+            if (enemyDefeated) {
+                break;
+            }
+        }
+    }
+
+
+    public void playerTurn(Enemy e) {
+        if (playerTakenDamage = true) {
+            playerCastSpell(super.getPlayer());
+        }
+        e.takeDamage(super.getPlayer().getDamage());
+    }
+
+    public void enemyTurn(Enemy e) {
+        e.takeDamage(super.getEnemy().getCurrentDamage());
+    }
+
+    public void setPlayerTakenDamage() {
+        this.playerTakenDamage = true;
+    }
+
+    public void checkIfOpponentHealthIsZero(Enemy e) {
+        if (e.getCurrentHealth() <= 0) {
+            super.setDefeated(getDefeated() + 1);
+            System.out.println(super.getDefeated() + " opponents defeated");
+            setOpponentDefeatedTrue();
+        }
+    }
+
+    public void checkIfPlayerHealthIsZero() {
+        if (super.getPlayer().getCurrentHealthPoints() <= 0) {
+            setPlayerDefeatedTrue();
+        }
+    }
+
+    public void checkIfEnemyHealthIsZero() {
+        if (super.getEnemy().getCurrentHealth() <= 0) {
+            setEnemyDefeatedTrue();
+        }
+    }
+
+
+    public void opponentTurn(Enemy e) {
+        if (super.getPlayer() == null) {
+            System.out.println("opponent attacked enemy");
+            super.getEnemy().takeDamage(e.getCurrentDamage());
+        } else
+            super.getPlayer().takeDamage(e.getCurrentDamage());
+        setPlayerTakenDamage();
+    }
+
+    public boolean isPlayerDefeated() {
+        return playerDefeated;
+    }
+
+    public void checkClass(Enemy enemy) {
+
+        if (super.getPlayer().getKlass() instanceof Paladin || enemy.getEnemyType().equals("Wolf")) {
+            enemy.takeDamage(5);
+        } else if (super.getPlayer().getKlass() instanceof Mage || enemy.getEnemyType().equals("Enemy")) {
+            enemy.takeDamage(25);
+        }
+    }
+
+    private void setWeaponAndArmorForPlayer() {
+        setWeaponForPlayer();
+        setArmorForPlayer();
+    }
+
+    public void setOpponentDefeatedFalse() {
+        this.opponentDefeated = false;
+    }
+
+    public void setOpponentDefeatedTrue() {
+        this.opponentDefeated = true;
+    }
+
+    public void setPlayerDefeatedTrue() {
+        this.playerDefeated = true;
+    }
+
+    public void setEnemyDefeatedTrue() {
+        this.enemyDefeated = true;
+    }
+
+    public void setPlayerTakenDamageFalse() {
+        playerTakenDamage = false;
+    }
+
+    //TODO: Flytta ut till Player och Gear klasserna:
+
+    public void playerCastSpell(Player player) {
+        if (player.getKlass() instanceof Paladin && playerTakenDamage && SPELL_COUNTER <= 10) {
+            player.castSpell(new FlashOfLight());
+            SPELL_COUNTER++;
+            setPlayerTakenDamageFalse();
+        }
+    }
+
+    public void setArmorForPlayer() {
+        if (super.getPlayer().getKlass() instanceof Paladin) {
+            Armor paladinArmor = new Armor("Paladin Armor", 10, 30, Armor.ArmorType.HEAVY_ARMOR);
+            super.getPlayer().setMaxHealthPoints(super.getPlayer().getCurrentHealthPoints() + paladinArmor.getArmorRating());
+            super.getPlayer().setCurrentHealthPoints(super.getPlayer().getMaxHealthPoints());
+        }
+        if (super.getPlayer().getKlass() instanceof Mage) {
+            Armor mageArmor = new Armor("Mage Armor", 5, 5, Armor.ArmorType.LIGHT_ARMOR);
+            super.getPlayer().setMaxHealthPoints(super.getPlayer().getCurrentHealthPoints() + mageArmor.getArmorRating());
+            super.getPlayer().setCurrentHealthPoints(super.getPlayer().getMaxHealthPoints());
+        }
+    }
+
+    public void setWeaponForPlayer() {
+        if (super.getPlayer().getKlass() instanceof Paladin) {
+            Weapon paladinWeapon = new Weapon("Paladin Weapon", 10, 50, Weapon.WeaponType.SWORD);
+            super.getPlayer().setDamage(paladinWeapon.getDamage());
+        }
+        if (super.getPlayer().getKlass() instanceof Mage) {
+            Weapon mageWeapon = new Weapon("Mage Weapon", 1, 50, Weapon.WeaponType.STAFF);
+            super.getPlayer().setDamage(mageWeapon.getDamage());
+        }
+    }
+
+}
