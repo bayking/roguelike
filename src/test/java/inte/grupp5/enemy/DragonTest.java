@@ -7,6 +7,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 public class DragonTest {
 
+    Dragon drag = new Dragon(50);
+
     @Test
     void checkIfHealsIself () {
         Dragon d = new Dragon(50);
@@ -26,12 +28,11 @@ public class DragonTest {
 
 
     @ParameterizedTest
-    @ValueSource(ints = {75, 50, 25, 0})
+    @ValueSource(ints = {75, 50, 25})
     void fireAttackManaIsCorrectValue (int mana){
-        Dragon d = new Dragon(50);
-        d.breathFireAttack();
-        d.setMana(mana);
-        assertEquals(mana, d.getMana());
+        drag.setMana(mana + 25);
+        drag.breathFireAttack();
+        assertEquals(mana, drag.getCurrentMana());
     }
 
     @Test

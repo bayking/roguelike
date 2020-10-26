@@ -2,17 +2,23 @@ package inte.grupp5.enemy;
 
 public class Dragon extends Enemy {
 
-    private int mana = 100;
+    private int mana;
 
     public Dragon(int level) {
         super(level);
+        mana = getMana();
     }
 
     public int getMana() {
+        return mana = 100;
+    }
+
+    public int getCurrentMana () {
         return mana;
     }
 
     public void setMana(int mana) {
+
         this.mana = mana;
     }
 
@@ -27,8 +33,8 @@ public class Dragon extends Enemy {
 
     public void breathFireAttack () {
         if (mana > 25 ) {
-            setDamage(getDamage() + 25);
-            mana = getMana() -25;
+            setDamage(getCurrentDamage() + 25);
+            mana = mana - 25;
         }
         else {
             throw new IllegalArgumentException("Should not be called");

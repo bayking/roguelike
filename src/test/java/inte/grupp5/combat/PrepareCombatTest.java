@@ -46,16 +46,5 @@ public class PrepareCombatTest {
         assertNotNull(prepareCombat.getEnemy());
     }
 
-    @Disabled
-    @Test
-    void differentEnemiesButNoPlayer () {
-    }
-
-    @Disabled
-    @Test
-    void differentEnemiesAndPlayer() {
-
-    }
-
 
 }

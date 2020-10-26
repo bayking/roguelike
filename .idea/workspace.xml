@@ -41,15 +41,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/CombatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/combat/CombatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/inte.grupp5.combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/inte.grupp5.combat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/classes/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/classes/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/Combat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/CombatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/CombatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/PrepareCombatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/PrepareCombatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/DragonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/DragonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +105,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Gradle.PrepareCombatTest">
+  <component name="RunManager" selected="Gradle.CombatTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -112,25 +116,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="ClassTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.classes.ClassTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="CombatTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -151,12 +136,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="InvokeManaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CombatTest.counterIsSetTo10WhenPlayerUsedSpellToManyTimes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.spell.InvokeManaTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest.counterIsSetTo10WhenPlayerUsedSpellToManyTimes&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -170,12 +155,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PlayerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CombatTest.enemyTakesDamage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.PlayerTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest.enemyTakesDamage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -189,12 +174,31 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PrepareCombatTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CombatTest.playerManaSetCorrectAfterUsingSpellDuringCombat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.PrepareCombatTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest.playerManaSetCorrectAfterUsingSpellDuringCombat&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DragonTest.fireAttackManaIsCorrectValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.DragonTest.fireAttackManaIsCorrectValue&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -210,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PrepareCombatTest" />
         <item itemvalue="Gradle.CombatTest" />
-        <item itemvalue="Gradle.ClassTest" />
-        <item itemvalue="Gradle.PlayerTest" />
-        <item itemvalue="Gradle.InvokeManaTest" />
+        <item itemvalue="Gradle.CombatTest.enemyTakesDamage" />
+        <item itemvalue="Gradle.CombatTest.counterIsSetTo10WhenPlayerUsedSpellToManyTimes" />
+        <item itemvalue="Gradle.CombatTest.playerManaSetCorrectAfterUsingSpellDuringCombat" />
+        <item itemvalue="Gradle.DragonTest.fireAttackManaIsCorrectValue" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +252,7 @@
       <workItem from="1603529087427" duration="28137000" />
       <workItem from="1603612224071" duration="10202000" />
       <workItem from="1603648403836" duration="4070000" />
-      <workItem from="1603669418956" duration="13728000" />
+      <workItem from="1603669418956" duration="22671000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1602689368708</created>
@@ -400,7 +404,13 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1603680653916</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="fixes, tests.">
+      <created>1603689755155</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1603689755155</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,10 +468,10 @@
       <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="93" y="93" width="2108" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2293.920@0.0.2293.920" timestamp="1603605013038" />
-    <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1603686657973">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1603696926460">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603650709417" />
+    <state x="638" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603696926460" />
     <state x="953" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.2293.920@0.0.2293.920" timestamp="1603686657973" />
     <state x="933" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602697769356">
       <screen x="0" y="0" width="1536" height="824" />
@@ -482,26 +492,26 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603457995228" />
     <state x="820" y="186" key="FileChooserDialogImpl/0.0.2293.920@0.0.2293.920" timestamp="1603302788204" />
-    <state width="2250" height="12" key="GridCell.Tab.0.bottom" timestamp="1603689710818">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state width="1493" height="343" key="GridCell.Tab.0.bottom" timestamp="1603699628530">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1234" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603652482258" />
-    <state width="2250" height="12" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603689710818" />
-    <state width="2250" height="12" key="GridCell.Tab.0.center" timestamp="1603689710817">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state width="1493" height="343" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603699628530" />
+    <state width="2250" height="101" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1603690266605" />
+    <state width="1493" height="343" key="GridCell.Tab.0.center" timestamp="1603699628530">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1234" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603652482258" />
-    <state width="2250" height="12" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1603689710817" />
-    <state width="2250" height="12" key="GridCell.Tab.0.left" timestamp="1603689710817">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state width="1493" height="343" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603699628530" />
+    <state width="2250" height="101" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1603690266605" />
+    <state width="1493" height="343" key="GridCell.Tab.0.left" timestamp="1603699628530">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1234" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603652482258" />
-    <state width="2250" height="12" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1603689710817" />
-    <state width="2250" height="12" key="GridCell.Tab.0.right" timestamp="1603689710818">
-      <screen x="0" y="0" width="2293" height="920" />
+    <state width="1493" height="343" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603699628530" />
+    <state width="2250" height="101" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1603690266605" />
+    <state width="1493" height="343" key="GridCell.Tab.0.right" timestamp="1603699628530">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1234" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603652482258" />
-    <state width="2250" height="12" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1603689710818" />
+    <state width="1493" height="343" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603699628530" />
+    <state width="2250" height="101" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1603690266605" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1603458396748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -536,11 +546,11 @@
       <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="628" y="35" key="SettingsEditor/0.0.2293.920@0.0.2293.920" timestamp="1603432794771" />
-    <state x="1022" y="297" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603680656397">
+    <state x="1022" y="297" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603689762427">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
     <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603609214320" />
-    <state x="1022" y="297" key="Vcs.Push.Dialog.v2/0.0.2293.920@0.0.2293.920" timestamp="1603680656397" />
+    <state x="1022" y="297" key="Vcs.Push.Dialog.v2/0.0.2293.920@0.0.2293.920" timestamp="1603689762427" />
     <state x="1094" y="106" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603460128216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

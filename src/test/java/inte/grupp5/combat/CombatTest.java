@@ -8,16 +8,40 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class CombatTest {
 
 
     Enemy e = new Enemy(50);
-    Wolf wolf = new Wolf(50);
+    Wolf wolf = new Wolf(50,0);
+    Wolf wolf1 = new Wolf(100,10);
     Player mage = new Player("Player",new Mage("mage"),32);
     Player paladin = new Player("Player", new Paladin("paladin"),10);
     EnemyList enemyList = new EnemyList();
+
+
+
+    @ParameterizedTest
+    @ValueSource(ints = {50, 25, 0})
+    void playerManaSetCorrectAfterUsingSpellDuringCombat (int mana){
+        enemyList.addEnemy(wolf);
+        Combat combat = new Combat(enemyList.getEnemies(),paladin);
+        combat.opponentTurn(wolf);
+        paladin.setCurrentManaPoints(mana + 25);
+        combat.playerCastSpell(paladin);
+        assertEquals(mana, paladin.getCurrentManaPoints());
+    }
+
+    @Test
+    void counterIsSetTo10WhenPlayerUsedSpellToManyTimes() {
+        enemyList.addWolves(wolf1.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),paladin);
+        combat.startCombat(combat.getEnemy(), combat.getPlayer(),combat.getOpponents());
+        assertEquals(11,combat.getSPELL_COUNTER());
+    }
 
 
     @Test
@@ -187,6 +211,7 @@ public class CombatTest {
         combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
         assertNotEquals(startingHealth, combat.getEnemy().getCurrentHealth());
     }
+
 
 
     }

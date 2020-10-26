@@ -64,8 +64,8 @@ public class Combat extends PrepareCombat {
             opponentTurn(e);
             checkIfPlayerHealthIsZero();
             if (playerDefeated) {
+                System.out.println("Player defeated");
                 setPlayerTakenDamageFalse();
-                SPELL_COUNTER = 0;
                 break;
             }
         }
@@ -82,6 +82,7 @@ public class Combat extends PrepareCombat {
             opponentTurn(e);
             checkIfEnemyHealthIsZero();
             if (enemyDefeated) {
+                System.out.println("Enemy defeated");
                 break;
             }
         }
@@ -93,10 +94,13 @@ public class Combat extends PrepareCombat {
             playerCastSpell(super.getPlayer());
         }
         e.takeDamage(super.getPlayer().getDamage());
+        System.out.println("Player attacked opponent");
     }
 
     public void enemyTurn(Enemy e) {
+
         e.takeDamage(super.getEnemy().getCurrentDamage());
+        System.out.println("Enemy attacked Opponent");
     }
 
     public void setPlayerTakenDamage() {
@@ -126,11 +130,14 @@ public class Combat extends PrepareCombat {
 
     public void opponentTurn(Enemy e) {
         if (super.getPlayer() == null) {
-            System.out.println("opponent attacked enemy");
+            System.out.println("Opponent attacked enemy");
             super.getEnemy().takeDamage(e.getCurrentDamage());
-        } else
+        }
+         else if (super.getPlayer() != null) {
             super.getPlayer().takeDamage(e.getCurrentDamage());
-        setPlayerTakenDamage();
+            System.out.println("Opponent attacked player");
+            setPlayerTakenDamage();
+        }
     }
 
     public boolean isPlayerDefeated() {
@@ -141,8 +148,10 @@ public class Combat extends PrepareCombat {
 
         if (super.getPlayer().getKlass() instanceof Paladin || enemy.getEnemyType().equals("Wolf")) {
             enemy.takeDamage(5);
+            System.out.println("Player class impacted enemy health.");
         } else if (super.getPlayer().getKlass() instanceof Mage || enemy.getEnemyType().equals("Enemy")) {
             enemy.takeDamage(25);
+            System.out.println("Player class impacted enemy health.");
         }
     }
 
@@ -167,9 +176,9 @@ public class Combat extends PrepareCombat {
         this.enemyDefeated = true;
     }
 
-    public void setPlayerTakenDamageFalse() {
-        playerTakenDamage = false;
-    }
+    public void setPlayerTakenDamageFalse() { playerTakenDamage = false; }
+
+    public int getSPELL_COUNTER() { return SPELL_COUNTER; }
 
     //TODO: Flytta ut till Player och Gear klasserna:
 
@@ -177,6 +186,7 @@ public class Combat extends PrepareCombat {
         if (player.getKlass() instanceof Paladin && playerTakenDamage && SPELL_COUNTER <= 10) {
             player.castSpell(new FlashOfLight());
             SPELL_COUNTER++;
+            System.out.println("Player has casted a spell.");
             setPlayerTakenDamageFalse();
         }
     }
