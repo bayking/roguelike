@@ -1,5 +1,7 @@
 package inte.grupp5.player;
 
+import inte.grupp5.item.Armor;
+import inte.grupp5.item.Weapon;
 import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.spell.Spell;
 
@@ -15,6 +17,7 @@ public class Player {
     private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level, damage; //la till damage
     private ArrayList<Spell> spells;
 
+
     public Player(String name, Class klass, int level) {
         setLevel(level);
         setName(name);
@@ -24,7 +27,9 @@ public class Player {
         maxManaPoints = klass.getMana(level);
         currentHealthPoints = maxHealthPoints;
         currentManaPoints = maxManaPoints;
+        maxManaPoints = klass.getMana(level);
         spells = klass.getSpells();
+        //Test
     }
     private void insufficientMana() {
         System.out.println("Insufficient Mana");
@@ -87,7 +92,7 @@ public class Player {
     public void setMaxHealthPoints(int maxHealthPoints) {
         if (maxHealthPoints < 1)
             throw new IllegalArgumentException("Value can't be less than 1");
-        this.maxHealthPoints = maxHealthPoints;
+        this.maxHealthPoints = maxHealthPoints; //TODO: Testfall
     }
 
     public void takeDamage (int damage) {

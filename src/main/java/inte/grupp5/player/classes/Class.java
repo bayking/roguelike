@@ -1,5 +1,8 @@
 package inte.grupp5.player.classes;
 
+import inte.grupp5.item.Armor;
+import inte.grupp5.item.Gear;
+import inte.grupp5.item.Weapon;
 import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
@@ -13,6 +16,7 @@ public abstract class  Class {
     protected int startingMana;
     protected ArrayList<Spell> spells = new ArrayList<>();
 
+
     public Class(String name) {
         this.name = name;
     }
@@ -21,17 +25,18 @@ public abstract class  Class {
         this.name = "test";
         this.startingHealth = 50;
         this.startingMana = 50;
+
     }
 
     protected void initArrays(int health, int mana) {
         if (health <= 0 || mana <= 0) {
             throw new IllegalArgumentException();
         }
-        for (int i = 0; i<=59;i++) {
+        for (int i = 0; i <= 59; i++) {
             healthPerLvl[i] = health;
             manaPerLvl[i] = mana;
-            health = health+100;
-            mana = mana+100;
+            health = health + 100;
+            mana = mana + 100;
         }
     }
 
@@ -58,15 +63,17 @@ public abstract class  Class {
     public int getHealth(int level) {
         if (level <= 0 || level > 60)
             throw new IllegalArgumentException("Level must be in range 1-60");
-        return healthPerLvl[level-1];
+        return healthPerLvl[level - 1];
     }
 
     public int getMana(int level) {
         if (level <= 0 || level > 60)
             throw new IllegalArgumentException("Level must be in range 1-60");
-        return manaPerLvl[level-1];
+        return manaPerLvl[level - 1];
     }
-  
+
+
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
