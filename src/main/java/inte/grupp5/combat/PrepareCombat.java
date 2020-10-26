@@ -1,16 +1,8 @@
 package inte.grupp5.combat;
 import inte.grupp5.enemy.Enemy;
-import inte.grupp5.enemy.Wolf;
-import inte.grupp5.item.Consumable;
 import inte.grupp5.player.Player;
 
 import java.util.ArrayList;
-
-import inte.grupp5.player.Player;
-import inte.grupp5.enemy.*;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class PrepareCombat {
@@ -20,12 +12,13 @@ public class PrepareCombat {
     private int defeated;
     private ArrayList<Enemy> opponents = new ArrayList<Enemy>();
 
-    // Om ingen spelare så möter enemy varandra.
-    public PrepareCombat(ArrayList<Enemy> enemies, Player player) {
 
+    public PrepareCombat(ArrayList<Enemy> enemies, Player player) {
+        // Om ingen spelare så möter enemy varandra.
         if (enemies.size() >= 2 && player == null) {
             addEnemyListToOpponents(enemies);
             enemy = getStrongestEnemy();
+            opponents.remove(enemy);
         }
         else if (enemies.size() == 0 ) {
             throw new IllegalArgumentException("There has to be enemies for a combat");
@@ -33,6 +26,7 @@ public class PrepareCombat {
         else if (player == null) {
             throw new NullPointerException ("There has to be a Player for a combat");
         }
+        //Spelare och enemy finns
         else addEnemyListToOpponents(enemies);
         this.player = player;
     }
@@ -66,8 +60,4 @@ public class PrepareCombat {
                 .max(Comparator.comparingInt(Enemy::getLevel))
                 .get();
     }
-
-
-
-
 }

@@ -82,6 +82,6 @@ public class Enemy {
 
         @Override
     public String toString() {
-        return " Enemy type = " + enemyType + ", Level = " + level + ", Health = " + hp + ", Damage = " + damage + ", Enemy ID = " + ENEMY_ID;
+        return " Enemy type = " + enemyType + ", Level = " + level + ", Health = " + getCurrentHealth() + ", Damage = " + getCurrentDamage() + ", Enemy ID = " + ENEMY_ID;
     }
 }
