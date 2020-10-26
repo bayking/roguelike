@@ -7,23 +7,24 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import inte.grupp5.player.spell.FlashOfLight;
-
 import java.util.ArrayList;
 
 public class Combat extends PrepareCombat {
 
-    //TODO: Spells, mera tester, enemy vs enemy, kommentarer
     private boolean enemyDefeated = false;
-    private boolean playerDefeated = false;
+    private boolean playerDefeated,enemydefeated = false;
     private boolean opponentDefeated = false;
     private boolean playerTakenDamage = false;
     private int SPELL_COUNTER = 0;
-
 
     public Combat(ArrayList<Enemy> enemy, Player player) {
         super(enemy, player);
     }
 
+    /*
+     Startar combat mellan spelare och enemies.
+     Om ingen spelare finns startas combat mellan starkaste enemy i listan mot av enemies som finns i listan.
+     */
     public void startCombat(Enemy enemy, Player player, ArrayList<Enemy> opponents) {
         if (enemy == null) {
             playerVersusEnemies(opponents);
@@ -32,16 +33,7 @@ public class Combat extends PrepareCombat {
             enemyVersusEnemy(opponents);
         }
     }
-
-    private void enemyVersusEnemy(ArrayList<Enemy> opponents) {
-        for (Enemy e : opponents) {
-            enemyVsEnemyLoop(e);
-            if (enemyDefeated) {
-                break;
-            }
-        }
-    }
-
+    // Spelare mot enemies som finns i listan "opponents".
     private void playerVersusEnemies(ArrayList<Enemy> opponents) {
         setWeaponAndArmorForPlayer();
         for (Enemy e : opponents) {
@@ -52,7 +44,16 @@ public class Combat extends PrepareCombat {
             }
         }
     }
-
+//Starkaste enemy mot resten av enemies.
+    private void enemyVersusEnemy(ArrayList<Enemy> opponents) {
+        for (Enemy e : opponents) {
+            enemyVsEnemyLoop(e);
+            if (enemyDefeated) {
+                break;
+            }
+        }
+    }
+//Loop spelare mot enemies.
     public void combatLoop(Enemy e) {
         while (!opponentDefeated) {
             playerTurn(e);
@@ -70,7 +71,7 @@ public class Combat extends PrepareCombat {
             }
         }
     }
-
+// Loop starkaste enemy mot enemies.
     public void enemyVsEnemyLoop(Enemy e) {
         while (!opponentDefeated) {
             enemyTurn(e);
@@ -88,7 +89,6 @@ public class Combat extends PrepareCombat {
         }
     }
 
-
     public void playerTurn(Enemy e) {
         if (playerTakenDamage = true) {
             playerCastSpell(super.getPlayer());
@@ -98,7 +98,6 @@ public class Combat extends PrepareCombat {
     }
 
     public void enemyTurn(Enemy e) {
-
         e.takeDamage(super.getEnemy().getCurrentDamage());
         System.out.println("Enemy attacked Opponent");
     }
@@ -126,7 +125,6 @@ public class Combat extends PrepareCombat {
             setEnemyDefeatedTrue();
         }
     }
-
 
     public void opponentTurn(Enemy e) {
         if (super.getPlayer() == null) {
@@ -180,7 +178,7 @@ public class Combat extends PrepareCombat {
 
     public int getSPELL_COUNTER() { return SPELL_COUNTER; }
 
-    //TODO: Flytta ut till Player och Gear klasserna:
+    //TODO: Flytta ut till Player och Gear klasserna? eller till combattest:
 
     public void playerCastSpell(Player player) {
         if (player.getKlass() instanceof Paladin && playerTakenDamage && SPELL_COUNTER <= 10) {
@@ -214,5 +212,4 @@ public class Combat extends PrepareCombat {
             super.getPlayer().setDamage(mageWeapon.getDamage());
         }
     }
-
 }
