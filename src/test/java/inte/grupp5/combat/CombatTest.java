@@ -19,13 +19,29 @@ public class CombatTest {
     Enemy e = new Enemy(50);
     Wolf wolf = new Wolf(50,0);
     Wolf wolf1 = new Wolf(100,10);
-    Player mage = new Player("Player",new Mage("mage"),32);
-    Player paladin = new Player("Player", new Paladin("paladin"),50);
     EnemyList enemyList = new EnemyList();
 
+    Player mage = new Player("Player",new Mage("mage"),32);
+    Player paladin = new Player("Player", new Paladin("paladin"),50);
 
+    @Test
+    void playerDefeatedSetToTrueAfterPlayerDefeated () {}
 
+    @Test
+    void runTimeTest () { }
 
+    @Test
+    void throwsIfsetWeaponDosentReturnWeapon () { }
+
+   @Test
+   void throwsIfSetArmorDosentReturnArmor () { }
+
+   @Test
+   void enemyDefeatedsetToTrueAfterEnemyDefeated() {
+        enemyList.addWolves(wolf1.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),null);
+
+   }
 
     @ParameterizedTest
     @ValueSource(ints = {50, 25, 0})
@@ -84,7 +100,7 @@ public class CombatTest {
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
         combat.opponentTurn(wolf);
         combat.playerCastSpell(combat.getPlayer());
-        assertEquals(150,combat.getPlayer().getCurrentHealthPoints());
+        assertEquals(4150,combat.getPlayer().getCurrentHealthPoints());
     }
 
 
@@ -104,21 +120,32 @@ public class CombatTest {
         assertEquals(0,combat.getOpponents().get(0).getCurrentHealth() );
     }
 
-    @Disabled // Måste räkna ut hur mycket damage spelaren gör
+
     @Test
     void paladinHasDamageWhenStartingCombat() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
-        assertEquals(50,combat.setWeaponForPlayer());
+        combat.startCombat(combat.getEnemy(), combat.getPlayer(),combat.getOpponents());
+        assertEquals(80,combat.setWeaponForPlayer());
     }
-    @Disabled
+
+
     @Test
-    void mageHasDamageWhenInitiziatingCombat() {
+    void mageHasDamageFromWeapon() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
         combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
-        assertEquals(50,combat.setWeaponForPlayer());
+        assertEquals(30,combat.setWeaponForPlayer());
+    }
+
+    @Test
+    void mageHasExtraHealthFromArmor () {
+        enemyList.addEnemy(wolf);
+        Combat combat = new Combat(enemyList.getEnemies(), mage);
+        int beforeSettingArmorHealth = mage.getCurrentHealthPoints();
+        combat.setArmorForPlayer();
+        assertEquals(3230,beforeSettingArmorHealth + 30);
+
     }
 
 
@@ -217,10 +244,7 @@ public class CombatTest {
         assertNotEquals(startingHealth, combat.getEnemy().getCurrentHealth());
     }
 
-    @Test
-    void runTimeTest () {
 
-    }
 
     }
 

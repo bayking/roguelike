@@ -114,15 +114,6 @@ public class Player {
         return items;
     }
 
-    //TODO: Test, behövs ej ännu för combat
-    public void removeItem(Item item) {
-        items.remove(item);
-    }
-    //TODO: Test, behövs ej ännu för combat
-    public void addItem(Item item) {
-        items.add(item);
-    }
-
     public void setMaxManaPoints(int maxManaPoints) {
         if (maxManaPoints < 1)
             throw new IllegalArgumentException("Value can't be less than 1");

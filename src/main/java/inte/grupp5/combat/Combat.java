@@ -11,10 +11,8 @@ import java.util.ArrayList;
 
 public class Combat extends PrepareCombat {
 
-    private boolean enemyDefeated = false;
-    private boolean playerDefeated = false;
-    private boolean opponentDefeated = false;
-    private boolean playerTakenDamage = false;
+//    private boolean enemyDefeated;
+    private boolean playerDefeated, enemyDefeated, opponentDefeated, playerTakenDamage;
     private int SPELL_COUNTER = 0;
 
     public Combat(ArrayList<Enemy> enemy, Player player) {
@@ -22,6 +20,8 @@ public class Combat extends PrepareCombat {
     }
 
     public void startCombat(Enemy enemy, Player player, ArrayList<Enemy> opponents) {
+        setBooleansToFalse();
+
         if (enemy == null) {
             playerVersusEnemies(opponents);
         }
@@ -51,30 +51,30 @@ public class Combat extends PrepareCombat {
     }
 
     //Loop spelare mot enemies.
-    public void combatLoop(Enemy e) {
+    private void combatLoop(Enemy e) {
         while (!opponentDefeated) {
             playerTurn(e);
             checkIfOpponentHealthIsZero(e);
             if (opponentDefeated) {
-                setOpponentDefeatedFalse();
+                opponentDefeated = false;
                 break;
             }
             opponentTurn(e);
             checkIfPlayerHealthIsZero();
             if (playerDefeated) {
                 System.out.println("Player defeated");
-                setPlayerTakenDamageFalse();
+                playerTakenDamage = false;
                 break;
             }
         }
     }
 
-    public void enemyVsEnemyLoop(Enemy e) {
+    private void enemyVsEnemyLoop(Enemy e) {
         while (!opponentDefeated) {
             enemyTurn(e);
             checkIfOpponentHealthIsZero(e);
             if (opponentDefeated) {
-                setOpponentDefeatedFalse();
+                opponentDefeated = false;
                 break;
             }
             opponentTurn(e);
@@ -106,28 +106,28 @@ public class Combat extends PrepareCombat {
         } else if (super.getPlayer() != null) {
             super.getPlayer().takeDamage(e.getCurrentDamage());
             System.out.println("Opponent attacked player");
-            setPlayerTakenDamage();
+            playerTakenDamage = true;
         }
     }
 
 
-    public void checkIfOpponentHealthIsZero(Enemy e) {
+    private void checkIfOpponentHealthIsZero(Enemy e) {
         if (e.getCurrentHealth() <= 0) {
             super.setDefeated(getDefeated() + 1);
             System.out.println(super.getDefeated() + " opponents defeated");
-            setOpponentDefeatedTrue();
+            opponentDefeated = true;
         }
     }
 
-    public void checkIfPlayerHealthIsZero() {
+    private void checkIfPlayerHealthIsZero() {
         if (super.getPlayer().getCurrentHealthPoints() <= 0) {
-            setPlayerDefeatedTrue();
+            playerDefeated = true;
         }
     }
 
     public void checkIfEnemyHealthIsZero() {
         if (super.getEnemy().getCurrentHealth() <= 0) {
-            setEnemyDefeatedTrue();
+            enemyDefeated = true;
         }
     }
 
@@ -141,40 +141,20 @@ public class Combat extends PrepareCombat {
             player.castSpell(new FlashOfLight());
             SPELL_COUNTER++;
             System.out.println("Player has casted a spell.");
-            setPlayerTakenDamageFalse();
+            playerTakenDamage = false;
         }
     }
-
-    public boolean isPlayerDefeated() {
-        return playerDefeated;
-    }
-
-    public void setPlayerTakenDamage() {
-        this.playerTakenDamage = true;
-    }
-
-    public void setOpponentDefeatedFalse() {
-        this.opponentDefeated = false;
-    }
-
-    public void setOpponentDefeatedTrue() {
-        this.opponentDefeated = true;
-    }
-
-    public void setPlayerDefeatedTrue() {
-        this.playerDefeated = true;
-    }
-
-    public void setEnemyDefeatedTrue() {
-        this.enemyDefeated = true;
-    }
-
-    public void setPlayerTakenDamageFalse() {
+    private void setBooleansToFalse () {
         playerTakenDamage = false;
+        playerDefeated = false;
+        enemyDefeated = false;
+        opponentDefeated = false;
     }
 
-    public int getSPELL_COUNTER() {
-        return SPELL_COUNTER;
+    public boolean isPlayerDefeated() { return playerDefeated;
+    }
+
+    public int getSPELL_COUNTER() { return SPELL_COUNTER;
     }
 
 }
