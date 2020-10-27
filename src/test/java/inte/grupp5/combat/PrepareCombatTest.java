@@ -29,6 +29,8 @@ public class PrepareCombatTest {
         new Combat(null,player);
     }); }
 
+    
+
     @Test
     void checkIfEnemyContains () {  assertThrows(IllegalArgumentException.class, () -> {
         Player player = new Player("Player",new Mage("mage"),32);

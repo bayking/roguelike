@@ -1,21 +1,24 @@
 package inte.grupp5.player;
 
 import inte.grupp5.item.Armor;
+import inte.grupp5.item.Chest;
+import inte.grupp5.item.Item;
 import inte.grupp5.item.Weapon;
 import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
 
-// TODO: Tests för int Damage, getDamage, setDamage, takeDamage.
+// TODO: Test för takedamage, la till Arraylist items, och getters för den.
 // TODO: Interaction with consumables.
 public class Player {
     public static final int MAX_LEVEL = 60;
     public static final int MIN_LEVEL = 1;
     private String name;
     private final Class klass;
-    private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level, damage; //la till damage
+    private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level;
     private ArrayList<Spell> spells;
+    private ArrayList<Item> items;
 
 
     public Player(String name, Class klass, int level) {
@@ -29,6 +32,7 @@ public class Player {
         currentManaPoints = maxManaPoints;
         maxManaPoints = klass.getMana(level);
         spells = klass.getSpells();
+        items = new Chest().openChest(this);
         //Test
     }
     private void insufficientMana() {
@@ -94,22 +98,29 @@ public class Player {
             throw new IllegalArgumentException("Value can't be less than 1");
         this.maxHealthPoints = maxHealthPoints; //TODO: Testfall
     }
-
+    //TODO: Test
     public void takeDamage (int damage) {
             currentHealthPoints = currentHealthPoints - damage;
         if (currentHealthPoints < 0) {
             currentHealthPoints = 0;
         }
     }
-
-    public int getDamage() {
-        return damage;
+    //TODO: Test
+    public Item getItem(int i) { {
+        return items.get(i); }
+    }
+    //TODO: Test om inte items finns på speciell plats i listan.
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
-    public void setDamage(int damage) {
-        if (damage < 0 )
-            throw new IllegalArgumentException("Value can't be less than 1");
-        this.damage = damage;
+    //TODO: Test, behövs ej ännu för combat
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+    //TODO: Test, behövs ej ännu för combat
+    public void addItem(Item item) {
+        items.add(item);
     }
 
     public void setMaxManaPoints(int maxManaPoints) {
