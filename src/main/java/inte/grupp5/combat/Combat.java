@@ -7,11 +7,11 @@ import inte.grupp5.player.spell.FlashOfLight;
 
 import java.util.ArrayList;
 
-//TODO: Göra metoder privata.
+//TODO: Göra metoder privata, ta bort enemy och spelare när startCombat körts.
 
 public class Combat extends PrepareCombat {
 
-//    private boolean enemyDefeated;
+
     private boolean playerDefeated, enemyDefeated, opponentDefeated, playerTakenDamage;
     private int SPELL_COUNTER = 0;
 
@@ -20,7 +20,6 @@ public class Combat extends PrepareCombat {
     }
 
     public void startCombat(Enemy enemy, Player player, ArrayList<Enemy> opponents) {
-        setBooleansToFalse();
 
         if (enemy == null) {
             playerVersusEnemies(opponents);
@@ -28,6 +27,7 @@ public class Combat extends PrepareCombat {
         if (player == null && enemy != null && opponents.size() >= 1) {
             enemyVersusEnemy(opponents);
         }
+        setBooleansToFalse();
     }
 
     private void playerVersusEnemies(ArrayList<Enemy> opponents) {
@@ -151,7 +151,19 @@ public class Combat extends PrepareCombat {
         opponentDefeated = false;
     }
 
-    public boolean isPlayerDefeated() { return playerDefeated;
+    public boolean getPlayerDefeated() { return playerDefeated;
+    }
+
+    public boolean getEnemyDefeated() {
+        return enemyDefeated;
+    }
+
+    public boolean getOpponentDefeated() {
+        return opponentDefeated;
+    }
+
+    public boolean getPlayerTakenDamage() {
+        return playerTakenDamage;
     }
 
     public int getSPELL_COUNTER() { return SPELL_COUNTER;

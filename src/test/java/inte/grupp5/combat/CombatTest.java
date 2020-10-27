@@ -24,8 +24,6 @@ public class CombatTest {
     Player mage = new Player("Player",new Mage("mage"),32);
     Player paladin = new Player("Player", new Paladin("paladin"),50);
 
-    @Test
-    void playerDefeatedSetToTrueAfterPlayerDefeated () {}
 
     @Test
     void runTimeTest () { }
@@ -40,6 +38,17 @@ public class CombatTest {
    void enemyDefeatedsetToTrueAfterEnemyDefeated() {
         enemyList.addWolves(wolf1.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(),null);
+   }
+
+   @Test
+   void booleansSetToFalseWhenStartCombatMethodCalled () {
+        enemyList.addWolves(wolf1.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),null);
+        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
+        assertFalse(combat.getPlayerDefeated());
+        assertFalse(combat.getEnemyDefeated());
+        assertFalse(combat.getOpponentDefeated());
+        assertFalse(combat.getPlayerTakenDamage());
 
    }
 
@@ -189,7 +198,7 @@ public class CombatTest {
         enemyList.addWolves(wolf.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(), mage);
         combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
-        assertTrue(combat.isPlayerDefeated());
+        assertTrue(combat.getPlayerDefeated());
     }
 
     @Test

@@ -30,7 +30,6 @@ public abstract class PrepareCombat {
         else if (player == null) {
             throw new NullPointerException ("There has to be a Player for a combat");
         }
-        //Spelare och enemy finns
         else addEnemyListToOpponents(enemies);
         this.player = player;
     }
