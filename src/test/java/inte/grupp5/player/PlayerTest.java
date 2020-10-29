@@ -1,5 +1,6 @@
 package inte.grupp5.player;
 
+import inte.grupp5.item.Weapon;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.spell.InvokeMana;
 import org.junit.jupiter.api.Assertions;
@@ -10,6 +11,47 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerTest {
 
     Player player = new Player("Tester", new Mage("mage"), 1);
+
+    @Test
+    void playerTakesDamage() {
+        player.takeDamage(50);
+        assertEquals(50,player.getCurrentHealthPoints());
+    }
+
+    @Test
+    void playerTakesDamageSetsToZeroIfDamageToHigh () {
+        player.takeDamage(101);
+        assertEquals(0,player.getCurrentHealthPoints());
+    }
+
+    @Test
+    void playerTakesDamageThrowsIfDamageNegative () {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> player.takeDamage(-100));
+    }
+
+    @Test
+    void getItemsSizeReturnsCorrectSize () {
+        assertEquals(5,player.getItemsSize());
+    }
+
+    @Test
+    void getItemReturnsItem () {
+        assertEquals("Light armor",player.getItem(4).getName());
+    }
+
+    @Test
+    void getItemThrowsIfLessThanZero () {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> player.getItem(-1));
+    }
+    @Test
+    void getItemThrowsIfMoreThanSize () {
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> player.getItem(5));
+    }
+
+    @Test
+    void playerHasItemsWhenCreated() {
+        assertEquals(5,player.getItemsSize());
+    }
 
     @Test
     void setCurrentHealthPointsZero() {

@@ -172,7 +172,6 @@ public class CombatTest {
     void playerDefeatsOneEnemy() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
-        System.out.println(mage.getItems());
         combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
         assertNull(combat.getEnemy());
         assertEquals(0,combat.getOpponents().get(0).getCurrentHealth());
@@ -216,14 +215,11 @@ public class CombatTest {
         Dragon d = new Dragon(500);
         Enemy enemy = new Enemy(10);
         Wolf w = new Wolf(10,0);
-
         enemyList.addWolves(w.getGroupOfWolves());
         enemyList.addEnemy(d);
         enemyList.addEnemy(enemy);
-
         Combat combat = new Combat(enemyList.getEnemies(), null);
         combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
-
         assertTrue(combat.getDefeated() >= 3);
     }
 
@@ -232,14 +228,11 @@ public class CombatTest {
         Dragon d = new Dragon(500);
         Enemy enemy = new Enemy(10);
         Wolf w = new Wolf(100,50);
-
         enemyList.addWolves(w.getGroupOfWolves());
         enemyList.addEnemy(d);
         enemyList.addEnemy(enemy);
-
         Combat combat = new Combat(enemyList.getEnemies(), null);
         combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
-
         assertEquals(0,combat.getEnemy().getCurrentHealth());
     }
 

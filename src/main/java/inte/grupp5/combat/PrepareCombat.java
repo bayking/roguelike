@@ -35,7 +35,7 @@ public abstract class PrepareCombat {
     }
 
     public void setArmorForPlayer() {
-        Armor armor = (Armor) player.getItem(player.getItems().size() - 1);
+        Armor armor = (Armor) player.getItem(player.getItemsSize() - 1);
         if (player.getKlass() instanceof Paladin) {
             player.setMaxHealthPoints(player.getCurrentHealthPoints() + armor.getArmorRating() >> 2);
             player.setCurrentHealthPoints(player.getMaxHealthPoints());
@@ -47,7 +47,7 @@ public abstract class PrepareCombat {
     }
 
     public int setWeaponForPlayer() {
-        Weapon weapon = (Weapon) player.getItem(player.getItems().size() - 2);
+        Weapon weapon = (Weapon) player.getItem(player.getItemsSize() - 2);
         System.out.println(weapon);
         if (player.getKlass() instanceof Paladin) {
             return weapon.getDamage() * 2;

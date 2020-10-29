@@ -96,22 +96,29 @@ public class Player {
     public void setMaxHealthPoints(int maxHealthPoints) {
         if (maxHealthPoints < 1)
             throw new IllegalArgumentException("Value can't be less than 1");
-        this.maxHealthPoints = maxHealthPoints; //TODO: Testfall
+        this.maxHealthPoints = maxHealthPoints;
     }
-    //TODO: Test
+
     public void takeDamage (int damage) {
+        if (damage < 0) {
+            throw new IllegalArgumentException("Value can't be less than 0");
+    }
             currentHealthPoints = currentHealthPoints - damage;
         if (currentHealthPoints < 0) {
             currentHealthPoints = 0;
         }
     }
-    //TODO: Test
+
     public Item getItem(int i) { {
+        if (i < 0 ) {
+            throw new IllegalArgumentException("Value can't be less than 0"); }
+        if (i > getItemsSize()){
+            throw new IndexOutOfBoundsException("Value can't be more than size of list"); }
         return items.get(i); }
     }
-    //TODO: Test om inte items finns på speciell plats i listan.
-    public ArrayList<Item> getItems() {
-        return items;
+
+    public int getItemsSize() {
+        return items.size();
     }
 
     public void setMaxManaPoints(int maxManaPoints) {
