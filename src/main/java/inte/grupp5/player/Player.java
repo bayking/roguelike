@@ -9,7 +9,6 @@ import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
 
-// TODO: Test för takedamage, la till Arraylist items, och getters för den.
 // TODO: Interaction with consumables.
 public class Player {
     public static final int MAX_LEVEL = 60;
