@@ -20,12 +20,6 @@ public class Dragon extends Enemy {
     public void setMana(int mana) {
         this.mana = mana;
     }
-    /*Testa med combat klasserna
-
-    public void itemUsedOnDragon(int damage) {
-        super.takeDamage(damage);
-    }
-     */
 
     public void healItself() {
         setHp(getCurrentHealth() + 25);

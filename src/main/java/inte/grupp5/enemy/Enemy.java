@@ -5,7 +5,7 @@ public class Enemy {
     public static final double ATTRIBUTES_CALC = 1.5; //Ändra till private?
     private static int ID_COUNTER = 1;
 
-    private final String enemyType; // gör final (klar)
+    private final String enemyType;
     private final Enemy enemy;
     private final int ENEMY_ID;
     private final int level;
@@ -82,6 +82,7 @@ public class Enemy {
 
         @Override
     public String toString() {
-        return " Enemy type = " + enemyType + ", Level = " + level + ", Health = " + getCurrentHealth() + ", Damage = " + getCurrentDamage() + ", Enemy ID = " + ENEMY_ID;
+        return " Enemy type = " + enemyType + ", Level = " + level +
+                ", Health = " + getCurrentHealth() + ", Damage = " + getCurrentDamage() + ", Enemy ID = " + ENEMY_ID;
     }
 }
