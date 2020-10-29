@@ -11,40 +11,40 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ChestTest {
 
-    Mage MAGE = new Mage("Gandalf");
-    Paladin PALADIN = new Paladin("Paladin");
+    final Mage MAGE = new Mage("Gandalf");
+    final Paladin PALADIN = new Paladin("Paladin");
 
-    Player LEVEL_5_MAGE = new Player("Level 5", MAGE, 5);
-    Player LEVEL_15_MAGE = new Player("Level 15", MAGE, 15);
-    Player LEVEL_25_MAGE = new Player("Level 25", MAGE, 25);
-    Player LEVEL_35_MAGE = new Player("Level 35", MAGE, 35);
-    Player LEVEL_45_MAGE = new Player("Level 45", MAGE, 45);
-    Player LEVEL_55_MAGE = new Player("Level 55", MAGE, 55);
-    Player LEVEL_60_MAGE = new Player("Level 60", MAGE, 60);
+    final Player LEVEL_5_MAGE = new Player("Level 5", MAGE, 5);
+    final Player LEVEL_15_MAGE = new Player("Level 15", MAGE, 15);
+    final Player LEVEL_25_MAGE = new Player("Level 25", MAGE, 25);
+    final Player LEVEL_35_MAGE = new Player("Level 35", MAGE, 35);
+    final Player LEVEL_45_MAGE = new Player("Level 45", MAGE, 45);
+    final Player LEVEL_55_MAGE = new Player("Level 55", MAGE, 55);
+    final Player LEVEL_60_MAGE = new Player("Level 60", MAGE, 60);
 
-    Player LEVEL_5_PALADIN = new Player("Level 5", PALADIN, 5);
-    Player LEVEL_15_PALADIN = new Player("Level 15", PALADIN, 15);
-    Player LEVEL_25_PALADIN = new Player("Level 25", PALADIN, 25);
-    Player LEVEL_35_PALADIN = new Player("Level 35", PALADIN, 35);
-    Player LEVEL_45_PALADIN = new Player("Level 45", PALADIN, 45);
-    Player LEVEL_55_PALADIN = new Player("Level 55", PALADIN, 55);
-    Player LEVEL_60_PALADIN = new Player("Level 60", PALADIN, 60);
+    final Player LEVEL_5_PALADIN = new Player("Level 5", PALADIN, 5);
+    final Player LEVEL_15_PALADIN = new Player("Level 15", PALADIN, 15);
+    final Player LEVEL_25_PALADIN = new Player("Level 25", PALADIN, 25);
+    final Player LEVEL_35_PALADIN = new Player("Level 35", PALADIN, 35);
+    final Player LEVEL_45_PALADIN = new Player("Level 45", PALADIN, 45);
+    final Player LEVEL_55_PALADIN = new Player("Level 55", PALADIN, 55);
+    final Player LEVEL_60_PALADIN = new Player("Level 60", PALADIN, 60);
 
-    Chest LEVEL_5_MAGE_CHEST = new Chest();
-    Chest LEVEL_15_MAGE_CHEST = new Chest();
-    Chest LEVEL_25_MAGE_CHEST = new Chest();
-    Chest LEVEL_35_MAGE_CHEST = new Chest();
-    Chest LEVEL_45_MAGE_CHEST = new Chest();
-    Chest LEVEL_55_MAGE_CHEST = new Chest();
-    Chest LEVEL_60_MAGE_CHEST = new Chest();
+    final Chest LEVEL_5_MAGE_CHEST = new Chest();
+    final Chest LEVEL_15_MAGE_CHEST = new Chest();
+    final Chest LEVEL_25_MAGE_CHEST = new Chest();
+    final Chest LEVEL_35_MAGE_CHEST = new Chest();
+    final Chest LEVEL_45_MAGE_CHEST = new Chest();
+    final Chest LEVEL_55_MAGE_CHEST = new Chest();
+    final Chest LEVEL_60_MAGE_CHEST = new Chest();
 
-    Chest LEVEL_5_PALADIN_CHEST = new Chest();
-    Chest LEVEL_15_PALADIN_CHEST = new Chest();
-    Chest LEVEL_25_PALADIN_CHEST = new Chest();
-    Chest LEVEL_35_PALADIN_CHEST = new Chest();
-    Chest LEVEL_45_PALADIN_CHEST = new Chest();
-    Chest LEVEL_55_PALADIN_CHEST = new Chest();
-    Chest LEVEL_60_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_5_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_15_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_25_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_35_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_45_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_55_PALADIN_CHEST = new Chest();
+    final Chest LEVEL_60_PALADIN_CHEST = new Chest();
 
     @Test
     void chestGeneratesWeaponWithDamageBasedOnLevelForMages() {
