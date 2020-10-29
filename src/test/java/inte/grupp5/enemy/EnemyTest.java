@@ -141,7 +141,8 @@ public class EnemyTest {
     @Test
     void toStringIsCorrect() {
         Enemy e = new Enemy(58);
-        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29," + " Enemy ID = " + e.getENEMY_ID(), e.toString());
+        assertEquals(" Enemy type = Enemy, Level = 58, Health = 187, Damage = 29," +
+                " Enemy ID = " + e.getENEMY_ID(), e.toString());
     }
 
 

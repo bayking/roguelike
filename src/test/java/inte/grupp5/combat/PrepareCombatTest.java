@@ -19,8 +19,9 @@ public class PrepareCombatTest {
     Player magePlayer = new Player("Player",new Mage("Mage"),10);
     Wolf wolf = new Wolf(50,40);
 
-    @Test
-    void checkIfContainsPlayerFails () {  assertThrows(NullPointerException.class, () -> {
+    @Test //T3
+    void checkIfPlayerNullAndIfToFewEnemies () {
+        assertThrows(NullPointerException.class, () -> {
         Enemy e = new Enemy(40);
         EnemyList enemyList = new EnemyList();
         enemyList.addEnemy(e);
@@ -34,8 +35,8 @@ public class PrepareCombatTest {
     }); }
 
 
-    @Test
-    void checkIfEnemyContains () {  assertThrows(IllegalArgumentException.class, () -> {
+    @Test //T2
+    void checkIfOpponentListContains () {  assertThrows(IllegalArgumentException.class, () -> {
         Player player = new Player("Player",new Mage("mage"),32);
         EnemyList enemyList = new EnemyList();
         new Combat(enemyList.getEnemies(),player);

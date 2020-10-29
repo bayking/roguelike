@@ -1,60 +1,69 @@
 Enemy attacked Opponent
 Opponent attacked enemy
-113
+111
 Enemy attacked Opponent
 Opponent attacked enemy
-108
+106
 Enemy attacked Opponent
 Opponent attacked enemy
-103
+101
 Enemy attacked Opponent
 Opponent attacked enemy
-98
+96
 Enemy attacked Opponent
 Opponent attacked enemy
-93
+91
 Enemy attacked Opponent
 Opponent attacked enemy
-88
+86
 Enemy attacked Opponent
 Opponent attacked enemy
-83
+81
 Enemy attacked Opponent
 Opponent attacked enemy
-78
+76
 Enemy attacked Opponent
 Opponent attacked enemy
-73
+71
 Enemy attacked Opponent
 Opponent attacked enemy
-68
+66
 Enemy attacked Opponent
 Opponent attacked enemy
-63
+61
 Enemy attacked Opponent
 Opponent attacked enemy
-58
+56
 Enemy attacked Opponent
 Opponent attacked enemy
-53
+51
 Enemy attacked Opponent
 Opponent attacked enemy
-48
+46
 Enemy attacked Opponent
 Opponent attacked enemy
-43
+41
 Enemy attacked Opponent
 Opponent attacked enemy
-38
+36
 Enemy attacked Opponent
 Opponent attacked enemy
-33
+31
 Enemy attacked Opponent
 Opponent attacked enemy
-28
+26
 Enemy attacked Opponent
 Opponent attacked enemy
-23
+21
+Enemy attacked Opponent
+Opponent attacked enemy
+16
+Enemy attacked Opponent
+Opponent attacked enemy
+11
+Enemy attacked Opponent
+Opponent attacked enemy
+6
 Enemy attacked Opponent
 1 opponents defeated
 Enemy attacked Opponent
@@ -152,6 +161,8 @@
 Player attacked opponent
 Opponent attacked player
 Player attacked opponent
+Opponent attacked player
+Player attacked opponent
 1 opponents defeated
 Enemy attacked Opponent
 1 opponents defeated
@@ -214,27 +225,27 @@
 13 opponents defeated
 Enemy attacked Opponent
 Opponent attacked enemy
-250
+249
 Enemy attacked Opponent
 14 opponents defeated
 Enemy attacked Opponent
 Opponent attacked enemy
-200
+198
 Enemy attacked Opponent
 15 opponents defeated
 Enemy attacked Opponent
 Opponent attacked enemy
-150
+147
 Enemy attacked Opponent
 16 opponents defeated
 Enemy attacked Opponent
 Opponent attacked enemy
-100
+96
 Enemy attacked Opponent
 17 opponents defeated
 Enemy attacked Opponent
 Opponent attacked enemy
-50
+45
 Enemy attacked Opponent
 18 opponents defeated
 Enemy attacked Opponent
@@ -276,483 +287,256 @@
 127
 Enemy attacked Opponent
 2 opponents defeated
+	Health is full
+	Player has casted a spell.
 	Player attacked opponent
 	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
+	Player has casted a spell.
 	Player attacked opponent
 	1 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	2 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	3 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	4 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	5 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	6 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	7 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	8 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	9 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	10 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	11 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	12 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	13 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	14 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	15 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	16 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	17 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	18 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	19 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	20 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	21 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	22 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	23 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	24 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	25 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	Opponent attacked player
-	Player attacked opponent
-	26 opponents defeated
-	Player attacked opponent
-	Opponent attacked player
-	Player defeated
 
-Health is full
+Enemy attacked Opponent
 
-Player has casted a spell.
+Opponent attacked enemy
 
-Player attacked opponent
+111
 
-Opponent attacked player
+Enemy attacked Opponent
 
-Player has casted a spell.
+Opponent attacked enemy
 
-Player attacked opponent
+106
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+101
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+96
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+91
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+86
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+81
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+76
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+71
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+66
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+61
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+56
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+51
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+46
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+41
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+36
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+31
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+26
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+21
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+16
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+11
+
+Enemy attacked Opponent
+
+Opponent attacked enemy
+
+6
+
+Enemy attacked Opponent
 
 1 opponents defeated
-Enemy attacked Opponent
-Opponent attacked enemy
-116
-Enemy attacked Opponent
-Opponent attacked enemy
-111
-Enemy attacked Opponent
-Opponent attacked enemy
-106
-Enemy attacked Opponent
-Opponent attacked enemy
-101
-Enemy attacked Opponent
-Opponent attacked enemy
-96
-Enemy attacked Opponent
-Opponent attacked enemy
-91
-Enemy attacked Opponent
-Opponent attacked enemy
-86
-Enemy attacked Opponent
-Opponent attacked enemy
-81
-Enemy attacked Opponent
-Opponent attacked enemy
-76
-Enemy attacked Opponent
-Opponent attacked enemy
-71
-Enemy attacked Opponent
-Opponent attacked enemy
-66
-Enemy attacked Opponent
-Opponent attacked enemy
-61
-Enemy attacked Opponent
-Opponent attacked enemy
-56
-Enemy attacked Opponent
-Opponent attacked enemy
-51
-Enemy attacked Opponent
-Opponent attacked enemy
-46
-Enemy attacked Opponent
-Opponent attacked enemy
-41
-Enemy attacked Opponent
-1 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+1 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+2 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+3 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+4 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+5 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+6 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+7 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+8 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+9 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+10 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+11 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player defeated
 Health is full
 Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-1 opponents defeated
-Health is full
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-2 opponents defeated
-Health is full
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player has casted a spell.
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-3 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-4 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-5 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-6 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-7 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-8 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-9 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-10 opponents defeated
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-Opponent attacked player
-Player attacked opponent
-11 opponents defeated
 Player attacked opponent
 Opponent attacked player
 Player defeated
@@ -800,6 +584,194 @@
 Player has casted a spell.
 Opponent attacked player
 Player has casted a spell.
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+1 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+2 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+3 opponents defeated
+Health is full
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player has casted a spell.
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+4 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+5 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+6 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+7 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+8 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+9 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+10 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+11 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+12 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+13 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+14 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+15 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+16 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+17 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+18 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+19 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+20 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+21 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+22 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+23 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+24 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+25 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+26 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+27 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+28 opponents defeated
+Player attacked opponent
+Opponent attacked player
+Player attacked opponent
+Opponent attacked player
+Player defeated
 Health is full
 Player has casted a spell.
 Player attacked opponent
@@ -1077,8 +1049,3 @@
 Opponent attacked player
 Player attacked opponent
 6 opponents defeated
-QX4
-›¼Insufficient Mana
-›ÀHealth is full
-›ÀHealth is full
-ÆÈHealth is full

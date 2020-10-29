@@ -12,9 +12,9 @@ import java.util.Comparator;
 public abstract class PrepareCombat {
 
     private final Player player;
+    private final ArrayList<Enemy> opponents = new ArrayList<>();
     private Enemy enemy;
     private int playerHasDefeated;
-    private final ArrayList<Enemy> opponents = new ArrayList<>();
 
 
     public PrepareCombat(ArrayList<Enemy> enemies, Player player) {
