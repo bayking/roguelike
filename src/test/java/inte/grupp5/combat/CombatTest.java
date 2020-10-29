@@ -16,23 +16,41 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CombatTest {
 
 
-    Enemy e = new Enemy(50);
-    Wolf wolf = new Wolf(50,0);
-    Wolf wolf1 = new Wolf(100,10);
-    EnemyList enemyList = new EnemyList();
+    Enemy enemy = new Enemy(50);
+    Wolf wolf = new Wolf(10,1);
+    Wolf wolf1 = new Wolf(100,50);
+    Wolf wolf2 = new Wolf(50,0);
+    Wolf wolf3 = new Wolf(1,50);
+    Dragon dragon = new Dragon(500);
+
 
     Player mage = new Player("Player",new Mage("mage"),32);
     Player paladin = new Player("Player", new Paladin("paladin"),50);
 
+    EnemyList enemyList = new EnemyList();
+
+
 
     @Test
-    void runTimeTest () { }
+    void playerHealthImpactedAfterFirstCombat () {
+        enemyList.addWolves(wolf3.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),paladin);
+        int playerHealthBefore = combat.getPlayer().getCurrentHealthPoints();
+        combat.startCombat();
+        int playerHealthAfter = combat.getPlayer().getCurrentHealthPoints();
+        assertNotEquals(playerHealthBefore,playerHealthAfter);
+    }
 
     @Test
-    void throwsIfsetWeaponDosentReturnWeapon () { }
-
-   @Test
-   void throwsIfSetArmorDosentReturnArmor () { }
+    void enemyHealthImpactedAfterFirstCombat() {
+        enemyList.addEnemy(enemy);
+        enemyList.addWolves(wolf.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),null);
+        int enemyhealthBefore = combat.getEnemy().getCurrentHealth();
+        combat.startCombat();
+        int enemyhealthAfter = combat.getEnemy().getCurrentHealth();
+        assertNotEquals(enemyhealthBefore,enemyhealthAfter);
+    }
 
    @Test
    void enemyDefeatedsetToTrueAfterEnemyDefeated() {
@@ -41,10 +59,10 @@ public class CombatTest {
    }
 
    @Test
-   void booleansSetToFalseWhenStartCombatMethodCalled () {
+   void booleansSetToFalseAfterStartCombatMethodCalled () {
         enemyList.addWolves(wolf1.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(),null);
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
+        combat.startCombat();
         assertFalse(combat.getPlayerDefeated());
         assertFalse(combat.getEnemyDefeated());
         assertFalse(combat.getOpponentDefeated());
@@ -67,28 +85,28 @@ public class CombatTest {
     void counterIsSetTo10WhenPlayerUsedSpellToManyTimes() {
         enemyList.addWolves(wolf1.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(),paladin);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(),combat.getOpponents());
+        combat.startCombat();
         assertEquals(11,combat.getSPELL_COUNTER());
     }
 
 
     @Test
     void playerExistsWhenStartingCombat() {
-        enemyList.addEnemy(e);
+        enemyList.addEnemy(enemy);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
         assertEquals("Player", combat.getPlayer().getName());
     }
 
     @Test
     void oneEnemyExistWhenStartingCombat() {
-        enemyList.addEnemy(e);
+        enemyList.addEnemy(enemy);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
         assertEquals( 1,combat.getOpponents().size());
     }
 
     @Test
     void paladinClassImpactsEnemyHealth() {
-        enemyList.addEnemy(wolf);
+        enemyList.addEnemy(wolf2);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
         combat.checkClass(combat.getOpponents().get(0));
         assertEquals(170,combat.getOpponents().get(0).getCurrentHealth());
@@ -96,7 +114,7 @@ public class CombatTest {
 
     @Test
     void mageClassImpactsEnemyHealth() {
-        enemyList.addEnemy(e);
+        enemyList.addEnemy(enemy);
         Combat combat = new Combat(enemyList.getEnemies(),mage );
         combat.checkClass(combat.getOpponents().get(0));
         assertEquals(150 ,combat.getOpponents().get(0).getCurrentHealth());
@@ -117,7 +135,7 @@ public class CombatTest {
     void enemyIsNullWhenPlayerAndEnemiesExist () {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
+        combat.startCombat();
         assertNull(combat.getEnemy());
     }
 
@@ -125,7 +143,7 @@ public class CombatTest {
     void combatLoopRuns () {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
+        combat.startCombat();
         assertEquals(0,combat.getOpponents().get(0).getCurrentHealth() );
     }
 
@@ -134,8 +152,8 @@ public class CombatTest {
     void paladinHasDamageWhenStartingCombat() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(),combat.getOpponents());
-        assertEquals(80,combat.setWeaponForPlayer());
+        combat.startCombat();
+        assertEquals(80,combat.useWeaponForPlayer());
     }
 
 
@@ -143,8 +161,8 @@ public class CombatTest {
     void mageHasDamageFromWeapon() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
-        assertEquals(30,combat.setWeaponForPlayer());
+        combat.startCombat();
+        assertEquals(30,combat.useWeaponForPlayer());
     }
 
     @Test
@@ -152,7 +170,7 @@ public class CombatTest {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
         int beforeSettingArmorHealth = mage.getCurrentHealthPoints();
-        combat.setArmorForPlayer();
+        combat.armorForPlayer();
         assertEquals(3230,beforeSettingArmorHealth + 30);
 
     }
@@ -162,8 +180,7 @@ public class CombatTest {
     void playerDoesDamage() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), paladin);
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(), combat.getOpponents());
-        System.out.println(combat.setWeaponForPlayer());
+        combat.startCombat();
         assertEquals(0,combat.getOpponents().get(0).getCurrentHealth());
 
     }
@@ -172,22 +189,21 @@ public class CombatTest {
     void playerDefeatsOneEnemy() {
         enemyList.addEnemy(wolf);
         Combat combat = new Combat(enemyList.getEnemies(), mage);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
+        combat.startCombat();
         assertNull(combat.getEnemy());
         assertEquals(0,combat.getOpponents().get(0).getCurrentHealth());
-        assertEquals(1,combat.getDefeated());
+        assertEquals(1,combat.getPlayerHasDefeated());
     }
 
     @Test
     void playerDefeatsManyOpponents() {
-        Wolf wolf = new Wolf(10,5);
-        enemyList.addEnemy(this.wolf);
-        enemyList.addWolves(wolf.getGroupOfWolves());
+        Wolf wolf5 = new Wolf(10,5);
+        enemyList.addWolves(wolf5.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(), mage);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
+        combat.startCombat();
         assertNull(combat.getEnemy());
-        assertEquals(0,combat.getOpponents().get(6).getCurrentHealth());
-        assertEquals(7,combat.getDefeated());
+        assertEquals(0,combat.getOpponents().get(5).getCurrentHealth());
+        assertEquals(6,combat.getPlayerHasDefeated());
     }
 
     @Test
@@ -196,57 +212,69 @@ public class CombatTest {
         enemyList.addEnemy(this.wolf);
         enemyList.addWolves(wolf.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(), mage);
-        combat.startCombat(combat.getEnemy(), combat.getPlayer(), combat.getOpponents());
-        assertTrue(combat.getPlayerDefeated());
+        combat.startCombat();
+        assertEquals(0,combat.getPlayer().getCurrentHealthPoints());
     }
 
     @Test
     void enemyDefeatsOneOpponent () {
-        Wolf wolf = new Wolf(10,1);
         enemyList.addWolves(wolf.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(), null);
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
+        combat.startCombat();
         assertNull(combat.getPlayer());
-        assertEquals(1,combat.getDefeated());
+        assertEquals(1,combat.getPlayerHasDefeated());
     }
 
     @Test
     void enemyDefeatsManyOpponents() {
-        Dragon d = new Dragon(500);
-        Enemy enemy = new Enemy(10);
-        Wolf w = new Wolf(10,0);
-        enemyList.addWolves(w.getGroupOfWolves());
-        enemyList.addEnemy(d);
+        enemyList.addWolves(wolf1.getGroupOfWolves());
+        enemyList.addEnemy(dragon);
         enemyList.addEnemy(enemy);
         Combat combat = new Combat(enemyList.getEnemies(), null);
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
-        assertTrue(combat.getDefeated() >= 3);
+        combat.startCombat();
+        assertTrue(combat.getPlayerHasDefeated() >= 3);
     }
 
     @Test
     void enemyDiesFromCombat() {
-        Dragon d = new Dragon(500);
-        Enemy enemy = new Enemy(10);
-        Wolf w = new Wolf(100,50);
-        enemyList.addWolves(w.getGroupOfWolves());
-        enemyList.addEnemy(d);
+        enemyList.addWolves(wolf1.getGroupOfWolves());
+        enemyList.addEnemy(dragon);
         enemyList.addEnemy(enemy);
         Combat combat = new Combat(enemyList.getEnemies(), null);
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
+        combat.startCombat();
         assertEquals(0,combat.getEnemy().getCurrentHealth());
     }
 
     @Test
     void enemyTakesDamage() {
-        Wolf wolf = new Wolf(10,1);
         enemyList.addWolves(wolf.getGroupOfWolves());
         Combat combat = new Combat(enemyList.getEnemies(), null);
         int startingHealth = combat.getEnemy().getCurrentHealth();
-        combat.startCombat(combat.getEnemy(),combat.getPlayer(),combat.getOpponents());
+        combat.startCombat();
         assertNotEquals(startingHealth, combat.getEnemy().getCurrentHealth());
     }
 
-
+    @Disabled
+    @Test
+        //Måste reset health eller ta bort från listorna
+    void startCombatRunsManyTimesWithPlayer () {
+        enemyList.addWolves(wolf3.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),paladin);
+        combat.startCombat();
+        combat.startCombat();
+        assertEquals(102,combat.getPlayerHasDefeated());
+    }
+    @Disabled
+    @Test
+        //Måste reset health eller ta bort från listorna
+    void startCombatRunsManyTimesWithEnemy () {
+        enemyList.addEnemy(dragon);
+        enemyList.addWolves(wolf3.getGroupOfWolves());
+        Combat combat = new Combat(enemyList.getEnemies(),null);
+        combat.startCombat();
+        combat.startCombat();
+        assertEquals(102,combat.getPlayerHasDefeated());
+    }
 
     }
 

@@ -7,8 +7,6 @@ import inte.grupp5.player.spell.FlashOfLight;
 
 import java.util.ArrayList;
 
-//TODO: Göra metoder privata, ta bort enemy och spelare när startCombat körts.
-
 public class Combat extends PrepareCombat {
 
 
@@ -19,13 +17,12 @@ public class Combat extends PrepareCombat {
         super(enemy, player);
     }
 
-    public void startCombat(Enemy enemy, Player player, ArrayList<Enemy> opponents) {
-
-        if (enemy == null) {
-            playerVersusEnemies(opponents);
+    public void startCombat() {
+        if (super.getEnemy() == null) {
+            playerVersusEnemies(super.getOpponents());
         }
-        if (player == null && enemy != null && opponents.size() >= 1) {
-            enemyVersusEnemy(opponents);
+        if (super.getPlayer() == null && super.getEnemy() != null && super.getOpponents().size() >= 1) {
+            enemyVersusEnemy(super.getOpponents());
         }
         setBooleansToFalse();
     }
@@ -50,7 +47,6 @@ public class Combat extends PrepareCombat {
         }
     }
 
-    //Loop spelare mot enemies.
     private void combatLoop(Enemy e) {
         while (!opponentDefeated) {
             playerTurn(e);
@@ -90,7 +86,7 @@ public class Combat extends PrepareCombat {
         if (playerTakenDamage = true) {
             playerCastSpell(super.getPlayer());
         }
-        e.takeDamage(setWeaponForPlayer());
+        e.takeDamage(useWeaponForPlayer());
         System.out.println("Player attacked opponent");
     }
 
@@ -103,6 +99,7 @@ public class Combat extends PrepareCombat {
         if (super.getPlayer() == null) {
             System.out.println("Opponent attacked enemy");
             super.getEnemy().takeDamage(e.getCurrentDamage());
+            System.out.println(super.getEnemy().getCurrentHealth());
         } else if (super.getPlayer() != null) {
             super.getPlayer().takeDamage(e.getCurrentDamage());
             System.out.println("Opponent attacked player");
@@ -113,8 +110,8 @@ public class Combat extends PrepareCombat {
 
     private void checkIfOpponentHealthIsZero(Enemy e) {
         if (e.getCurrentHealth() <= 0) {
-            super.setDefeated(getDefeated() + 1);
-            System.out.println(super.getDefeated() + " opponents defeated");
+            super.setPlayerHasDefeated(getPlayerHasDefeated() + 1);
+            System.out.println(super.getPlayerHasDefeated() + " opponents defeated");
             opponentDefeated = true;
         }
     }
@@ -132,8 +129,8 @@ public class Combat extends PrepareCombat {
     }
 
     private void setWeaponAndArmorForPlayer() {
-        setWeaponForPlayer();
-        setArmorForPlayer();
+        useWeaponForPlayer();
+        armorForPlayer();
     }
 
     public void playerCastSpell(Player player) {

@@ -13,7 +13,7 @@ public abstract class PrepareCombat {
 
     private final Player player;
     private Enemy enemy;
-    private int defeated;
+    private int playerHasDefeated;
     private final ArrayList<Enemy> opponents = new ArrayList<>();
 
 
@@ -34,7 +34,7 @@ public abstract class PrepareCombat {
         this.player = player;
     }
 
-    public void setArmorForPlayer() {
+    public void armorForPlayer() {
         Armor armor = (Armor) player.getItem(player.getItemsSize() - 1);
         if (player.getKlass() instanceof Paladin) {
             player.setMaxHealthPoints(player.getCurrentHealthPoints() + armor.getArmorRating() >> 2);
@@ -46,24 +46,20 @@ public abstract class PrepareCombat {
         }
     }
 
-    public int setWeaponForPlayer() {
+    public int useWeaponForPlayer() {
         Weapon weapon = (Weapon) player.getItem(player.getItemsSize() - 2);
-        System.out.println(weapon);
         if (player.getKlass() instanceof Paladin) {
             return weapon.getDamage() * 2;
-        } else if (player.getKlass() instanceof Mage) {
+        } else
             return weapon.getDamage();
-        }
-        else return getPlayer().getLevel();
     }
+
 
     public void checkClass(Enemy enemy) {
         if (player.getKlass() instanceof Paladin || enemy.getEnemyType().equals("Wolf")) {
             enemy.takeDamage(5);
-            System.out.println("Player class impacted enemy health.");
         } else if (player.getKlass() instanceof Mage || enemy.getEnemyType().equals("Enemy")) {
             enemy.takeDamage(25);
-            System.out.println("Player class impacted enemy health.");
         }
     }
 
@@ -73,8 +69,8 @@ public abstract class PrepareCombat {
                 .get();
     }
 
-    public int getDefeated() {
-        return defeated;
+    public int getPlayerHasDefeated() {
+        return playerHasDefeated;
     }
 
     public Enemy getEnemy() {
@@ -85,8 +81,8 @@ public abstract class PrepareCombat {
         return player;
     }
 
-    public void setDefeated(int defeated) {
-        this.defeated = defeated;
+    public void setPlayerHasDefeated(int playerHasDefeated) {
+        this.playerHasDefeated = playerHasDefeated;
     }
 
     public void addEnemyListToOpponents(ArrayList<Enemy> enemy) {

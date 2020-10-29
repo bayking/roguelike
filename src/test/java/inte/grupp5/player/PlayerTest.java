@@ -45,7 +45,7 @@ class PlayerTest {
     }
     @Test
     void getItemThrowsIfMoreThanSize () {
-        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> player.getItem(5));
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> player.getItem(10));
     }
 
     @Test
@@ -73,6 +73,7 @@ class PlayerTest {
         player.setCurrentHealthPoints(player.getMaxHealthPoints());
         assertEquals(player.getMaxHealthPoints(), player.getCurrentHealthPoints());
     }
+
 
     @Test
     void setCurrentManaPointsZero() {

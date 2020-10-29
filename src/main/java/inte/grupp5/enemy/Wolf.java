@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class Wolf extends Enemy {
 
-    private final ArrayList<Enemy> groupOfWolves = new ArrayList<>(); //Final?
+    private final ArrayList<Enemy> groupOfWolves = new ArrayList<>();
 
 
     public Wolf(int level, int amount) {
