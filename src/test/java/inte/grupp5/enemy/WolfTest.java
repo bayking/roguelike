@@ -39,7 +39,6 @@ public class WolfTest {
 
     @Test
     void randomNumberGeneratorBetween1and5 () {
-        // När enemy skapas så skapas 1-5 extra om level är >30
         Wolf w = new Wolf(20,0);
         // Metod som returnerar en int mellan 1-5
         assertTrue(w.randomWolvesGenerator() >= 1 && 5 >= w.randomWolvesGenerator());
@@ -79,7 +78,7 @@ public class WolfTest {
     void checkIfBelowLevel30MethodWasCalled () {
         Wolf w = new Wolf (21,0);
         assertTrue(w.getGroupOfWolves().size() >= 2);
-        System.out.println(w.getGroupOfWolves().size());
+
     }
 
     @Test void addWolvesIfBelowLevel () {

@@ -30,8 +30,7 @@ public class Dragon extends Enemy {
             setDamage(getCurrentDamage() + 25);
             mana = mana - 25;
         }
-        else {
-            throw new IllegalArgumentException("Should not be called");
+        else { throw new IllegalArgumentException("Should not be called");
         }
     }
 
