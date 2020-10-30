@@ -102,7 +102,7 @@ public class Player {
         if (damage < 0) {
             throw new IllegalArgumentException("Value can't be less than 0");
     }
-            currentHealthPoints = currentHealthPoints - damage;
+        currentHealthPoints -= damage;
         if (currentHealthPoints < 0) {
             currentHealthPoints = 0;
         }

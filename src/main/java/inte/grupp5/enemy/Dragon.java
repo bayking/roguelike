@@ -28,7 +28,7 @@ public class Dragon extends Enemy {
     public void breathFireAttack () {
         if (mana > 25 ) {
             setDamage(getCurrentDamage() + 25);
-            mana = mana - 25;
+            mana -= 25;
         }
         else { throw new IllegalArgumentException("Should not be called");
         }

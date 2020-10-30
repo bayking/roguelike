@@ -18,11 +18,11 @@ public class Combat extends PrepareCombat {
     }
 
     public void startCombat() {
-        if (super.getEnemy() == null) {
-            playerVersusEnemies(super.getOpponents());
+        if (getEnemy() == null) {
+            playerVersusEnemies(getOpponents());
         }
-        if (super.getPlayer() == null && super.getEnemy() != null && super.getOpponents().size() >= 1) {
-            enemyVersusEnemy(super.getOpponents());
+        if (getPlayer() == null && getEnemy() != null && getOpponents().size() >= 1) {
+            enemyVersusEnemy(getOpponents());
         }
         setBooleansToFalse();
     }
@@ -84,24 +84,24 @@ public class Combat extends PrepareCombat {
 
     private void playerTurn(Enemy e) {
         if (playerTakenDamage = true) {
-            playerCastSpell(super.getPlayer());
+            playerCastSpell(getPlayer());
         }
         e.takeDamage(useWeaponForPlayer());
         System.out.println("Player attacked opponent");
     }
 
     private void enemyTurn(Enemy e) {
-        e.takeDamage(super.getEnemy().getCurrentDamage());
+        e.takeDamage(getEnemy().getCurrentDamage());
         System.out.println("Enemy attacked Opponent");
     }
 
     public void opponentTurn(Enemy e) {
-        if (super.getPlayer() == null) {
+        if (getPlayer() == null) {
             System.out.println("Opponent attacked enemy");
-            super.getEnemy().takeDamage(e.getCurrentDamage());
-            System.out.println(super.getEnemy().getCurrentHealth());
-        } else if (super.getPlayer() != null) {
-            super.getPlayer().takeDamage(e.getCurrentDamage());
+            getEnemy().takeDamage(e.getCurrentDamage());
+            System.out.println(getEnemy().getCurrentHealth());
+        } else if (getPlayer() != null) {
+            getPlayer().takeDamage(e.getCurrentDamage());
             System.out.println("Opponent attacked player");
             playerTakenDamage = true;
         }
@@ -110,20 +110,20 @@ public class Combat extends PrepareCombat {
 
     private void checkIfOpponentHealthIsZero(Enemy e) {
         if (e.getCurrentHealth() <= 0) {
-            super.setPlayerHasDefeated(getPlayerHasDefeated() + 1);
-            System.out.println(super.getPlayerHasDefeated() + " opponents defeated");
+            setPlayerHasDefeated(getPlayerHasDefeated() + 1);
+            System.out.println(getPlayerHasDefeated() + " opponents defeated");
             opponentDefeated = true;
         }
     }
 
     private void checkIfPlayerHealthIsZero() {
-        if (super.getPlayer().getCurrentHealthPoints() <= 0) {
+        if (getPlayer().getCurrentHealthPoints() <= 0) {
             playerDefeated = true;
         }
     }
 
     public void checkIfEnemyHealthIsZero() {
-        if (super.getEnemy().getCurrentHealth() <= 0) {
+        if (getEnemy().getCurrentHealth() <= 0) {
             enemyDefeated = true;
         }
     }

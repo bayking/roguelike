@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -29,10 +33,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1e189d-f8a9-4063-9bef-e3ad1903713a" name="Default Changelist" comment="fix">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
@@ -40,49 +47,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/combat/Combat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Dragon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/EnemyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/EnemyList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Wolf.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Wolf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor$ArmorType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor$ArmorType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Consumable.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Consumable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion$PotionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion$PotionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/QuestItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/QuestItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon$WeaponType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon$WeaponType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Paladin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/classes/Paladin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/terrain/Terrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/DragonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/EnemyListTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ConsumableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ConsumableTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/FoodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/FoodTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ItemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ItemTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/PotionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/PotionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/QuestItemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/QuestItemTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/WeaponTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/WeaponTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/PlayerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/ClassTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/MageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/MageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/PaladinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/classes/PaladinTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/terrain/TerrainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/enemy/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/WolfTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/enemy/WolfTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/Combat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/PrepareCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/combat/PrepareCombat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/WolfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/enemy/WolfTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/enemy/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/PrepareCombatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/combat/PrepareCombatTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +113,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Ny mapp" />
@@ -143,9 +121,10 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pAll Java" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
-  <component name="RunManager" selected="Gradle.WolfTest.groupOfWolvesContainsMoreThanOne">
+  <component name="RunManager" selected="Gradle.Tests in 'inte.grupp5.combat'">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -157,50 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CombatTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PrepareCombatTest.checkIfPlayerNullAndIfToFewEnemies" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CombatTest.firstOpponentAttackDefeatsPlayer" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest.firstOpponentAttackDefeatsPlayer&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CombatTest.playerDefeatsOneEnemy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.CombatTest.playerDefeatsOneEnemy&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.PrepareCombatTest.checkIfPlayerNullAndIfToFewEnemies&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -220,6 +161,44 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;inte.grupp5.combat.*&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'inte.grupp5.enemy'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.enemy.*&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'roguelike.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -254,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WolfTest.groupOfWolvesContainsMoreThanOne" />
         <item itemvalue="Gradle.Tests in 'inte.grupp5.combat'" />
-        <item itemvalue="Gradle.CombatTest.firstOpponentAttackDefeatsPlayer" />
-        <item itemvalue="Gradle.CombatTest" />
-        <item itemvalue="Gradle.CombatTest.playerDefeatsOneEnemy" />
+        <item itemvalue="Gradle.PrepareCombatTest.checkIfPlayerNullAndIfToFewEnemies" />
+        <item itemvalue="Gradle.Tests in 'roguelike.test'" />
+        <item itemvalue="Gradle.Tests in 'inte.grupp5.enemy'" />
+        <item itemvalue="Gradle.WolfTest.groupOfWolvesContainsMoreThanOne" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +276,7 @@
       <workItem from="1603738238827" duration="4781000" />
       <workItem from="1603762381014" duration="21356000" />
       <workItem from="1603825623797" duration="1579000" />
-      <workItem from="1603942428561" duration="32410000" />
+      <workItem from="1603942428561" duration="39581000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1602689368708</created>
@@ -521,7 +500,13 @@
       <option name="presentableId" value="LOCAL−00037" />
       <updated>1603996716065</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL−00038" summary="fix">
+      <created>1604003876077</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1604003876078</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,6 +563,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="399" y="101" key="#Inspections" timestamp="1604041531499">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="399" y="101" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1604041531499" />
     <state x="583" y="237" key="#Notifications" timestamp="1603458304053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -601,6 +590,11 @@
     </state>
     <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1603624913086" />
     <state x="1387" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2293.920@0.0.2293.920" timestamp="1603949706618" />
+    <state x="770" y="276" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604043398600">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="516" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1604041575837" />
+    <state x="770" y="276" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2293.920@0.0.2293.920" timestamp="1604043398600" />
     <state x="106" y="41" key="DiffContextDialog" timestamp="1603435967542">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
@@ -610,26 +604,26 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603457995228" />
     <state x="820" y="186" key="FileChooserDialogImpl/0.0.2293.920@0.0.2293.920" timestamp="1603302788204" />
-    <state width="2250" height="5" key="GridCell.Tab.0.bottom" timestamp="1604002815793">
+    <state width="2250" height="234" key="GridCell.Tab.0.bottom" timestamp="1604045356796">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
-    <state width="1402" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603996641459" />
-    <state width="2250" height="5" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1604002815793" />
-    <state width="2250" height="5" key="GridCell.Tab.0.center" timestamp="1604002815793">
+    <state width="1493" height="69" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604034521603" />
+    <state width="2250" height="234" key="GridCell.Tab.0.bottom/0.0.2293.920@0.0.2293.920" timestamp="1604045356796" />
+    <state width="2250" height="234" key="GridCell.Tab.0.center" timestamp="1604045356796">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
-    <state width="1402" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603996641459" />
-    <state width="2250" height="5" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1604002815793" />
-    <state width="2250" height="5" key="GridCell.Tab.0.left" timestamp="1604002815793">
+    <state width="1493" height="69" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604034521603" />
+    <state width="2250" height="234" key="GridCell.Tab.0.center/0.0.2293.920@0.0.2293.920" timestamp="1604045356796" />
+    <state width="2250" height="234" key="GridCell.Tab.0.left" timestamp="1604045356796">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
-    <state width="1402" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603996641459" />
-    <state width="2250" height="5" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1604002815793" />
-    <state width="2250" height="5" key="GridCell.Tab.0.right" timestamp="1604002815793">
+    <state width="1493" height="69" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604034521603" />
+    <state width="2250" height="234" key="GridCell.Tab.0.left/0.0.2293.920@0.0.2293.920" timestamp="1604045356796" />
+    <state width="2250" height="234" key="GridCell.Tab.0.right" timestamp="1604045356796">
       <screen x="0" y="0" width="2293" height="920" />
     </state>
-    <state width="1402" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603996641459" />
-    <state width="2250" height="5" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1604002815793" />
+    <state width="1493" height="69" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604034521603" />
+    <state width="2250" height="234" key="GridCell.Tab.0.right/0.0.2293.920@0.0.2293.920" timestamp="1604045356796" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1603458396748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -665,10 +659,10 @@
     </state>
     <state x="421" y="31" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603706319238" />
     <state x="628" y="35" key="SettingsEditor/0.0.2293.920@0.0.2293.920" timestamp="1603432794771" />
-    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1603996721420">
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604003883146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603996721419" />
+    <state x="388" y="156" width="827" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604003883146" />
     <state x="1022" y="297" key="Vcs.Push.Dialog.v2/0.0.2293.920@0.0.2293.920" timestamp="1603956294080" />
     <state x="1094" y="106" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603996667111">
       <screen x="0" y="0" width="1536" height="824" />
@@ -697,6 +691,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603176539838" />
+    <state x="814" y="290" key="scopes" timestamp="1604043050312">
+      <screen x="0" y="0" width="2293" height="920" />
+    </state>
+    <state x="814" y="290" key="scopes/0.0.2293.920@0.0.2293.920" timestamp="1604043050312" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603788596572">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -717,13 +715,13 @@
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_player_classes_.ic" NAME="Tests in 'inte.grupp5.player.classes' Coverage Results" MODIFIED="1603783219853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PrepareCombatTest.ic" NAME="PrepareCombatTest Coverage Results" MODIFIED="1603956006542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1603956224588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$Tests_in__roguelike_test_.ic" NAME="Tests in 'roguelike.test' Coverage Results" MODIFIED="1603462245305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603953693999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PrepareCombatTest_checkIfContainsPlayerFails.ic" NAME="PrepareCombatTest.checkIfContainsPlayerFails Coverage Results" MODIFIED="1603955984000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$Tests_in__roguelike_test_.ic" NAME="Tests in 'roguelike.test' Coverage Results" MODIFIED="1604043214226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_item_.ic" NAME="Tests in 'inte.grupp5.item' Coverage Results" MODIFIED="1603942523355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest_playerDefeatsOneEnemy.ic" NAME="StartCombatTest.playerDefeatsOneEnemy Coverage Results" MODIFIED="1603520992199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1603953706408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest_playerDiesDuringCombat.ic" NAME="StartCombatTest.playerDiesDuringCombat Coverage Results" MODIFIED="1603536276859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_combat_.ic" NAME="Tests in 'inte.grupp5.combat' Coverage Results" MODIFIED="1603996641443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_combat_.ic" NAME="Tests in 'inte.grupp5.combat' Coverage Results" MODIFIED="1604043748785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

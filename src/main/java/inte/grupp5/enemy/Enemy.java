@@ -37,7 +37,7 @@ public class Enemy {
         if (damage < 0) {
             throw new IllegalArgumentException("Damage taken can not be below 0.");
         }
-        hp = hp - damage;
+        hp -= damage;
         if (hp < 0) {
             hp = 0;
         }

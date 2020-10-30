@@ -24,11 +24,11 @@ public abstract class PrepareCombat {
             enemy = getStrongestEnemy();
             opponents.remove(enemy);
         }
-        else if (enemies.size() == 0 ) {
+        else if (enemies.isEmpty()) {
             throw new IllegalArgumentException("There has to be enemies for a combat");
         }
-        else if (player == null) {
-            throw new NullPointerException ("There has to be a Player for a combat");
+        else if (null == player) {
+            throw new IllegalArgumentException ("There has to be a Player for a combat");
         }
         else addEnemyListToOpponents(enemies);
         this.player = player;
@@ -49,7 +49,7 @@ public abstract class PrepareCombat {
     public int useWeaponForPlayer() {
         Weapon weapon = (Weapon) player.getItem(player.getItemsSize() - 2);
         if (player.getKlass() instanceof Paladin) {
-            return weapon.getDamage() * 2;
+            return weapon.getDamage() << 1;
         } else
             return weapon.getDamage();
     }

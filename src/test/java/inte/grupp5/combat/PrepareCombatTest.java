@@ -21,7 +21,7 @@ public class PrepareCombatTest {
 
     @Test //T3
     void checkIfPlayerNullAndIfToFewEnemies () {
-        assertThrows(NullPointerException.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
         Enemy e = new Enemy(40);
         EnemyList enemyList = new EnemyList();
         enemyList.addEnemy(e);
