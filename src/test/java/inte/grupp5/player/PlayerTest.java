@@ -1,7 +1,7 @@
 package inte.grupp5.player;
 
-import inte.grupp5.item.Weapon;
 import inte.grupp5.player.classes.Mage;
+import inte.grupp5.player.classes.Paladin;
 import inte.grupp5.player.spell.InvokeMana;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -241,4 +241,66 @@ class PlayerTest {
         assertTrue(caster.castSpell(invokeMana));
         assertEquals(caster.getCurrentManaPoints(), caster.getMaxManaPoints());
     }
+
+    @Test
+    void constructPlayer1() {
+        Mage mage = new Mage("mage");
+        Player player = new Player("Trollkarl",mage, 25);
+        assertEquals(25, player.getLevel());
+        assertEquals("Trollkarl", player.getName());
+        assertEquals(mage, player.getKlass());
+        assertEquals(2500, player.getCurrentHealthPoints());
+        assertEquals(2500, player.getCurrentManaPoints());
+        assertEquals(2500, player.getMaxManaPoints());
+        assertEquals(2500, player.getMaxHealthPoints());
+    }
+
+    @Test
+    void constructPlayer2() {
+        Paladin paladin = new Paladin("paladin");
+        Player player = new Player("Helig Man", paladin, 35);
+        assertEquals(35, player.getLevel());
+        assertEquals("Helig Man", player.getName());
+        assertEquals(paladin, player.getKlass());
+        assertEquals(3600, player.getCurrentHealthPoints());
+        assertEquals(3480, player.getCurrentManaPoints());
+        assertEquals(3480, player.getMaxManaPoints());
+        assertEquals(3600, player.getMaxHealthPoints());
+    }
+
+    @Test
+    void constructPlayer3() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new Player("", new Mage("mage"), 20);
+        });
+    }
+
+    @Test
+    void constructPlayer4() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new Player("ty", new Mage("mage"), 20);
+        });
+    }
+
+    @Test
+    void constructPlayer5() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new Player("Wolfeschlegelsteinhausenbergerdorff", new Paladin("paladin"), 15);
+        });
+    }
+
+    @Test
+    void constructPlayer6() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new Player("Mustafa", new Mage("mage"), -4);
+        });
+    }
+
+    @Test
+    void constructPlayer7() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            new Player("Tester", new Paladin("Paladin"), 61);
+        });
+    }
+
 }

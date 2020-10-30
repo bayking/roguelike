@@ -1,8 +1,5 @@
 package inte.grupp5.player.classes;
 
-import inte.grupp5.item.Armor;
-import inte.grupp5.item.Gear;
-import inte.grupp5.item.Weapon;
 import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
@@ -71,8 +68,6 @@ public abstract class  Class {
             throw new IllegalArgumentException("Level must be in range 1-60");
         return manaPerLvl[level - 1];
     }
-
-
 
     @Override
     public boolean equals(Object o) {

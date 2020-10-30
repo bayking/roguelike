@@ -1,9 +1,7 @@
 package inte.grupp5.player;
 
-import inte.grupp5.item.Armor;
 import inte.grupp5.item.Chest;
 import inte.grupp5.item.Item;
-import inte.grupp5.item.Weapon;
 import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.spell.Spell;
 
@@ -19,7 +17,6 @@ public class Player {
     private ArrayList<Spell> spells;
     private ArrayList<Item> items;
 
-
     public Player(String name, Class klass, int level) {
         setLevel(level);
         setName(name);
@@ -29,7 +26,6 @@ public class Player {
         maxManaPoints = klass.getMana(level);
         currentHealthPoints = maxHealthPoints;
         currentManaPoints = maxManaPoints;
-        maxManaPoints = klass.getMana(level);
         spells = klass.getSpells();
         items = new Chest().openChest(this);
         //Test
