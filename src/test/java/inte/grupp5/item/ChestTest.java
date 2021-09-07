@@ -3,7 +3,10 @@ package inte.grupp5.item;
 import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,10 @@ public class ChestTest {
     final Chest LEVEL_45_PALADIN_CHEST = new Chest();
     final Chest LEVEL_55_PALADIN_CHEST = new Chest();
     final Chest LEVEL_60_PALADIN_CHEST = new Chest();
+
+    final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
+    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
+    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
 
     @Test
     void chestGeneratesWeaponWithDamageBasedOnLevelForMages() {
@@ -146,14 +153,12 @@ public class ChestTest {
     }
 
     @Test
+    @DisplayName("openChest() generates items and returns them as ArrayList")
     void methodOpenChestGeneratesItemsAndReturnsThemAsArrayList() {
         ArrayList<Item> testItems = new ArrayList<>();
-        testItems.add(new Potion
-                ("Health potion", 2, Potion.PotionType.HEALTH_POTION));
-        testItems.add(new Potion
-                ("Level potion", 1, Potion.PotionType.LEVEL_POTION));
-        testItems.add(new Potion
-                ("Mana potion", 2, Potion.PotionType.MANA_POTION));
+        testItems.add(HEALTH_POTION);
+        testItems.add(LEVEL_POTION);
+        testItems.add(MANA_POTION);
         testItems.add(new Weapon
                 ("Staff", 3, 5, Weapon.WeaponType.STAFF));
         testItems.add(new Armor
@@ -161,4 +166,38 @@ public class ChestTest {
 
         assertEquals(testItems.toString(), LEVEL_5_MAGE_CHEST.openChest(LEVEL_5_MAGE).toString());
     }
+
+    @ParameterizedTest
+            @CsvSource({
+                    "6, 5, 5", "11, 10, 10", "21, 20, 20", "31, 30, 30", "41, 40, 40",
+                    "51, 50, 50", "60 , 60, 60"
+            })
+    void openChestMethodReadsItemsFromMageFile(int level, int damage, int armorRating) {
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(HEALTH_POTION);
+        items.add(LEVEL_POTION);
+        items.add(MANA_POTION);
+        items.add(new Weapon("Staff", 3, damage, Weapon.WeaponType.STAFF));
+        items.add(new Armor("Light armor", 7, armorRating, Armor.ArmorType.LIGHT_ARMOR));
+
+        assertEquals(items.toString(), new Chest().openChest(new Player("Mage", MAGE, level)).toString());
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "6, 5, 10", "11, 10, 20", "21, 20, 30", "31, 30, 40", "41, 40, 50",
+            "51, 50, 60", "60 , 60, 70"
+    })
+    void openChestMethodReadsItemsFromPaladinFile(int level, int damage, int armorRating) {
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(HEALTH_POTION);
+        items.add(LEVEL_POTION);
+        items.add(HEALTH_POTION);
+        items.add(new Weapon("Sword", 5, damage, Weapon.WeaponType.SWORD));
+        items.add(new Armor("Heavy armor", 10, armorRating, Armor.ArmorType.HEAVY_ARMOR));
+
+        assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
+    }
+
+
 }
