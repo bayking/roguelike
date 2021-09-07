@@ -4,11 +4,27 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Chest {
 
     private final ArrayList<Item> items = new ArrayList<>();
+
+    public void generateItemsCSV(Player player) {
+        try {
+            FileWriter writer = new FileWriter("src/main/java/resources/TEST.csv");
+            writer.write(player.getLevel() + ", ");
+            String classType = (player.getKlass() instanceof Paladin) ? "Paladin" : "Mage";
+            writer.write(classType);
+
+
+            writer.close();
+        } catch (IOException e) {
+            System.err.println("ERROR: I/O error");
+        }
+    }
 
     public void generateItems(Player player) {
 
@@ -59,6 +75,7 @@ public class Chest {
         items.add(new Potion(HEALTH_POTION_STR, 2, Potion.PotionType.HEALTH_POTION));
         items.add(new Potion(LEVEL_POTION_STR, 1, Potion.PotionType.LEVEL_POTION));
 
+        // TODO: make this read from a CSV-file that depends on player level and class.
         // If player is of class Mage
         if (player.getKlass() instanceof Mage) {
 

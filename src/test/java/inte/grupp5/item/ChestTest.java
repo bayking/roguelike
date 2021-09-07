@@ -6,6 +6,7 @@ import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.ArrayList;
@@ -168,11 +169,11 @@ public class ChestTest {
     }
 
     @ParameterizedTest
-            @CsvSource({
-                    "6, 5, 5", "11, 10, 10", "21, 20, 20", "31, 30, 30", "41, 40, 40",
-                    "51, 50, 50", "60 , 60, 60"
-            })
-    void openChestMethodReadsItemsFromMageFile(int level, int damage, int armorRating) {
+    @CsvSource({
+            "6, 5, 5", "11, 10, 10", "21, 20, 20", "31, 30, 30", "41, 40, 40",
+            "51, 50, 50", "60 , 60, 60"
+    })
+    void openChestMethodReadsItemsFromMageCsvSource(int level, int damage, int armorRating) {
         ArrayList<Item> items = new ArrayList<>();
         items.add(HEALTH_POTION);
         items.add(LEVEL_POTION);
@@ -188,7 +189,7 @@ public class ChestTest {
             "6, 5, 10", "11, 10, 20", "21, 20, 30", "31, 30, 40", "41, 40, 50",
             "51, 50, 60", "60 , 60, 70"
     })
-    void openChestMethodReadsItemsFromPaladinFile(int level, int damage, int armorRating) {
+    void openChestMethodReadsItemsFromPaladinCsvSource(int level, int damage, int armorRating) {
         ArrayList<Item> items = new ArrayList<>();
         items.add(HEALTH_POTION);
         items.add(LEVEL_POTION);
@@ -197,6 +198,28 @@ public class ChestTest {
         items.add(new Armor("Heavy armor", 10, armorRating, Armor.ArmorType.HEAVY_ARMOR));
 
         assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/data.csv")
+    void openChestMethodCreatesCSVFileBasedOnClassAndLevel(int level, int damage, int armorRating) {
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(HEALTH_POTION);
+        items.add(LEVEL_POTION);
+        items.add(HEALTH_POTION);
+        items.add(new Weapon("Sword", 5, damage, Weapon.WeaponType.SWORD));
+        items.add(new Armor("Heavy armor", 10, armorRating, Armor.ArmorType.HEAVY_ARMOR));
+
+        assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/MageTEST.csv")
+    void generateCsvFile(int level, String klass) {
+        LEVEL_5_MAGE_CHEST.generateItemsCSV(LEVEL_5_MAGE);
+        assertEquals(level, 5);
+        assertEquals(klass, "Mage");
+
     }
 
 
