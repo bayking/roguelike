@@ -65,6 +65,12 @@ public class Chest {
         }
     }
 
+    public ArrayList<Item> openChest(Player player) {
+        items.clear();
+        generateItemsFromFile(player);
+        return items;
+    }
+
     private int getSwordWeight() {
         int min = 7;
         int max = 16;
@@ -130,14 +136,4 @@ public class Chest {
         return heavyArmorNames[rng];
     }
 
-    public ArrayList<Item> openChest(Player player) {
-        items.clear();
-        //generateItems(player);
-        generateItemsFromFile(player);
-        return items;
-    }
-
-    public ArrayList<Item> getItems() {
-        return items;
-    }
 }

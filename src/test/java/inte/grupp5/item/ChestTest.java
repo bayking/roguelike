@@ -10,6 +10,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -308,6 +309,4 @@ public class ChestTest {
         assertTrue(Arrays.asList(lightArmorNames).contains(p1.getItem(4).getName()));
         assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
     }
-
-
 }
