@@ -12,8 +12,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -213,7 +211,7 @@ public class ChestTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv")
+    @CsvFileSource(resources = "/MageChestGeneratorTest.csv")
     void openChestMethodCreatesCSVFileBasedOnClassAndLevel(int level, int damage, int armorRating) {
         ArrayList<Item> items = new ArrayList<>();
         items.add(HEALTH_POTION);
@@ -225,20 +223,9 @@ public class ChestTest {
         assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
     }
 
-    @ParameterizedTest
-    @CsvFileSource(resources = "/MageTEST.csv")
-    void generateCsvFile(int level, String klass) {
-        LEVEL_5_MAGE_CHEST.writeToCsvFile(LEVEL_5_MAGE);
-        assertEquals(level, 5);
-        assertEquals(klass, "Mage");
-    }
-
-    @RepeatedTest(value = 100)
-    void generateChestFromCsvFileForPaladin() {
-
-        Chest c1 = new Chest();
-        Player p1 = new Player("Paladin", PALADIN, 59);
-        c1.openChest(p1);
+    @RepeatedTest(value = 10)
+    void generateChestForPaladin() {
+        Player p1 = new Player("Paladin", PALADIN, 25);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
         assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
@@ -249,18 +236,44 @@ public class ChestTest {
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(2).getName()));
         assertTrue(1 <= p1.getItem(2).getWeight() && p1.getItem(2).getWeight() <= 3);
 
-        assertTrue(Arrays.asList(staffNames).contains(p1.getItem(3).getName()));
-        assertTrue(1 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 8);
+        assertTrue(Arrays.asList(swordNames).contains(p1.getItem(3).getName()));
+        assertTrue(7 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 16);
 
-        assertTrue(Arrays.asList(lightArmorNames).contains(p1.getItem(4).getName()));
-        assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
+        assertTrue(Arrays.asList(heavyArmorNames).contains(p1.getItem(4).getName()));
+        assertTrue(15 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 20);
     }
 
-    @RepeatedTest(value = 100)
+    @ParameterizedTest
+    @CsvSource({
+            "1, 5, 10, 20, 30, 40, 50, 60"
+    })
+    void generateChestForPaladinDifferentLevels(int level) {
+
+        Chest c1 = new Chest();
+        Player p1 = new Player("Paladin", PALADIN, level);
+        //c1.openChestUpdated(p1);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
+        assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(levelPotionNames).contains(p1.getItem(1).getName()));
+        assertTrue(1 <= p1.getItem(1).getWeight() && p1.getItem(1).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(2).getName()));
+        assertTrue(1 <= p1.getItem(2).getWeight() && p1.getItem(2).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(swordNames).contains(p1.getItem(3).getName()));
+        assertTrue(7 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 16);
+
+        assertTrue(Arrays.asList(heavyArmorNames).contains(p1.getItem(4).getName()));
+        assertTrue(15 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 20);
+    }
+
+    @RepeatedTest(value = 1)
     void generateChestFromCsvFileForMage() {
         Chest c1 = new Chest();
         Player p1 = new Player("Mage", MAGE, 5);
-        c1.openChest(p1);
+        //c1.openChestUpdated(p1);
         assertEquals(p1.getItem(0).getName(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getName());
         assertEquals(p1.getItem(0).getWeight(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getWeight());
     }

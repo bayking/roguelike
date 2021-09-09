@@ -20,31 +20,11 @@ public class Chest {
 
     private final ArrayList<Item> items = new ArrayList<>();
 
-    public void writeToCsvFile(Player player) {
-        try {
-            FileWriter writer = new FileWriter("src/main/java/resources/TEST.csv");
-            writer.write(player.getLevel() + ", ");
-            String classType = (player.getKlass() instanceof Paladin) ? "Paladin" : "Mage";
-            writer.write(classType);
-
-
-            writer.close();
-        } catch (IOException e) {
-            System.err.println("ERROR: I/O error");
-        }
-    }
-
     private void readItemsFromCsvFile(Player player) {
 
-        // TODO: Add default items
+        // Add default items
         items.add(new Potion(getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
         items.add(new Potion(getLevelPotionName(), getPotionWeight(), Potion.PotionType.LEVEL_POTION));
-
-        if (player.getKlass() instanceof Mage) {
-            items.add(new Potion(getManaPotionName(), getPotionWeight(), Potion.PotionType.MANA_POTION));
-        } else if (player.getKlass() instanceof Paladin) {
-            items.add(new Potion(getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
-        }
 
         try {
             String playerType = player.getKlass().getClass().getName();
@@ -62,10 +42,24 @@ public class Chest {
                 // Set weapon damage to second int
                 // Set armor rating to third/last int
                 if (player.getLevel() < Integer.parseInt(split[0])) {
-                    items.add(new Weapon
-                            (getStaffName(), getStaffWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.STAFF));
-                    items.add(new Armor
-                            (getLightArmorName(), getLightArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.LIGHT_ARMOR));
+                    // TODO: if mage add staff and light armor
+                    //  if paladin add sword and heavy armor
+                    if (player.getKlass() instanceof Mage) {
+                        items.add(new Potion
+                                (getManaPotionName(), getPotionWeight(), Potion.PotionType.MANA_POTION));
+                        items.add(new Weapon
+                                (getStaffName(), getStaffWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.STAFF));
+                        items.add(new Armor
+                                (getLightArmorName(), getLightArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.LIGHT_ARMOR));
+                    } else if (player.getKlass() instanceof Paladin) {
+                        items.add(new Potion
+                                (getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
+                        items.add(new Weapon
+                                (getSwordName(), getSwordWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.SWORD));
+                        items.add(new Armor
+                                (getHeavyArmorName(), getHeavyArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.HEAVY_ARMOR));
+                    }
+                    return;
                 }
             }
         } catch (FileNotFoundException e) {
@@ -73,6 +67,12 @@ public class Chest {
         } catch (IOException e) {
             System.err.println("ERROR: I/O error " + e.getMessage());
         }
+    }
+
+    private int getSwordWeight() {
+        int min = 7;
+        int max = 16;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
     private String getManaPotionName() {
@@ -100,44 +100,37 @@ public class Chest {
         int min = 5;
         int max = 10;
         return ThreadLocalRandom.current().nextInt(min, max + 1);
-        //return 2 + (int) (Math.random() * 5);
     }
 
     private int getHeavyArmorWeight() {
         int min = 15;
         int max = 20;
         return ThreadLocalRandom.current().nextInt(min, max + 1);
-        //return 5 + (int) (Math.random() * 5);
     }
 
     private int getStaffWeight() {
         int min = 1;
         int max = 8;
         return ThreadLocalRandom.current().nextInt(min, max + 1);
-        //return 5 + (int) (Math.random() * 5);
     }
 
     private String getSwordName() {
         int rng = ThreadLocalRandom.current().nextInt(0, swordNames.length);
-        //int rng = (int) (Math.random() * swordNames.length);
         return swordNames[rng];
     }
 
     private String getStaffName() {
         int rng = ThreadLocalRandom.current().nextInt(0, staffNames.length);
-        //int rng = (int) (Math.random() * staffNames.length);
         return staffNames[rng];
     }
 
     private String getLightArmorName() {
         int rng = ThreadLocalRandom.current().nextInt(0, lightArmorNames.length);
-        //int rng = (int) (Math.random() * lightArmorNames.length);
         return lightArmorNames[rng];
     }
 
     private String getHeavyArmorName() {
         int rng = ThreadLocalRandom.current().nextInt(0, heavyArmorNames.length);
-        //int rng = (int) (Math.random() * heavyArmorNames.length);
         return heavyArmorNames[rng];
     }
 
@@ -277,6 +270,12 @@ public class Chest {
     public ArrayList<Item> openChest(Player player) {
         items.clear();
         //generateItems(player);
+        readItemsFromCsvFile(player);
+        return items;
+    }
+
+    public ArrayList<Item> openChestUpdated(Player player) {
+        items.clear();
         readItemsFromCsvFile(player);
         return items;
     }
