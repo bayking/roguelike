@@ -4,16 +4,28 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ChestTest {
+
+    private final String[] staffNames = {"Staff", "Staff of storms", "Wabbajack"};
+    private final String[] swordNames = {"Sword", "Sword of pain", "Sting"};
+    private final String[] lightArmorNames = {"Light armor", "Leather armor", "Fur armor"};
+    private final String[] heavyArmorNames = {"Heavy armor", "Steel armor", "Dragonplate armor"};
+    private final String[] healthPotionNames = {"Health potion", "Draught of health", "Elixir of Health"};
+    private final String[] levelPotionNames = {"Level potion", "Rare candy", "Draught of experience"};
+    private final String[] manaPotionNames = {"Mana potion", "Elixir of mana"};
 
     final Mage MAGE = new Mage("Gandalf");
     final Paladin PALADIN = new Paladin("Paladin");
@@ -216,9 +228,41 @@ public class ChestTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/MageTEST.csv")
     void generateCsvFile(int level, String klass) {
-        LEVEL_5_MAGE_CHEST.generateItemsCSV(LEVEL_5_MAGE);
+        LEVEL_5_MAGE_CHEST.writeToCsvFile(LEVEL_5_MAGE);
         assertEquals(level, 5);
         assertEquals(klass, "Mage");
+    }
+
+    @RepeatedTest(value = 100)
+    void generateChestFromCsvFileForPaladin() {
+
+        Chest c1 = new Chest();
+        Player p1 = new Player("Paladin", PALADIN, 5);
+        c1.openChest(p1);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
+        assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(levelPotionNames).contains(p1.getItem(1).getName()));
+        assertTrue(1 <= p1.getItem(1).getWeight() && p1.getItem(1).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(2).getName()));
+        assertTrue(1 <= p1.getItem(2).getWeight() && p1.getItem(2).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(staffNames).contains(p1.getItem(3).getName()));
+        assertTrue(1 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 8);
+
+        assertTrue(Arrays.asList(lightArmorNames).contains(p1.getItem(4).getName()));
+        assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
+    }
+
+    @RepeatedTest(value = 10)
+    void generateChestFromCsvFileForMage() {
+        Chest c1 = new Chest();
+        Player p1 = new Player("Mage", MAGE, 5);
+        c1.openChest(p1);
+        assertEquals(p1.getItem(0).getName(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getName());
+        assertEquals(p1.getItem(0).getWeight(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getWeight());
 
     }
 

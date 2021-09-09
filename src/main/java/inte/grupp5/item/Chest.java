@@ -4,15 +4,23 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Chest {
 
+    private static final String[] staffNames = {"Staff", "Staff of storms", "Wabbajack"};
+    private static final String[] swordNames = {"Sword", "Sword of pain", "Sting"};
+    private static final String[] lightArmorNames = {"Light armor", "Leather armor", "Fur armor"};
+    private static final String[] heavyArmorNames = {"Heavy armor", "Steel armor", "Dragonplate armor"};
+    private static final String[] healthPotionNames = {"Health potion", "Draught of health", "Elixir of Health"};
+    private static final String[] levelPotionNames = {"Level potion", "Rare candy", "Draught of experience"};
+    private static final String[] manaPotionNames = {"Mana potion", "Elixir of mana"};
+
     private final ArrayList<Item> items = new ArrayList<>();
 
-    public void generateItemsCSV(Player player) {
+    public void writeToCsvFile(Player player) {
         try {
             FileWriter writer = new FileWriter("src/main/java/resources/TEST.csv");
             writer.write(player.getLevel() + ", ");
@@ -24,6 +32,113 @@ public class Chest {
         } catch (IOException e) {
             System.err.println("ERROR: I/O error");
         }
+    }
+
+    private void readItemsFromCsvFile(Player player) {
+
+        // TODO: Add default items
+        items.add(new Potion(getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
+        items.add(new Potion(getLevelPotionName(), getPotionWeight(), Potion.PotionType.LEVEL_POTION));
+
+        if (player.getKlass() instanceof Mage) {
+            items.add(new Potion(getManaPotionName(), getPotionWeight(), Potion.PotionType.MANA_POTION));
+        } else if (player.getKlass() instanceof Paladin) {
+            items.add(new Potion(getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
+        }
+
+        try {
+            String playerType = player.getKlass().getClass().getName();
+            String[] splitType = playerType.split("\\.");
+            playerType = splitType[splitType.length - 1];
+            FileReader fileReader = new FileReader( "src/main/java/resources/" + playerType + "ChestGenerator.csv");
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] split;
+            while (bufferedReader.ready()) {
+                line = bufferedReader.readLine();
+                split = line.split(",");
+                //TODO: compare Player level to first int in each row.
+                // If level < int read next int on that row
+                // Set weapon damage to second int
+                // Set armor rating to third/last int
+                if (player.getLevel() < Integer.parseInt(split[0])) {
+                    items.add(new Weapon
+                            (getStaffName(), getStaffWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.STAFF));
+                    items.add(new Armor
+                            (getLightArmorName(), getLightArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.LIGHT_ARMOR));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("ERROR: File " + e.getLocalizedMessage() + "not found!");
+        } catch (IOException e) {
+            System.err.println("ERROR: I/O error " + e.getMessage());
+        }
+    }
+
+    private String getManaPotionName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, manaPotionNames.length);
+        return manaPotionNames[rng];
+    }
+
+    private int getPotionWeight() {
+        int min = 1;
+        int max = 3;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+    }
+
+    private String getLevelPotionName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, levelPotionNames.length);
+        return levelPotionNames[rng];
+    }
+
+    private String getHealthPotionName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, healthPotionNames.length);
+        return healthPotionNames[rng];
+    }
+
+    private int getLightArmorWeight() {
+        int min = 5;
+        int max = 10;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+        //return 2 + (int) (Math.random() * 5);
+    }
+
+    private int getHeavyArmorWeight() {
+        int min = 15;
+        int max = 20;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+        //return 5 + (int) (Math.random() * 5);
+    }
+
+    private int getStaffWeight() {
+        int min = 1;
+        int max = 8;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+        //return 5 + (int) (Math.random() * 5);
+    }
+
+    private String getSwordName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, swordNames.length);
+        //int rng = (int) (Math.random() * swordNames.length);
+        return swordNames[rng];
+    }
+
+    private String getStaffName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, staffNames.length);
+        //int rng = (int) (Math.random() * staffNames.length);
+        return staffNames[rng];
+    }
+
+    private String getLightArmorName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, lightArmorNames.length);
+        //int rng = (int) (Math.random() * lightArmorNames.length);
+        return lightArmorNames[rng];
+    }
+
+    private String getHeavyArmorName() {
+        int rng = ThreadLocalRandom.current().nextInt(0, heavyArmorNames.length);
+        //int rng = (int) (Math.random() * heavyArmorNames.length);
+        return heavyArmorNames[rng];
     }
 
     public void generateItems(Player player) {
@@ -160,8 +275,10 @@ public class Chest {
     }
 
     public ArrayList<Item> openChest(Player player) {
-        generateItems(player);
-        return getItems();
+        items.clear();
+        //generateItems(player);
+        readItemsFromCsvFile(player);
+        return items;
     }
 
     public ArrayList<Item> getItems() {
