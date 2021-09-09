@@ -20,30 +20,26 @@ public class Chest {
 
     private final ArrayList<Item> items = new ArrayList<>();
 
-    private void readItemsFromCsvFile(Player player) {
-
+    private void generateItemsFromFile(Player player) {
         // Add default items
         items.add(new Potion(getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
         items.add(new Potion(getLevelPotionName(), getPotionWeight(), Potion.PotionType.LEVEL_POTION));
-
         try {
             String playerType = player.getKlass().getClass().getName();
             String[] splitType = playerType.split("\\.");
             playerType = splitType[splitType.length - 1];
-            FileReader fileReader = new FileReader( "src/main/java/resources/" + playerType + "ChestGenerator.csv");
+            FileReader fileReader = new FileReader("src/main/java/resources/" + playerType + "ChestGenerator.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] split;
             while (bufferedReader.ready()) {
                 line = bufferedReader.readLine();
                 split = line.split(",");
-                //TODO: compare Player level to first int in each row.
-                // If level < int read next int on that row
+                // compares Player level to first int in each row.
+                // If level < int, read next int on that row
                 // Set weapon damage to second int
-                // Set armor rating to third/last int
+                // Set armor rating to third int
                 if (player.getLevel() < Integer.parseInt(split[0])) {
-                    // TODO: if mage add staff and light armor
-                    //  if paladin add sword and heavy armor
                     if (player.getKlass() instanceof Mage) {
                         items.add(new Potion
                                 (getManaPotionName(), getPotionWeight(), Potion.PotionType.MANA_POTION));
@@ -134,7 +130,7 @@ public class Chest {
         return heavyArmorNames[rng];
     }
 
-    public void generateItems(Player player) {
+    /*public void generateItems(Player player) {
 
         // Variable declaration
         int WEAPON_DMG_LVL_1 = 5;
@@ -265,18 +261,12 @@ public class Chest {
                 items.add(new Armor(HEAVY_ARMOR_STR, HEAVY_ARMOR_WEIGHT, HVY_ARM_RTG_LVL_60, Armor.ArmorType.HEAVY_ARMOR));
             }
         }
-    }
+    }*/
 
     public ArrayList<Item> openChest(Player player) {
         items.clear();
         //generateItems(player);
-        readItemsFromCsvFile(player);
-        return items;
-    }
-
-    public ArrayList<Item> openChestUpdated(Player player) {
-        items.clear();
-        readItemsFromCsvFile(player);
+        generateItemsFromFile(player);
         return items;
     }
 
