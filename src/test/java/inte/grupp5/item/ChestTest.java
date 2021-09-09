@@ -237,7 +237,7 @@ public class ChestTest {
     void generateChestFromCsvFileForPaladin() {
 
         Chest c1 = new Chest();
-        Player p1 = new Player("Paladin", PALADIN, 5);
+        Player p1 = new Player("Paladin", PALADIN, 59);
         c1.openChest(p1);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
@@ -256,14 +256,13 @@ public class ChestTest {
         assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
     }
 
-    @RepeatedTest(value = 10)
+    @RepeatedTest(value = 100)
     void generateChestFromCsvFileForMage() {
         Chest c1 = new Chest();
         Player p1 = new Player("Mage", MAGE, 5);
         c1.openChest(p1);
         assertEquals(p1.getItem(0).getName(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getName());
         assertEquals(p1.getItem(0).getWeight(), new Potion("Potion", 1, Potion.PotionType.HEALTH_POTION).getWeight());
-
     }
 
 
