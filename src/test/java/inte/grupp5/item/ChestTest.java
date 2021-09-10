@@ -3,15 +3,12 @@ package inte.grupp5.item;
 import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -246,10 +243,18 @@ public class ChestTest {
 
     @ParameterizedTest
     @CsvSource({
-            "1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 39, 40, 41, 49, 50, 51, 59, 60"
+            "1,5,10", "9,5,10",
+            "10,10,20", "11,10,20", "19,10,20",
+            "20,20,30", "21,20,30", "29,20,30",
+            "30,30,40", "31,30,40", "39,30,40",
+            "40,40,50", "41,40,50", "49,40,50",
+            "50,50,60", "51,50,60", "59,50,60",
+            "60,60,70"
     })
-    void generateChestForPaladinDifferentLevels(int level) {
+    void generateChestForPaladinDifferentLevels(int level, int damage, int armorRating) {
         Player p1 = new Player("Paladin", PALADIN, level);
+        Weapon w1 = (Weapon) p1.getItem(3);
+        Armor a1 = (Armor) p1.getItem(4);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
         assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
@@ -262,9 +267,13 @@ public class ChestTest {
 
         assertTrue(Arrays.asList(swordNames).contains(p1.getItem(3).getName()));
         assertTrue(7 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 16);
+        assertEquals(damage, w1.getDamage());
+        assertEquals(Weapon.WeaponType.SWORD, w1.getWeaponType());
 
         assertTrue(Arrays.asList(heavyArmorNames).contains(p1.getItem(4).getName()));
         assertTrue(15 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 20);
+        assertEquals(armorRating, a1.getArmorRating());
+        assertEquals(Armor.ArmorType.HEAVY_ARMOR, a1.getArmorType());
     }
 
     @RepeatedTest(value = 50)
@@ -289,10 +298,18 @@ public class ChestTest {
 
     @ParameterizedTest
     @CsvSource({
-            "1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 39, 40, 41, 49, 50, 51, 59, 60"
+            "1,5,5", "9,5,5",
+            "10,10,10", "11,10,10", "19,10,10",
+            "20,20,20", "21,20,20", "29,20,20",
+            "30,30,30", "31,30,30", "39,30,30",
+            "40,40,40", "41,40,40", "49,40,40",
+            "50,50,50", "51,50,50", "59,50,50",
+            "60,60,60"
     })
-    void generateChestForMageDifferentLevels(int level) {
+    void generateChestForMageDifferentLevels(int level, int damage, int armorRating) {
         Player p1 = new Player("Mage", MAGE, level);
+        Weapon w1 = (Weapon) p1.getItem(3);
+        Armor a1 = (Armor) p1.getItem(4);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
         assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
@@ -305,8 +322,12 @@ public class ChestTest {
 
         assertTrue(Arrays.asList(staffNames).contains(p1.getItem(3).getName()));
         assertTrue(1 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 8);
+        assertEquals(damage, w1.getDamage());
+        assertEquals(Weapon.WeaponType.STAFF, w1.getWeaponType());
 
         assertTrue(Arrays.asList(lightArmorNames).contains(p1.getItem(4).getName()));
         assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
+        assertEquals(armorRating, a1.getArmorRating());
+        assertEquals(Armor.ArmorType.LIGHT_ARMOR, a1.getArmorType());
     }
 }
