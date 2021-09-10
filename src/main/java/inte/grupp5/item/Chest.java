@@ -46,14 +46,14 @@ public class Chest {
                         items.add(new Weapon
                                 (getStaffName(), getStaffWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.STAFF));
                         items.add(new Armor
-                                (getLightArmorName(), getLightArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.LIGHT_ARMOR));
+                                (getLightArmorName(), getLightArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.LIGHT_ARMOR, getEnchantment()));
                     } else if (player.getKlass() instanceof Paladin) {
                         items.add(new Potion
                                 (getHealthPotionName(), getPotionWeight(), Potion.PotionType.HEALTH_POTION));
                         items.add(new Weapon
                                 (getSwordName(), getSwordWeight(), Integer.parseInt(split[1]), Weapon.WeaponType.SWORD));
                         items.add(new Armor
-                                (getHeavyArmorName(), getHeavyArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.HEAVY_ARMOR));
+                                (getHeavyArmorName(), getHeavyArmorWeight(), Integer.parseInt(split[2]), Armor.ArmorType.HEAVY_ARMOR, getEnchantment()));
                     }
                     return;
                 }
@@ -69,6 +69,18 @@ public class Chest {
         items.clear();
         generateItemsFromFile(player);
         return items;
+    }
+
+    private Gear.Enchantment getEnchantment() {
+        double noneChance = .9;
+        double otherChance = .1;
+        Gear.Enchantment e1 = Gear.Enchantment.NONE;
+        Gear.Enchantment e2 = Gear.Enchantment.QUAD_DAMAGE;
+        Gear.Enchantment e3 = Gear.Enchantment.INVISIBILITY;
+        Gear.Enchantment e4 = Gear.Enchantment.PROTECTION;
+
+        //Math.random();
+        return Gear.Enchantment.NONE;
     }
 
     private int getSwordWeight() {

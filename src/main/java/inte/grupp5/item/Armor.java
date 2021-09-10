@@ -8,8 +8,8 @@ public class Armor extends Gear {
         LIGHT_ARMOR, HEAVY_ARMOR
     }
 
-    public Armor(String name, int weight, int armor, ArmorType armorType) {
-        super(name, weight, armor);
+    public Armor(String name, int weight, int armor, ArmorType armorType, Enchantment enchantment) {
+        super(name, weight, armor, enchantment);
         this.armorType = armorType;
     }
 
