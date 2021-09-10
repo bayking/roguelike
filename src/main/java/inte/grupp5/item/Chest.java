@@ -72,15 +72,16 @@ public class Chest {
     }
 
     private Gear.Enchantment getEnchantment() {
-        double noneChance = .9;
-        double otherChance = .1;
-        Gear.Enchantment e1 = Gear.Enchantment.NONE;
-        Gear.Enchantment e2 = Gear.Enchantment.QUAD_DAMAGE;
-        Gear.Enchantment e3 = Gear.Enchantment.INVISIBILITY;
-        Gear.Enchantment e4 = Gear.Enchantment.PROTECTION;
 
-        //Math.random();
-        return Gear.Enchantment.NONE;
+        int rng = ThreadLocalRandom.current().nextInt(100);
+
+        if (rng > 0 && rng <= 70) {
+            return Gear.Enchantment.NONE;
+        } else if (rng > 70 && rng <= 80) {
+            return Gear.Enchantment.QUAD_DAMAGE;
+        } else if (rng > 80 && rng <= 90) {
+            return Gear.Enchantment.INVISIBILITY;
+        } else return Gear.Enchantment.PROTECTION;
     }
 
     private int getSwordWeight() {

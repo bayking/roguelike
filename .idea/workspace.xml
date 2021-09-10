@@ -28,7 +28,25 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc3034b-63e4-4c69-a6e9-40457d13dbe7" name="Default Changelist" comment="new test in ChestTest for generating CSV file" />
+    <list default="true" id="afc3034b-63e4-4c69-a6e9-40457d13dbe7" name="Default Changelist" comment="new test in ChestTest for generating CSV file">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ChestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ChestTest.java" afterDir="false" />
+    </list>
     <list id="862de157-4745-4a59-84a1-c0c4de0600a8" name="ji" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +112,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'inte.grupp5.item'">
+  <component name="RunManager" selected="Gradle.ChestTest.generateChestForPaladin">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -107,6 +125,44 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ChestTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.ChestTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChestTest.generateChestForPaladin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.ChestTest.generateChestForPaladin&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="GearTest.armorWithNegativeArmorRatingThrowsIAE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -146,44 +202,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest.gearEnchantmentHasCorrectDamageModifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectDamageModifier&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GearTest.gearEnchantmentHasCorrectDuration" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectDuration&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'inte.grupp5.item'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChestTest.generateChestForPaladin" />
         <item itemvalue="Gradle.Tests in 'inte.grupp5.item'" />
+        <item itemvalue="Gradle.ChestTest" />
         <item itemvalue="Gradle.GearTest.armorWithNegativeArmorRatingThrowsIAE" />
         <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectArmorModifier" />
-        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectDamageModifier" />
-        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectDuration" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +281,7 @@
       <workItem from="1630750632042" duration="604000" />
       <workItem from="1630995815891" duration="14368000" />
       <workItem from="1631179450931" duration="20102000" />
-      <workItem from="1631268885862" duration="6686000" />
+      <workItem from="1631268885862" duration="9876000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1602689368708</created>
@@ -567,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631279820352</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Renamed test in ChestTest">
+      <created>1631280595012</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1631280595012</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +626,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dragon test fix" />
     <MESSAGE value="fixes" />
     <MESSAGE value="EnemyListTest, StartCombatTest" />
     <MESSAGE value="Tests, startCombat" />
@@ -626,7 +650,8 @@
     <MESSAGE value="Added more test to chest generation" />
     <MESSAGE value="Added Enchantment attribute to Gear class. &#10;Added some test for Enchantment" />
     <MESSAGE value="Full coverage test for Gear" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full coverage test for Gear" />
+    <MESSAGE value="Renamed test in ChestTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed test in ChestTest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1521" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1631277955276">
@@ -645,46 +670,46 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="93" y="93" width="1521" height="735" key="DiffContextDialog/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631004639390" />
-    <state width="1663" height="291" key="GridCell.Tab.0.bottom" timestamp="1631279487852">
+    <state width="1663" height="291" key="GridCell.Tab.0.bottom" timestamp="1631288314308">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="291" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487852" />
-    <state width="1663" height="291" key="GridCell.Tab.0.center" timestamp="1631279487851">
+    <state width="1663" height="291" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288314308" />
+    <state width="1663" height="291" key="GridCell.Tab.0.center" timestamp="1631288314308">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="291" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
-    <state width="1663" height="291" key="GridCell.Tab.0.left" timestamp="1631279487851">
+    <state width="1663" height="291" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288314308" />
+    <state width="1663" height="291" key="GridCell.Tab.0.left" timestamp="1631288314308">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="291" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
-    <state width="1663" height="291" key="GridCell.Tab.0.right" timestamp="1631279487851">
+    <state width="1663" height="291" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288314308" />
+    <state width="1663" height="291" key="GridCell.Tab.0.right" timestamp="1631288314308">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="291" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
-    <state width="1663" height="300" key="GridCell.Tab.1.bottom" timestamp="1631278320415">
+    <state width="1663" height="291" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288314308" />
+    <state width="1663" height="300" key="GridCell.Tab.1.bottom" timestamp="1631287944792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278320415" />
-    <state width="1663" height="300" key="GridCell.Tab.1.center" timestamp="1631278320415">
+    <state width="1663" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631287944792" />
+    <state width="1663" height="300" key="GridCell.Tab.1.center" timestamp="1631287944792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278320415" />
-    <state width="1663" height="300" key="GridCell.Tab.1.left" timestamp="1631278320415">
+    <state width="1663" height="300" key="GridCell.Tab.1.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631287944792" />
+    <state width="1663" height="300" key="GridCell.Tab.1.left" timestamp="1631287944792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278320415" />
-    <state width="1663" height="300" key="GridCell.Tab.1.right" timestamp="1631278320415">
+    <state width="1663" height="300" key="GridCell.Tab.1.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631287944792" />
+    <state width="1663" height="300" key="GridCell.Tab.1.right" timestamp="1631287944792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278320415" />
+    <state width="1663" height="300" key="GridCell.Tab.1.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631287944792" />
     <state x="703" y="374" key="VCS.ChangelistChooser" timestamp="1631003955793">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="703" y="374" key="VCS.ChangelistChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631003955793" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631279828172">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631280595948">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279828172" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631280595948" />
     <state x="781" y="203" key="refactoring.ChangeSignatureDialog" timestamp="1631276771380">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -699,88 +724,48 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
+          <line>78</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
+          <line>77</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
+          <line>75</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="4" />
+          <line>79</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="5" />
+          <line>80</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="6" />
+          <line>81</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="7" />
+          <line>82</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="8" />
+          <line>84</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="17" />
+          <line>83</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -801,7 +786,7 @@
     <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603953693999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603953682803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PrepareCombatTest_checkIfContainsPlayerFails.ic" NAME="PrepareCombatTest.checkIfContainsPlayerFails Coverage Results" MODIFIED="1603955984000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_item_.ic" NAME="Tests in 'inte.grupp5.item' Coverage Results" MODIFIED="1631279487843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_item_.ic" NAME="Tests in 'inte.grupp5.item' Coverage Results" MODIFIED="1631287789834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$ChestTest.ic" NAME="ChestTest Coverage Results" MODIFIED="1603295116857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$CombatTest.ic" NAME="CombatTest Coverage Results" MODIFIED="1603953432841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_player_.ic" NAME="Tests in 'inte.grupp5.player' Coverage Results" MODIFIED="1603956106296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
