@@ -33,25 +33,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Gear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Gear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ArmorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ArmorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/GearTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/GearTest.java" afterDir="false" />
     </list>
     <list id="862de157-4745-4a59-84a1-c0c4de0600a8" name="ji" comment="" />
@@ -133,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArmorTest.enchantmentMatches" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GearTest.armorWithNegativeArmorRatingThrowsIAE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.ArmorTest.enchantmentMatches&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.armorWithNegativeArmorRatingThrowsIAE&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -152,12 +140,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GearTest.gearEnchantmentHasCorrectArmorModifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectArmorModifier&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -171,12 +159,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest.gearHasEnchantment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GearTest.gearEnchantmentHasCorrectDamageModifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearHasEnchantment&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectDamageModifier&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -190,12 +178,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest.valueMatches" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GearTest.gearEnchantmentHasCorrectDuration" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.valueMatches&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectDuration&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -231,10 +219,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'inte.grupp5.item'" />
-        <item itemvalue="Gradle.GearTest.valueMatches" />
-        <item itemvalue="Gradle.GearTest" />
-        <item itemvalue="Gradle.GearTest.gearHasEnchantment" />
-        <item itemvalue="Gradle.ArmorTest.enchantmentMatches" />
+        <item itemvalue="Gradle.GearTest.armorWithNegativeArmorRatingThrowsIAE" />
+        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectArmorModifier" />
+        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectDamageModifier" />
+        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectDuration" />
       </list>
     </recent_temporary>
   </component>
@@ -288,7 +276,7 @@
       <workItem from="1630750632042" duration="604000" />
       <workItem from="1630995815891" duration="14368000" />
       <workItem from="1631179450931" duration="20102000" />
-      <workItem from="1631268885862" duration="5371000" />
+      <workItem from="1631268885862" duration="6364000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1602689368708</created>
@@ -578,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631276041502</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added Enchantment attribute to Gear class. &#10;Added some test for Enchantment">
+      <created>1631278621855</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1631278621855</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Enemy getters,takeDamage" />
     <MESSAGE value="Enemies, tests fix" />
     <MESSAGE value="Dragon test fix" />
     <MESSAGE value="fixes" />
@@ -637,7 +631,8 @@
     <MESSAGE value="removed old chest generation method." />
     <MESSAGE value="code cleanup" />
     <MESSAGE value="Added more test to chest generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more test to chest generation" />
+    <MESSAGE value="Added Enchantment attribute to Gear class. &#10;Added some test for Enchantment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Enchantment attribute to Gear class. &#10;Added some test for Enchantment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1521" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1631277955276">
@@ -656,22 +651,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="93" y="93" width="1521" height="735" key="DiffContextDialog/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631004639390" />
-    <state width="1663" height="290" key="GridCell.Tab.0.bottom" timestamp="1631278493110">
+    <state width="1663" height="291" key="GridCell.Tab.0.bottom" timestamp="1631279487852">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="290" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278493110" />
-    <state width="1663" height="290" key="GridCell.Tab.0.center" timestamp="1631278493110">
+    <state width="1663" height="291" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487852" />
+    <state width="1663" height="291" key="GridCell.Tab.0.center" timestamp="1631279487851">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="290" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278493110" />
-    <state width="1663" height="290" key="GridCell.Tab.0.left" timestamp="1631278493110">
+    <state width="1663" height="291" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
+    <state width="1663" height="291" key="GridCell.Tab.0.left" timestamp="1631279487851">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="290" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278493110" />
-    <state width="1663" height="290" key="GridCell.Tab.0.right" timestamp="1631278493110">
+    <state width="1663" height="291" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
+    <state width="1663" height="291" key="GridCell.Tab.0.right" timestamp="1631279487851">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="290" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278493110" />
+    <state width="1663" height="291" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631279487851" />
     <state width="1663" height="300" key="GridCell.Tab.1.bottom" timestamp="1631278320415">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -692,10 +687,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="703" y="374" key="VCS.ChangelistChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631003955793" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631276042989">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631278623291">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631276042989" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631278623291" />
     <state x="781" y="203" key="refactoring.ChangeSignatureDialog" timestamp="1631276771380">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -793,11 +788,6 @@
           <line>57</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/inte/grupp5/item/Gear.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -817,7 +807,7 @@
     <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603953693999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603953682803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PrepareCombatTest_checkIfContainsPlayerFails.ic" NAME="PrepareCombatTest.checkIfContainsPlayerFails Coverage Results" MODIFIED="1603955984000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_item_.ic" NAME="Tests in 'inte.grupp5.item' Coverage Results" MODIFIED="1631202226938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_item_.ic" NAME="Tests in 'inte.grupp5.item' Coverage Results" MODIFIED="1631279487843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$ChestTest.ic" NAME="ChestTest Coverage Results" MODIFIED="1603295116857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$CombatTest.ic" NAME="CombatTest Coverage Results" MODIFIED="1603953432841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_player_.ic" NAME="Tests in 'inte.grupp5.player' Coverage Results" MODIFIED="1603956106296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
