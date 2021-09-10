@@ -251,7 +251,7 @@ public class ChestTest {
             "50,50,60", "51,50,60", "59,50,60",
             "60,60,70"
     })
-    void generateChestForPaladinDifferentLevels(int level, int damage, int armorRating) {
+    void generateChestForPaladinCorrectDamageAndArmorRatingBasedOnLevel(int level, int damage, int armorRating) {
         Player p1 = new Player("Paladin", PALADIN, level);
         Weapon w1 = (Weapon) p1.getItem(3);
         Armor a1 = (Armor) p1.getItem(4);
@@ -306,7 +306,7 @@ public class ChestTest {
             "50,50,50", "51,50,50", "59,50,50",
             "60,60,60"
     })
-    void generateChestForMageDifferentLevels(int level, int damage, int armorRating) {
+    void generateChestForMageCorrectDamageAndArmorRatingBasedOnLevel(int level, int damage, int armorRating) {
         Player p1 = new Player("Mage", MAGE, level);
         Weapon w1 = (Weapon) p1.getItem(3);
         Armor a1 = (Armor) p1.getItem(4);
