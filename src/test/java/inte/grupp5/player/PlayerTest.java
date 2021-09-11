@@ -318,4 +318,16 @@ class PlayerTest {
                 p1.queueEnchantment(new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE)));
     }
 
+    @Test
+    void havingNoActiveEnchantmentReturnsFalse() {
+        assertFalse(player.hasActiveEnchantment());
+    }
+
+    @Test
+    void havingActiveEnchantmentReturnsTrue() {
+        player.queueEnchantment(new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.QUAD_DAMAGE));
+        player.activateEnchantment();
+        assertTrue(player.hasActiveEnchantment());
+    }
+
 }
