@@ -1,5 +1,7 @@
 package inte.grupp5.item;
 
+import inte.grupp5.player.Player;
+import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -90,8 +92,10 @@ class GearTest {
 
     @Test
     void usingEnchantmentOnArmorWithNoEnchantmentThrowsISE() {
+        Paladin PALADIN = new Paladin("Paladin");
+        Player p1 = new Player("Player", PALADIN, 1);
         Assertions.assertThrows(IllegalStateException.class, () ->
-                new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE).useEnchantment());
+                new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE).useEnchantment(p1));
     }
 
 }
