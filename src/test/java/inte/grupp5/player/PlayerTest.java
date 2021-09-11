@@ -1,5 +1,7 @@
 package inte.grupp5.player;
 
+import inte.grupp5.item.Armor;
+import inte.grupp5.item.Gear;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import inte.grupp5.player.spell.InvokeMana;
@@ -306,6 +308,14 @@ class PlayerTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new Player("Tester", new Paladin("Paladin"), 61);
         });
+    }
+
+    @Test
+    void queuingEnchantmentOnArmorWithNoEnchantmentThrowsISE() {
+        Paladin PALADIN = new Paladin("Paladin");
+        Player p1 = new Player("Player", PALADIN, 1);
+        Assertions.assertThrows(IllegalStateException.class, () ->
+                p1.queueEnchantment(new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE)));
     }
 
 }
