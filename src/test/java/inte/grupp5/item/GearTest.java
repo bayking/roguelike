@@ -11,6 +11,7 @@ class GearTest {
     private final Gear GLOVES_WITH_QUAD = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.QUAD_DAMAGE);
     private final Gear GLOVES_WITH_INVIS = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.INVISIBILITY);
     private final Gear GLOVES_WITH_PROTEC = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.PROTECTION);
+    private final Gear GLOVES_WITH_INFERNO = new Armor("Gloves", 4, 2, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.INFERNO);
 
     @Test
     void valueMatches() {
@@ -18,6 +19,7 @@ class GearTest {
         assertEquals(17.0, GLOVES_WITH_QUAD.getValue());
         assertEquals(30.5, GLOVES_WITH_INVIS.getValue());
         assertEquals(25.0, GLOVES_WITH_PROTEC.getValue());
+        assertEquals(20.5, GLOVES_WITH_INFERNO.getValue());
     }
 
     @Test
@@ -26,6 +28,7 @@ class GearTest {
         assertEquals(Gear.Enchantment.QUAD_DAMAGE, GLOVES_WITH_QUAD.getEnchantment());
         assertEquals(Gear.Enchantment.INVISIBILITY, GLOVES_WITH_INVIS.getEnchantment());
         assertEquals(Gear.Enchantment.PROTECTION, GLOVES_WITH_PROTEC.getEnchantment());
+        assertEquals(Gear.Enchantment.INFERNO, GLOVES_WITH_INFERNO.getEnchantment());
     }
 
     @Test
@@ -34,6 +37,7 @@ class GearTest {
         assertEquals(15, GLOVES_WITH_QUAD.getEnchantment().getDuration());
         assertEquals(30, GLOVES_WITH_INVIS.getEnchantment().getDuration());
         assertEquals(20, GLOVES_WITH_PROTEC.getEnchantment().getDuration());
+        assertEquals(20, GLOVES_WITH_INFERNO.getEnchantment().getDuration());
     }
 
     @Test
@@ -42,6 +46,7 @@ class GearTest {
         assertEquals(4, GLOVES_WITH_QUAD.getEnchantment().getDamageModifier());
         assertEquals(1, GLOVES_WITH_INVIS.getEnchantment().getDamageModifier());
         assertEquals(1, GLOVES_WITH_PROTEC.getEnchantment().getDamageModifier());
+        assertEquals(1, GLOVES_WITH_INFERNO.getEnchantment().getDamageModifier());
     }
 
     @Test
@@ -50,12 +55,43 @@ class GearTest {
         assertEquals(1, GLOVES_WITH_QUAD.getEnchantment().getArmorModifier());
         assertEquals(1, GLOVES_WITH_INVIS.getEnchantment().getArmorModifier());
         assertEquals(10, GLOVES_WITH_PROTEC.getEnchantment().getArmorModifier());
+        assertEquals(1, GLOVES_WITH_INFERNO.getEnchantment().getArmorModifier());
+    }
+
+    @Test
+    void gearEnchantmentHasCorrectMuffle() {
+        assertFalse(GLOVES_WITH_NO_ENCHANTMENT.getEnchantment().isMuffled());
+        assertFalse(GLOVES_WITH_QUAD.getEnchantment().isMuffled());
+        assertTrue(GLOVES_WITH_INVIS.getEnchantment().isMuffled());
+        assertFalse(GLOVES_WITH_PROTEC.getEnchantment().isMuffled());
+        assertFalse(GLOVES_WITH_INFERNO.getEnchantment().isMuffled());
+    }
+
+    @Test
+    void gearEnchantmentHasCorrectAOE() {
+        assertFalse(GLOVES_WITH_NO_ENCHANTMENT.getEnchantment().doesDamageToNearby());
+        assertFalse(GLOVES_WITH_QUAD.getEnchantment().doesDamageToNearby());
+        assertFalse(GLOVES_WITH_INVIS.getEnchantment().doesDamageToNearby());
+        assertFalse(GLOVES_WITH_PROTEC.getEnchantment().doesDamageToNearby());
+        assertTrue(GLOVES_WITH_INFERNO.getEnchantment().doesDamageToNearby());
     }
 
     @Test
     void armorWithNegativeArmorRatingThrowsIAE() {
         Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Armor("Gear", 1, -1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE));
+    }
+
+    @Test
+    void armorWithNullEnchantmentThrowsIAE() {
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+                new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, null));
+    }
+
+    @Test
+    void usingEnchantmentOnArmorWithNoEnchantmentThrowsISE() {
+        Assertions.assertThrows(IllegalStateException.class, () ->
+                new Armor("Gear", 1, 1, Armor.ArmorType.LIGHT_ARMOR, Gear.Enchantment.NONE).useEnchantment());
     }
 
 }

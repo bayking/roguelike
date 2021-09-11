@@ -2,7 +2,7 @@ package inte.grupp5.item;
 
 public class QuestItem extends Item {
 
-    public QuestItem(String name, int weight) {
+    public QuestItem(String name, double weight) {
         super(name, weight);
     }
 

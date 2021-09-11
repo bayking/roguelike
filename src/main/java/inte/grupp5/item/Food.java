@@ -7,7 +7,7 @@ public class Food extends Consumable {
 
     private final int healthBonus;
 
-    public Food(String name, int weight, int healthBonus) {
+    public Food(String name, double weight, int healthBonus) {
         super(name, weight);
         this.healthBonus = healthBonus;
     }

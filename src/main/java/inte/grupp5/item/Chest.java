@@ -72,9 +72,7 @@ public class Chest {
     }
 
     private Gear.Enchantment getEnchantment() {
-
         int rng = ThreadLocalRandom.current().nextInt(100);
-
         if (rng > 0 && rng <= 70) {
             return Gear.Enchantment.NONE;
         } else if (rng > 70 && rng <= 80) {

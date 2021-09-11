@@ -58,9 +58,9 @@ public class ChestTest {
 //    final Chest LEVEL_55_PALADIN_CHEST = new Chest();
 //    final Chest LEVEL_60_PALADIN_CHEST = new Chest();
 
-    final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
-    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
-    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
+ //   final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
+//    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
+//    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
 
 //    @Test
 //    void chestGeneratesWeaponWithDamageBasedOnLevelForMages() {
@@ -222,7 +222,7 @@ public class ChestTest {
     }*/
 
     @RepeatedTest(value = 50)
-    void generateChestForPaladin() {
+    void generateChestForPaladinAllowedValues() {
         Player p1 = new Player("Paladin", PALADIN, 25);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
@@ -277,7 +277,7 @@ public class ChestTest {
     }
 
     @RepeatedTest(value = 50)
-    void generateChestForMage() {
+    void generateChestForMageAllowedValues() {
         Player p1 = new Player("mage", MAGE, 25);
 
         assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));

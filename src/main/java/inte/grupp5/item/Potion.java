@@ -27,7 +27,7 @@ public class Potion extends Consumable {
         }
     }
 
-    public Potion(String name, int weight, PotionType potionType) {
+    public Potion(String name, double weight, PotionType potionType) {
         super(name, weight);
         this.potionType = potionType;
     }
