@@ -6,9 +6,13 @@ import inte.grupp5.player.spell.InvokeMana;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
+
+    private final String[] lightArmorNames = {"Light armor", "Leather armor", "Fur armor"};
 
     Player player = new Player("Tester", new Mage("mage"), 1);
 
@@ -36,7 +40,8 @@ class PlayerTest {
 
     @Test
     void getItemReturnsItem () {
-        assertEquals("Light armor",player.getItem(4).getName());
+        assertTrue(Arrays.asList(lightArmorNames).contains(player.getItem(4).getName()));
+        //assertEquals("Light armor",player.getItem(4).getName());
     }
 
     @Test
