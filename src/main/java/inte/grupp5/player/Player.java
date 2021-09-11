@@ -1,11 +1,13 @@
 package inte.grupp5.player;
 
 import inte.grupp5.item.Chest;
+import inte.grupp5.item.Gear;
 import inte.grupp5.item.Item;
 import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 // TODO: Interaction with consumables.
 public class Player {
@@ -16,6 +18,9 @@ public class Player {
     private int maxHealthPoints, maxManaPoints, currentHealthPoints, currentManaPoints, level;
     private ArrayList<Spell> spells;
     private ArrayList<Item> items;
+
+    private PriorityQueue<Gear> enchantmentQueue = new PriorityQueue<>();
+    private Gear activeEnchantment;
 
     public Player(String name, Class klass, int level) {
         setLevel(level);
@@ -30,6 +35,7 @@ public class Player {
         items = new Chest().openChest(this);
         //Test
     }
+
     private void insufficientMana() {
         System.out.println("Insufficient Mana");
     }
@@ -47,10 +53,9 @@ public class Player {
     public boolean heal(int amount) {
         if (currentHealthPoints == maxHealthPoints) {
             System.out.println("Health is full");
-        }
-        else if (hasManaForSpell(10)) {
-            if (currentHealthPoints <= maxHealthPoints-amount)
-                currentHealthPoints +=amount;
+        } else if (hasManaForSpell(10)) {
+            if (currentHealthPoints <= maxHealthPoints - amount)
+                currentHealthPoints += amount;
             else {
                 currentHealthPoints = maxHealthPoints;
             }
@@ -94,22 +99,26 @@ public class Player {
         this.maxHealthPoints = maxHealthPoints;
     }
 
-    public void takeDamage (int damage) {
+    public void takeDamage(int damage) {
         if (damage < 0) {
             throw new IllegalArgumentException("Value can't be less than 0");
-    }
+        }
         currentHealthPoints -= damage;
         if (currentHealthPoints < 0) {
             currentHealthPoints = 0;
         }
     }
 
-    public Item getItem(int i) { {
-        if (i < 0 ) {
-            throw new IllegalArgumentException("Value can't be less than 0"); }
-        if (i > getItemsSize()){
-            throw new IndexOutOfBoundsException("Value can't be more than size of list"); }
-        return items.get(i); }
+    public Item getItem(int i) {
+        {
+            if (i < 0) {
+                throw new IllegalArgumentException("Value can't be less than 0");
+            }
+            if (i > getItemsSize()) {
+                throw new IndexOutOfBoundsException("Value can't be more than size of list");
+            }
+            return items.get(i);
+        }
     }
 
     public int getItemsSize() {
@@ -150,5 +159,47 @@ public class Player {
 
     public boolean castSpell(Spell spell) {
         return spell.cast(this);
+    }
+
+    // TODO: test this
+    // Places chosen enchanted Gear into a priority queue.
+    public void queueEnchantment(Gear gear) {
+        if (gear.getEnchantment() != Gear.Enchantment.NONE) {
+            enchantmentQueue.add(gear);
+        } else {
+            throw new IllegalStateException("Gear: " + gear.getName() + " is not enchanted!");
+        }
+    }
+
+    // If an item is already activated, compares those,
+    // and if current item has higher priority, throws ISE.
+    // If queue is empty, throws ISE.
+    public void activateEnchantment() {
+        if (enchantmentQueue.peek() != null) {
+            if (activeEnchantment == null) {
+                activeEnchantment = enchantmentQueue.poll();
+            } else {
+                if (enchantmentQueue.peek().compareTo(activeEnchantment) > 0) {
+                    deactivateEnchantment();
+                    activeEnchantment = enchantmentQueue.poll();
+                } else {
+                    throw new IllegalStateException("Current enchantment has priority!");
+                }
+            }
+        } else {
+            throw new IllegalStateException("No items in queue!");
+        }
+    }
+
+    // Sets active item to null
+    // and removes the enchantment from that item.
+    private void deactivateEnchantment() {
+        activeEnchantment.setEnchantmentToNONE();
+        activeEnchantment = null;
+    }
+
+    // Is player having an enchanted item activated right now.
+    public boolean hasActiveEnchantment() {
+        return activeEnchantment != null;
     }
 }

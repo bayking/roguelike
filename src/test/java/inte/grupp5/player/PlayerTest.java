@@ -17,6 +17,8 @@ class PlayerTest {
     private final String[] lightArmorNames = {"Light armor", "Leather armor", "Fur armor"};
 
     Player player = new Player("Tester", new Mage("mage"), 1);
+    Armor ENCHANTED_ARMOR_WITH_QUAD = new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.QUAD_DAMAGE);
+    Armor ENCHANTED_ARMOR_WITH_INVIS = new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.INVISIBILITY);
 
     @Test
     void playerTakesDamage() {
@@ -325,9 +327,34 @@ class PlayerTest {
 
     @Test
     void havingActiveEnchantmentReturnsTrue() {
-        player.queueEnchantment(new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.QUAD_DAMAGE));
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_QUAD);
         player.activateEnchantment();
         assertTrue(player.hasActiveEnchantment());
+    }
+
+    @Test
+    void activatingEnchantmentWithHigherPriorityRemovesEnchantment() {
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_QUAD);
+        player.activateEnchantment();
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_INVIS);
+        player.activateEnchantment();
+        assertEquals(Gear.Enchantment.NONE, ENCHANTED_ARMOR_WITH_QUAD.getEnchantment());
+        assertTrue(player.hasActiveEnchantment());
+    }
+
+    @Test
+    void activatingEnchantmentWithLowerPriorityThrowsISE() {
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_INVIS);
+        player.activateEnchantment();
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_QUAD);
+        Assertions.assertThrows(IllegalStateException.class, () ->
+                player.activateEnchantment());
+    }
+
+    @Test
+    void activatingEnchantmentWithEmptyQueueThrowsISE() {
+        Assertions.assertThrows(IllegalStateException.class, () ->
+                player.activateEnchantment());
     }
 
 }
