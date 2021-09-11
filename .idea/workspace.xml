@@ -29,18 +29,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc3034b-63e4-4c69-a6e9-40457d13dbe7" name="Default Changelist" comment="new test in ChestTest for generating CSV file">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor$ArmorType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor$ArmorType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Armor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Chest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Consumable.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Consumable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Gear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Potion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/QuestItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/QuestItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/item/Weapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/inte/grupp5/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ArmorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ChestTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/FoodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/FoodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/GearTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ItemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/ItemTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/PotionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/PotionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/QuestItemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/QuestItemTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/WeaponTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/item/WeaponTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/inte/grupp5/player/PlayerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Chest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Consumable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Consumable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Gear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Gear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Potion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/QuestItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/QuestItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/item/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ChestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/ChestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/GearTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/item/GearTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inte/grupp5/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/inte/grupp5/player/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inte/grupp5/player/PlayerTest.java" afterDir="false" />
     </list>
     <list id="862de157-4745-4a59-84a1-c0c4de0600a8" name="ji" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +131,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'inte.grupp5.item'">
+  <component name="RunManager" selected="Gradle.PlayerTest.itemsInPriorityQueueHasCorrectOrder">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -119,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GearTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PlayerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.PlayerTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +162,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest.gearEnchantmentHasCorrectAOE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PlayerTest.activatingEnchantmentWithEmptyQueueThrowsISE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.gearEnchantmentHasCorrectAOE&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.PlayerTest.activatingEnchantmentWithEmptyQueueThrowsISE&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,12 +181,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GearTest.usingEnchantmentOnArmorWithNoEnchantmentThrowsISE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PlayerTest.activatingEnchantmentWithLowerPrioThrowsISE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.GearTest.usingEnchantmentOnArmorWithNoEnchantmentThrowsISE&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.PlayerTest.activatingEnchantmentWithLowerPrioThrowsISE&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -176,12 +200,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'inte.grupp5.item'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PlayerTest.itemsInPriorityQueueHasCorrectOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;inte.grupp5.item.*&quot;" />
+        <option name="scriptParameters" value="--tests &quot;inte.grupp5.player.PlayerTest.itemsInPriorityQueueHasCorrectOrder&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -216,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'inte.grupp5.item'" />
+        <item itemvalue="Gradle.PlayerTest.itemsInPriorityQueueHasCorrectOrder" />
         <item itemvalue="Gradle.Tests in 'roguelike.test'" />
-        <item itemvalue="Gradle.GearTest" />
-        <item itemvalue="Gradle.GearTest.gearEnchantmentHasCorrectAOE" />
-        <item itemvalue="Gradle.GearTest.usingEnchantmentOnArmorWithNoEnchantmentThrowsISE" />
+        <item itemvalue="Gradle.PlayerTest" />
+        <item itemvalue="Gradle.PlayerTest.activatingEnchantmentWithEmptyQueueThrowsISE" />
+        <item itemvalue="Gradle.PlayerTest.activatingEnchantmentWithLowerPrioThrowsISE" />
       </list>
     </recent_temporary>
   </component>
@@ -275,49 +299,7 @@
       <workItem from="1630995815891" duration="14368000" />
       <workItem from="1631179450931" duration="20102000" />
       <workItem from="1631268885862" duration="10379000" />
-      <workItem from="1631356416464" duration="4933000" />
-    </task>
-    <task id="LOCAL−00002" summary="First commit">
-      <created>1602689552707</created>
-      <option name="number" value="LOCAL−00002" />
-      <option name="presentableId" value="LOCAL−00002" />
-      <updated>1602689552707</updated>
-    </task>
-    <task id="LOCAL−00003" summary="commit test">
-      <created>1602689626303</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1602689626303</updated>
-    </task>
-    <task id="LOCAL−00004" summary="Added EnemyTest">
-      <created>1602697822064</created>
-      <option name="number" value="LOCAL−00004" />
-      <option name="presentableId" value="LOCAL−00004" />
-      <updated>1602697822064</updated>
-    </task>
-    <task id="LOCAL−00005" summary="Updated EnemyTest, Added a couple enemies.">
-      <created>1602745443155</created>
-      <option name="number" value="LOCAL−00005" />
-      <option name="presentableId" value="LOCAL−00005" />
-      <updated>1602745443155</updated>
-    </task>
-    <task id="LOCAL−00006" summary="Updated enemies and tests.">
-      <created>1602914029498</created>
-      <option name="number" value="LOCAL−00006" />
-      <option name="presentableId" value="LOCAL−00006" />
-      <updated>1602914029498</updated>
-    </task>
-    <task id="LOCAL−00007" summary="Enemy klasser och tester">
-      <created>1603094302360</created>
-      <option name="number" value="LOCAL−00007" />
-      <option name="presentableId" value="LOCAL−00007" />
-      <updated>1603094302360</updated>
-    </task>
-    <task id="LOCAL−00008" summary="CombatTest">
-      <created>1603096174520</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1603096174520</updated>
+      <workItem from="1631356416464" duration="15769000" />
     </task>
     <task id="LOCAL−00009" summary="Enemy getters,takeDamage">
       <created>1603188995804</created>
@@ -587,7 +569,56 @@
       <option name="project" value="LOCAL" />
       <updated>1631288494838</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="changed Item.weight to double in subclasses.&#10;rough implementation of Gear.useEnchantment.&#10;added enchantment INFERNO.&#10;added enchantment attributes muffled &amp; damageNearby.">
+      <created>1631361683535</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1631361683535</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Added test ensuring ISE is thrown when calling useEnchantment() on a Gear object without it having an enchantment.">
+      <created>1631375757455</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1631375757455</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Fixed testcase getItemReturnsItem() to work with new implementation of the Chest class.">
+      <created>1631376397794</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1631376397794</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Added test queuingEnchantmentOnArmorWithNoEnchantmentThrowsISE">
+      <created>1631376540561</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1631376540561</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Moved test queuingEnchantmentOnArmorWithNoEnchantmentThrowsISE to PlayerTest">
+      <created>1631376578923</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1631376578923</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added test havingActiveEnchantmentReturnsTrue() to PlayerTest">
+      <created>1631378326900</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1631378326900</updated>
+    </task>
+    <task id="LOCAL-00057" summary="addedTest and implementations for Priority queue for enchanted Gear in Player.">
+      <created>1631380507706</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1631380507706</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,13 +652,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EnemyListTest, StartCombatTest" />
-    <MESSAGE value="Tests, startCombat" />
-    <MESSAGE value="startCombat och tests." />
-    <MESSAGE value="startCombat structure, tests." />
-    <MESSAGE value="fixes, tests." />
-    <MESSAGE value="fixes, combattests." />
-    <MESSAGE value="Lista för items i player och getters. Tog bort damage. Combat klassen fix." />
     <MESSAGE value="Combat klassen fix." />
     <MESSAGE value="Tester för player. Takedamage och Chest listan." />
     <MESSAGE value="Tester för player, Combat" />
@@ -646,7 +670,14 @@
     <MESSAGE value="Full coverage test for Gear" />
     <MESSAGE value="Renamed test in ChestTest" />
     <MESSAGE value="Chest.getEnchantment implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Chest.getEnchantment implemented." />
+    <MESSAGE value="changed Item.weight to double in subclasses.&#10;rough implementation of Gear.useEnchantment.&#10;added enchantment INFERNO.&#10;added enchantment attributes muffled &amp; damageNearby." />
+    <MESSAGE value="Added test ensuring ISE is thrown when calling useEnchantment() on a Gear object without it having an enchantment." />
+    <MESSAGE value="Fixed testcase getItemReturnsItem() to work with new implementation of the Chest class." />
+    <MESSAGE value="Added test queuingEnchantmentOnArmorWithNoEnchantmentThrowsISE" />
+    <MESSAGE value="Moved test queuingEnchantmentOnArmorWithNoEnchantmentThrowsISE to PlayerTest" />
+    <MESSAGE value="added test havingActiveEnchantmentReturnsTrue() to PlayerTest" />
+    <MESSAGE value="addedTest and implementations for Priority queue for enchanted Gear in Player." />
+    <option name="LAST_COMMIT_MESSAGE" value="addedTest and implementations for Priority queue for enchanted Gear in Player." />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1521" height="735" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1631277955276">
@@ -657,54 +688,54 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="569" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631200917964" />
-    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1631360248986">
+    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1631377301306">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631360248986" />
+    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631377301306" />
     <state x="93" y="93" width="1521" height="735" key="DiffContextDialog" timestamp="1631004639390">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="93" y="93" width="1521" height="735" key="DiffContextDialog/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631004639390" />
-    <state width="1663" height="293" key="GridCell.Tab.0.bottom" timestamp="1631360826895">
+    <state width="1663" height="275" key="GridCell.Tab.0.bottom" timestamp="1631381152196">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="293" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631360826895" />
-    <state width="1663" height="293" key="GridCell.Tab.0.center" timestamp="1631360826895">
+    <state width="1663" height="275" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631381152196" />
+    <state width="1663" height="275" key="GridCell.Tab.0.center" timestamp="1631381152196">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="293" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631360826895" />
-    <state width="1663" height="293" key="GridCell.Tab.0.left" timestamp="1631360826895">
+    <state width="1663" height="275" key="GridCell.Tab.0.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631381152196" />
+    <state width="1663" height="275" key="GridCell.Tab.0.left" timestamp="1631381152196">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="293" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631360826895" />
-    <state width="1663" height="293" key="GridCell.Tab.0.right" timestamp="1631360826895">
+    <state width="1663" height="275" key="GridCell.Tab.0.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631381152196" />
+    <state width="1663" height="275" key="GridCell.Tab.0.right" timestamp="1631381152196">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="293" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631360826895" />
-    <state width="1663" height="300" key="GridCell.Tab.1.bottom" timestamp="1631288850553">
+    <state width="1663" height="275" key="GridCell.Tab.0.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631381152196" />
+    <state width="1663" height="300" key="GridCell.Tab.1.bottom" timestamp="1631379653378">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288850553" />
-    <state width="1663" height="300" key="GridCell.Tab.1.center" timestamp="1631288850553">
+    <state width="1663" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631379653378" />
+    <state width="1663" height="300" key="GridCell.Tab.1.center" timestamp="1631379653378">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288850553" />
-    <state width="1663" height="300" key="GridCell.Tab.1.left" timestamp="1631288850553">
+    <state width="1663" height="300" key="GridCell.Tab.1.center/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631379653378" />
+    <state width="1663" height="300" key="GridCell.Tab.1.left" timestamp="1631379653378">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288850553" />
-    <state width="1663" height="300" key="GridCell.Tab.1.right" timestamp="1631288850553">
+    <state width="1663" height="300" key="GridCell.Tab.1.left/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631379653378" />
+    <state width="1663" height="300" key="GridCell.Tab.1.right" timestamp="1631379653378">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="300" key="GridCell.Tab.1.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288850553" />
+    <state width="1663" height="300" key="GridCell.Tab.1.right/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631379653378" />
     <state x="703" y="374" key="VCS.ChangelistChooser" timestamp="1631003955793">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="703" y="374" key="VCS.ChangelistChooser/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631003955793" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631288495980">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1631380508955">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631288495980" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/2560.121.1920.1040@0.0.1707.920" timestamp="1631380508955" />
     <state x="781" y="203" key="refactoring.ChangeSignatureDialog" timestamp="1631358796487">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -723,10 +754,10 @@
     <SUITE FILE_PATH="coverage/roguelike$WolfTest.ic" NAME="WolfTest Coverage Results" MODIFIED="1603953730591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1603953706408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest.ic" NAME="StartCombatTest Coverage Results" MODIFIED="1603536820094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$Tests_in__roguelike_test_.ic" NAME="Tests in 'roguelike.test' Coverage Results" MODIFIED="1604050357011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$Tests_in__roguelike_test_.ic" NAME="Tests in 'roguelike.test' Coverage Results" MODIFIED="1631380545545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$StartCombatTest_playerDefeatsOneEnemy.ic" NAME="StartCombatTest.playerDefeatsOneEnemy Coverage Results" MODIFIED="1603520992199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$Tests_in__inte_grupp5_enemy_.ic" NAME="Tests in 'inte.grupp5.enemy' Coverage Results" MODIFIED="1603956083728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/roguelike$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1603956224588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/roguelike$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1631380442039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$EnemyListTest.ic" NAME="EnemyListTest Coverage Results" MODIFIED="1603953693999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$DragonTest.ic" NAME="DragonTest Coverage Results" MODIFIED="1603953682803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/roguelike$PrepareCombatTest_checkIfContainsPlayerFails.ic" NAME="PrepareCombatTest.checkIfContainsPlayerFails Coverage Results" MODIFIED="1603955984000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

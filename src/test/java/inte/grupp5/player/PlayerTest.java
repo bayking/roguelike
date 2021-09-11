@@ -19,6 +19,7 @@ class PlayerTest {
     Player player = new Player("Tester", new Mage("mage"), 1);
     Armor ENCHANTED_ARMOR_WITH_QUAD = new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.QUAD_DAMAGE);
     Armor ENCHANTED_ARMOR_WITH_INVIS = new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.INVISIBILITY);
+    Armor ENCHANTED_ARMOR_WITH_PROTEC = new Armor("Test", 2, 2, Armor.ArmorType.HEAVY_ARMOR, Gear.Enchantment.PROTECTION);
 
     @Test
     void playerTakesDamage() {
@@ -355,6 +356,15 @@ class PlayerTest {
     void activatingEnchantmentWithEmptyQueueThrowsISE() {
         Assertions.assertThrows(IllegalStateException.class, () ->
                 player.activateEnchantment());
+    }
+
+    @Test
+    void itemsInPriorityQueueHasCorrectOrder() {
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_INVIS);
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_PROTEC);
+        player.queueEnchantment(ENCHANTED_ARMOR_WITH_QUAD);
+        player.activateEnchantment();
+        assertEquals(ENCHANTED_ARMOR_WITH_INVIS, player.getActiveEnchantment());
     }
 
 }

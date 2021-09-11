@@ -7,6 +7,7 @@ import inte.grupp5.player.classes.Class;
 import inte.grupp5.player.spell.Spell;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 // TODO: Interaction with consumables.
@@ -19,7 +20,8 @@ public class Player {
     private ArrayList<Spell> spells;
     private ArrayList<Item> items;
 
-    private PriorityQueue<Gear> enchantmentQueue = new PriorityQueue<>();
+    private PriorityQueue<Gear> enchantmentQueue =
+            new PriorityQueue<Gear>(new GearEnchantmentComparator());
     private Gear activeEnchantment;
 
     public Player(String name, Class klass, int level) {
@@ -161,7 +163,6 @@ public class Player {
         return spell.cast(this);
     }
 
-    // TODO: test this
     // Places chosen enchanted Gear into a priority queue.
     public void queueEnchantment(Gear gear) {
         if (gear.getEnchantment() != Gear.Enchantment.NONE) {
@@ -201,5 +202,17 @@ public class Player {
     // Is player having an enchanted item activated right now.
     public boolean hasActiveEnchantment() {
         return activeEnchantment != null;
+    }
+
+    public Gear getActiveEnchantment() {
+        return activeEnchantment;
+    }
+}
+
+class GearEnchantmentComparator implements Comparator<Gear> {
+
+    @Override
+    public int compare(Gear o1, Gear o2) {
+        return Integer.compare(o2.getEnchantment().getDuration(), o1.getEnchantment().getDuration());
     }
 }

@@ -1,6 +1,8 @@
 package inte.grupp5.item;
 
-public abstract class Gear extends Item {
+import inte.grupp5.player.Player;
+
+public abstract class Gear extends Item implements Comparable<Gear> {
 
     private final int armorRating;
     private Enchantment enchantment;
@@ -62,8 +64,6 @@ public abstract class Gear extends Item {
     public int getArmorRating() {
         return armorRating;
     }
-
-    public abstract void useEnchantment();
 
     public Enchantment getEnchantment() {
         return enchantment;

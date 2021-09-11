@@ -17,7 +17,7 @@ class ArmorTest {
 
     @Test
     void toStringMatches() {
-        assertEquals("[Name: Helmet, Weight: 10.00, Armor rating: 7, Armor type: HEAVY_ARMOR]", helmet.toString());
+        assertEquals("[Name: Helmet, Weight: 10.00, Armor rating: 7, Armor type: HEAVY_ARMOR, Enchantment: NONE]", helmet.toString());
     }
 
     @Test
