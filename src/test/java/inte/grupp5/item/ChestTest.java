@@ -9,6 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,6 +26,10 @@ public class ChestTest {
 
     final Mage MAGE = new Mage("Gandalf");
     final Paladin PALADIN = new Paladin("Paladin");
+
+    final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
+    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
+    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
 
 //    final Player LEVEL_5_MAGE = new Player("Level 5", MAGE, 5);
 //    final Player LEVEL_15_MAGE = new Player("Level 15", MAGE, 15);
@@ -57,11 +62,6 @@ public class ChestTest {
 //    final Chest LEVEL_45_PALADIN_CHEST = new Chest();
 //    final Chest LEVEL_55_PALADIN_CHEST = new Chest();
 //    final Chest LEVEL_60_PALADIN_CHEST = new Chest();
-
- //   final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
-//    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
-//    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
-
 //    @Test
 //    void chestGeneratesWeaponWithDamageBasedOnLevelForMages() {
 //        LEVEL_5_MAGE_CHEST.generateItems(LEVEL_5_MAGE);
@@ -176,51 +176,6 @@ public class ChestTest {
 //        assertEquals(testItems.toString(), LEVEL_5_MAGE_CHEST.openChest(LEVEL_5_MAGE).toString());
 //    }
 
-/*    @ParameterizedTest
-    @CsvSource({
-            "6, 5, 5", "11, 10, 10", "21, 20, 20", "31, 30, 30", "41, 40, 40",
-            "51, 50, 50", "60 , 60, 60"
-    })
-    void openChestMethodReadsItemsFromMageCsvSource(int level, int damage, int armorRating) {
-        ArrayList<Item> items = new ArrayList<>();
-        items.add(HEALTH_POTION);
-        items.add(LEVEL_POTION);
-        items.add(MANA_POTION);
-        items.add(new Weapon("Staff", 3, damage, Weapon.WeaponType.STAFF));
-        items.add(new Armor("Light armor", 7, armorRating, Armor.ArmorType.LIGHT_ARMOR));
-
-        assertEquals(items.toString(), new Chest().openChest(new Player("Mage", MAGE, level)).toString());
-    }*/
-
-/*    @ParameterizedTest
-    @CsvSource({
-            "6, 5, 10", "11, 10, 20", "21, 20, 30", "31, 30, 40", "41, 40, 50",
-            "51, 50, 60", "60 , 60, 70"
-    })
-    void openChestMethodReadsItemsFromPaladinCsvSource(int level, int damage, int armorRating) {
-        ArrayList<Item> items = new ArrayList<>();
-        items.add(HEALTH_POTION);
-        items.add(LEVEL_POTION);
-        items.add(HEALTH_POTION);
-        items.add(new Weapon("Sword", 5, damage, Weapon.WeaponType.SWORD));
-        items.add(new Armor("Heavy armor", 10, armorRating, Armor.ArmorType.HEAVY_ARMOR));
-
-        assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
-    }*/
-
-/*    @ParameterizedTest
-    @CsvFileSource(resources = "/MageChestGeneratorTest.csv")
-    void openChestMethodCreatesCSVFileBasedOnClassAndLevel(int level, int damage, int armorRating) {
-        ArrayList<Item> items = new ArrayList<>();
-        items.add(HEALTH_POTION);
-        items.add(LEVEL_POTION);
-        items.add(HEALTH_POTION);
-        items.add(new Weapon("Sword", 5, damage, Weapon.WeaponType.SWORD));
-        items.add(new Armor("Heavy armor", 10, armorRating, Armor.ArmorType.HEAVY_ARMOR));
-
-        assertEquals(items.toString(), new Chest().openChest(new Player("Paladin", PALADIN, level)).toString());
-    }*/
-
     @RepeatedTest(value = 50)
     void generateChestForPaladinAllowedValues() {
         Player p1 = new Player("Paladin", PALADIN, 25);
@@ -329,5 +284,59 @@ public class ChestTest {
         assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
         assertEquals(armorRating, a1.getArmorRating());
         assertEquals(Armor.ArmorType.LIGHT_ARMOR, a1.getArmorType());
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/MageChestGeneratorTest.csv")
+    void generateChestForMageCorrectDamageAndArmorRatingBasedOnLevelFromFile(int level, int damage, int armorRating) {
+        Player p1 = new Player("Mage", MAGE, level);
+        Weapon w1 = (Weapon) p1.getItem(3);
+        Armor a1 = (Armor) p1.getItem(4);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
+        assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(levelPotionNames).contains(p1.getItem(1).getName()));
+        assertTrue(1 <= p1.getItem(1).getWeight() && p1.getItem(1).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(manaPotionNames).contains(p1.getItem(2).getName()));
+        assertTrue(1 <= p1.getItem(2).getWeight() && p1.getItem(2).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(staffNames).contains(p1.getItem(3).getName()));
+        assertTrue(1 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 8);
+        assertEquals(damage, w1.getDamage());
+        assertEquals(Weapon.WeaponType.STAFF, w1.getWeaponType());
+
+        assertTrue(Arrays.asList(lightArmorNames).contains(p1.getItem(4).getName()));
+        assertTrue(5 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 10);
+        assertEquals(armorRating, a1.getArmorRating());
+        assertEquals(Armor.ArmorType.LIGHT_ARMOR, a1.getArmorType());
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/PaladinChestGeneratorTest.csv")
+    void generateChestForPaladinCorrectDamageAndArmorRatingBasedOnLevelFromFile(int level, int damage, int armorRating) {
+        Player p1 = new Player("Paladin", PALADIN, level);
+        Weapon w1 = (Weapon) p1.getItem(3);
+        Armor a1 = (Armor) p1.getItem(4);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(0).getName()));
+        assertTrue(1 <= p1.getItem(0).getWeight() && p1.getItem(0).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(levelPotionNames).contains(p1.getItem(1).getName()));
+        assertTrue(1 <= p1.getItem(1).getWeight() && p1.getItem(1).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(healthPotionNames).contains(p1.getItem(2).getName()));
+        assertTrue(1 <= p1.getItem(2).getWeight() && p1.getItem(2).getWeight() <= 3);
+
+        assertTrue(Arrays.asList(swordNames).contains(p1.getItem(3).getName()));
+        assertTrue(7 <= p1.getItem(3).getWeight() && p1.getItem(3).getWeight() <= 16);
+        assertEquals(damage, w1.getDamage());
+        assertEquals(Weapon.WeaponType.SWORD, w1.getWeaponType());
+
+        assertTrue(Arrays.asList(heavyArmorNames).contains(p1.getItem(4).getName()));
+        assertTrue(15 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 20);
+        assertEquals(armorRating, a1.getArmorRating());
+        assertEquals(Armor.ArmorType.HEAVY_ARMOR, a1.getArmorType());
     }
 }
