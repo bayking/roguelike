@@ -4,12 +4,10 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,10 +24,6 @@ public class ChestTest {
 
     final Mage MAGE = new Mage("Gandalf");
     final Paladin PALADIN = new Paladin("Paladin");
-
-    final Potion HEALTH_POTION = new Potion("Health potion", 2, Potion.PotionType.HEALTH_POTION);
-    final Potion LEVEL_POTION = new Potion("Level potion", 1, Potion.PotionType.LEVEL_POTION);
-    final Potion MANA_POTION = new Potion("Mana potion", 2, Potion.PotionType.MANA_POTION);
 
 //    final Player LEVEL_5_MAGE = new Player("Level 5", MAGE, 5);
 //    final Player LEVEL_15_MAGE = new Player("Level 15", MAGE, 15);
