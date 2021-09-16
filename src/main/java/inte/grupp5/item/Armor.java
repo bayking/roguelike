@@ -4,11 +4,6 @@ public class Armor extends Gear {
 
     private final ArmorType armorType;
 
-    @Override
-    public int compareTo(Gear o) {
-        return Integer.compare(this.getEnchantment().getDuration(), o.getEnchantment().getDuration());
-    }
-
     public enum ArmorType {
         LIGHT_ARMOR, HEAVY_ARMOR
     }

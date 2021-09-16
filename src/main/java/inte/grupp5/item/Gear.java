@@ -1,7 +1,5 @@
 package inte.grupp5.item;
 
-import inte.grupp5.player.Player;
-
 public abstract class Gear extends Item implements Comparable<Gear> {
 
     private final int armorRating;
@@ -71,6 +69,11 @@ public abstract class Gear extends Item implements Comparable<Gear> {
 
     public void setEnchantmentToNONE() {
         enchantment = Enchantment.NONE;
+    }
+
+    @Override
+    public int compareTo(Gear gear) {
+        return Integer.compare(enchantment.duration, gear.enchantment.duration);
     }
 
     @Override

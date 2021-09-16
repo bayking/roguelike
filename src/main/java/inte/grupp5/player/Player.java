@@ -212,7 +212,7 @@ public class Player {
 class GearEnchantmentComparator implements Comparator<Gear> {
 
     @Override
-    public int compare(Gear o1, Gear o2) {
-        return Integer.compare(o2.getEnchantment().getDuration(), o1.getEnchantment().getDuration());
+    public int compare(Gear g1, Gear g2) {
+        return Integer.compare(g2.getEnchantment().getDuration(), g1.getEnchantment().getDuration());
     }
 }
