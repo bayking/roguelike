@@ -176,7 +176,7 @@ public class ChestTest {
 //        assertEquals(testItems.toString(), LEVEL_5_MAGE_CHEST.openChest(LEVEL_5_MAGE).toString());
 //    }
 
-    @RepeatedTest(value = 50)
+    @RepeatedTest(value = 100)
     void generateChestForPaladinAllowedValues() {
         Player p1 = new Player("Paladin", PALADIN, 25);
 
@@ -231,7 +231,7 @@ public class ChestTest {
         assertEquals(Armor.ArmorType.HEAVY_ARMOR, a1.getArmorType());
     }
 
-    @RepeatedTest(value = 50)
+    @RepeatedTest(value = 100)
     void generateChestForMageAllowedValues() {
         Player p1 = new Player("mage", MAGE, 25);
 
