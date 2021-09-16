@@ -21,6 +21,7 @@ public abstract class Spell {
     }
 
     public abstract boolean cast(Player caster);
+
     public abstract boolean cast(Player caster, Player target);
 
     @Override

@@ -5,7 +5,7 @@ import inte.grupp5.player.spell.Spell;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public abstract class  Class {
+public abstract class Class {
     private final String name;
     private int[] healthPerLvl = new int[60];
     private int[] manaPerLvl = new int[60];
@@ -75,7 +75,7 @@ public abstract class  Class {
             return true;
         if (!(o instanceof Class))
             return false;
-        Class other = (Class)o;
+        Class other = (Class) o;
         boolean nameEquals = (this.name == null && other.name == null)
                 || (this.name != null && this.name.equalsIgnoreCase(other.name));
         return this.name.equals(other.name) && nameEquals;

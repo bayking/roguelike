@@ -5,7 +5,7 @@ import inte.grupp5.player.classes.Mage;
 
 
 // A spell only usable by level 10 mages. Refills mana.
-public class InvokeMana extends Spell{
+public class InvokeMana extends Spell {
     public InvokeMana() {
         manaCost = 0;
         lvlReq = 10;
