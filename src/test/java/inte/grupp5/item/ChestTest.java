@@ -4,6 +4,7 @@ import inte.grupp5.player.Player;
 import inte.grupp5.player.classes.Mage;
 import inte.grupp5.player.classes.Paladin;
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -332,5 +333,15 @@ public class ChestTest {
         assertTrue(15 <= p1.getItem(4).getWeight() && p1.getItem(4).getWeight() <= 20);
         assertEquals(armorRating, a1.getArmorRating());
         assertEquals(Armor.ArmorType.HEAVY_ARMOR, a1.getArmorType());
+    }
+
+    // TODO: subclass the Chest class and overwrite the RNG method with hardcoded return value.
+    @Test
+    void testingRNG() {
+        Player p1 = new Player("Test", PALADIN, 5);
+        Weapon w1 = (Weapon) p1.getItem(3);
+        Armor a1 = (Armor) p1.getItem(4);
+
+        //assertTrue();
     }
 }
